@@ -316,216 +316,159 @@
                 <button class="filter-objects-open filter-open">фильтр</button>
             </div>
             <div class="filter-settings">
-                {{ form.create('Advertisement', {
-                    'url': {'plugin':'agency','controller':'realty','action':'index'},
-                    'class':'filter-settings-position',
-                }) }}
+                {{ form.create('Advertisement', {'url': {'plugin':'agency','controller':'realty','action':'index'},'class':'filter-settings-position',}) }}
                     <div class="filter-settings-options">
-                        <button class="filter-settings-options-button">
+                        <button class="filter-settings-options-button" type="button">
                             <span class="filter-settings-options-button-icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
                             <span>Назад</span>
                         </button>
-                        <button class="filter-settings-options-disable">Сбросить</button>
+                        <button class="filter-settings-options-disable" type="reset">Сбросить</button>
                     </div>
                     <div class="filter-settings-content">
                         <!-- Выбор микрорайона при клике на кнопку "выбран микрорайон"-->
                         <div class="filter-settings-content-selection">
                             <span class="filter-settings-content-selection-name">Микрорайон</span>
-
                             <!-- Навигация, закрыть и сбросить настройки"-->
                             <div class="filter-settings-content-selection-navigation">
-                                <button class="filter-settings-content-selection-navigation-prev">
-											<span class="filter-settings-content-selection-navigation-prev__icon">
-												<svg width="8" height="13" viewBox="0 0 8 13" fill="none"
-                                                     xmlns="http://www.w3.org/2000/svg">
-													<path fill-rule="evenodd" clip-rule="evenodd"
-                                                          d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z"
-                                                          fill="#929292"/>
-												</svg>
-											</span>
+                                <button class="filter-settings-content-selection-navigation-prev" type="button">
+                                    <span class="filter-settings-content-selection-navigation-prev__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
                                     <span class="filter-settings-content-selection-navigation-prev__text">Назад</span>
                                 </button>
-                                <button class="filter-settings-content-selection-navigation__reset">Сбросить</button>
+                                <button class="filter-settings-content-selection-navigation__reset" type="reset">Сбросить</button>
                             </div>
                             <div class="filter-settings-content-selection-block">
                                 <div class="filter-settings-content-selection-block__info">
-
                                     <!-- Выбор микрорайона c кнопкой выбрать все-->
                                     <div class="filter-settings-content-selection-block-district">
                                         <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
-                                        <button class="filter-settings-content-selection-block-district__button">Выбрать
-                                            все
-                                        </button>
+                                        <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
                                     </div>
 
                                     <!-- Выбор микрорайона checkbox-->
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-1" name="item-1" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-2" name="item-2" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-3" name="item-3" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-4" name="item-4" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-5" name="item-5" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            низ</label>
+                                        <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-6" name="item-6" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            верх</label>
+                                        <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-7" name="item-7" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый
-                                            Сочи</label>
+                                        <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-8" name="item-8" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            Клубничная</label>
+                                        <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-9" name="item-9" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
                                     </div>
                                 </div>
                                 <div class="filter-settings-content-selection-block__info">
                                     <div class="filter-settings-content-selection-block-district">
                                         <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
-                                        <button class="filter-settings-content-selection-block-district__button">Выбрать
-                                            все
-                                        </button>
+                                        <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-1" name="item-1" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-2" name="item-2" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-3" name="item-3" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-4" name="item-4" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-5" name="item-5" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            низ</label>
+                                        <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-6" name="item-6" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            верх</label>
+                                        <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-7" name="item-7" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый
-                                            Сочи</label>
+                                        <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-8" name="item-8" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            Клубничная</label>
+                                        <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-9" name="item-9" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
                                     </div>
                                 </div>
                                 <div class="filter-settings-content-selection-block__info">
                                     <div class="filter-settings-content-selection-block-district">
                                         <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
-                                        <button class="filter-settings-content-selection-block-district__button">Выбрать
-                                            все
-                                        </button>
+                                        <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-1" name="item-1" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-2" name="item-2" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-3" name="item-3" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-4" name="item-4" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-5" name="item-5" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            низ</label>
+                                        <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-6" name="item-6" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            верх</label>
+                                        <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-7" name="item-7" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый
-                                            Сочи</label>
+                                        <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-8" name="item-8" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
-                                        <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка
-                                            Клубничная</label>
+                                        <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                                        <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
                                     </div>
                                     <div class="filter-settings-content-selection-block-item">
-                                        <input type="checkbox" id="item-9" name="item-9" value="yes"
-                                               class="filter-settings-content-selection-block-item__checkbox">
+                                        <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
                                         <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
                                     </div>
                                 </div>
                             </div>
                             <div class="filter-settings-content-selection-buttons">
-                                <button class="filter-settings-content-selection-buttons__btn">показать</button>
+                                <button class="filter-settings-content-selection-buttons__btn" type="submit">показать</button>
                             </div>
                         </div>
                         <!-- Основные опции фильтра -->
@@ -572,7 +515,7 @@
                         {% endif %}
                         {% set kolichestvoSpalnyhMestOptions = attribute(searchFields, 'kolichestvo_spalnyh_mest') %}
                         {% if kolichestvoSpalnyhMestOptions %}
-                            <div class="filter-settings-content-six" data-alias="rooms_num">
+                            <div class="filter-settings-content-six" data-alias="kolichestvo_spalnyh_mest">
                                 <span class="filter-settings-content-six__text">Количество спален</span>
                                 <div class="filter-settings-content-six-buttons">
                                     {{ form.input('kolichestvo_spalnyh_mest', {
@@ -586,66 +529,108 @@
                                             '5': '5',
                                             '6': '6+',
                                         },
+                                        'hiddenField': false,
                                         'div': false,
                                         'legend': false,
                                         'label': {'class': 'filter-settings-content-six__button'},
                                         'fieldset': false,
                                     }) }}
-{#                                    <button class="filter-settings-content-six__button">1</button>#}
-{#                                    <button class="filter-settings-content-six__button active">2</button>#}
-{#                                    <button class="filter-settings-content-six__button">3</button>#}
-{#                                    <button class="filter-settings-content-six__button">4</button>#}
-{#                                    <button class="filter-settings-content-six__button">5</button>#}
-{#                                    <button class="filter-settings-content-six__button">6+</button>#}
-                                    {#{'value': '1', 'name': '1'},
-                                            {'value': '2', 'name': '2'},
-                                            {'value': '3', 'name': '3'},
-                                            {'value': '4', 'name': '4'},
-                                            {'value': '5', 'name': '5'},
-                                            {'value': '6', 'name': '6+'},#}
                                 </div>
                             </div>
                         {% endif %}
-                        <div class="filter-settings-content-three">
-                            <span class="filter-settings-content-three__text">Ремонт</span>
-                            <div class="filter-settings-content-three-buttons">
-                                <button class="filter-settings-content-three__button active">Черновой</button>
-                                <button class="filter-settings-content-three__button">White box</button>
-                                <button class="filter-settings-content-three__button">с ремонтом</button>
+                        {% set interiorDecorationOptions = attribute(searchFields, 'interior_decoration') %}
+                        {% if interiorDecorationOptions %}
+                            <div class="filter-settings-content-three" data-alias="interior_decoration">
+                                <span class="filter-settings-content-three__text">Ремонт</span>
+                                <div class="filter-settings-content-three-buttons">
+                                    {{ form.input('interior_decoration', {
+                                        'type': 'radio',
+                                        'multiple': 'select',
+                                        'options': interiorDecorations,
+                                        'div': false,
+                                        'legend': false,
+                                        'hiddenField': false,
+                                        'label': {'class': 'filter-settings-content-three__button'},
+                                        'fieldset': false,
+                                    }) }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="filter-settings-content-six">
-                            <span class="filter-settings-content-six__text">Количество этажей</span>
-                            <div class="filter-settings-content-six-buttons">
-                                <button class="filter-settings-content-six__button">1</button>
-                                <button class="filter-settings-content-six__button">2</button>
-                                <button class="filter-settings-content-six__button">3</button>
-                                <button class="filter-settings-content-six__button active">4</button>
-                                <button class="filter-settings-content-six__button">5</button>
-                                <button class="filter-settings-content-six__button">6+</button>
+                        {% endif %}
+                        {% set numberOfFloorsOptions = attribute(searchFields, 'number_of_floors') %}
+                        {% if numberOfFloorsOptions %}
+                            <div class="filter-settings-content-six" data-alias="number_of_floors">
+                                <span class="filter-settings-content-six__text">Количество этажей</span>
+                                <div class="filter-settings-content-six-buttons">
+                                    {{ form.input('number_of_floors', {
+                                        'type': 'radio',
+                                        'multiple': 'select',
+                                        'options': {
+                                            '1': '1',
+                                            '2': '2',
+                                            '3': '3',
+                                            '4': '4',
+                                            '5': '5',
+                                            '6': '6+',
+                                        },
+                                        'hiddenField': false,
+                                        'div': false,
+                                        'legend': false,
+                                        'label': {'class': 'filter-settings-content-six__button'},
+                                        'fieldset': false,
+                                    }) }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="filter-settings-content-three">
-                            <span class="filter-settings-content-three__text">Ремонт</span>
-                            <div class="filter-settings-content-three-buttons-flex">
-                                <button class="filter-settings-content-three__button active">до 2км</button>
-                                <button class="filter-settings-content-three__button">до 5км</button>
-                                <button class="filter-settings-content-three__button">5км +</button>
+                        {% endif %}
+                        {% set avtomobOptions = attribute(searchFields, 'avtomob') %}
+                        {% if avtomobOptions %}
+                            <div class="filter-settings-content-three" data-alias="avtomob">
+                                <span class="filter-settings-content-three__text">Расстояние до моря</span>
+                                <div class="filter-settings-content-three-buttons-flex">
+                                    {{ form.input('avtomob_from', {
+                                        'type': 'radio',
+                                        'multiple': 'select',
+                                        'options': {
+                                            '2': 'до 2 км',
+                                            '5': 'до 5 км',
+                                        },
+                                        'div': false,
+                                        'hiddenField': false,
+                                        'legend': false,
+                                        'label': {'class': 'filter-settings-content-three__button'},
+                                        'fieldset': false,
+                                    }) }}
+                                    {{ form.input('avtomob_to', {
+                                        'type': 'radio',
+                                        'multiple': 'select',
+                                        'options': {
+                                            '5': '5км +',
+                                        },
+                                        'div': false,
+                                        'hiddenField': false,
+                                        'legend': false,
+                                        'label': {'class': 'filter-settings-content-three__button'},
+                                        'fieldset': false,
+                                    }) }}
+                                </div>
                             </div>
-                        </div>
-                        <div class="filter-settings-content-eight">
-                            <span class="filter-settings-content-eight__line"></span>
-                            <div class="filter-settings-content-eight-block">
-                                <button class="filter-settings-content-eight-block__button active">хайтек</button>
-                                <button class="filter-settings-content-eight-block__button">с ремонтом</button>
-                                <button class="filter-settings-content-eight-block__button">вид на море</button>
-                                <button class="filter-settings-content-eight-block__button">с бассейном</button>
-                                <button class="filter-settings-content-eight-block__button">с баней</button>
-                                <button class="filter-settings-content-eight-block__button">с гаражом</button>
-                                <button class="filter-settings-content-eight-block__button">шале</button>
-                                <button class="filter-settings-content-eight-block__button">гостевой дом</button>
+                        {% endif %}
+                        {% if tagsList %}
+                            <div class="filter-settings-content-eight">
+                                <span class="filter-settings-content-eight__line"></span>
+                                <div class="filter-settings-content-eight-block">
+                                    {{ form.input('universal_tag_id', {
+                                        'type': 'radio',
+                                        'multiple': 'select',
+                                        'options': tagsList,
+                                        'div': false,
+                                        'legend': false,
+                                        'hiddenField': false,
+                                        'label': {'class': 'filter-settings-content-eight-block__button'},
+                                        'fieldset': false,
+                                    }) }}
+                                </div>
                             </div>
-                        </div>
+                        {% endif %}
                         <button class="filter-settings-content-button active" type="submit">Показать</button>
                     </div>
                     <button class="filter-settings-button">
