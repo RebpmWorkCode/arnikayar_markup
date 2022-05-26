@@ -11,6 +11,9 @@ $(() => {
         sortValue ? url.searchParams.set('sort', sortValue) : url.searchParams.delete('sort');
         directionValue ? url.searchParams.set('direction', directionValue) : url.searchParams.delete('direction');
         window.location.href = url.toString();
-    })
+    });
+
+    $('.phone-mask').mask('8 (000) 000-00-00');
+    $('.price-mask').mask("000 000 000 000 000", {reverse: true});
 
 })
