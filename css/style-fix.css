@@ -1,46 +1,17 @@
-img.session_image {
-    border-radius: 50%;
-}
-.filter-objects-card-box__img {
-    border-radius: 15px 15px 0 0;
-}
-.with_client .filter-objects-card-box-numbers-item.commission_hidden {
-    display: none;
-}
-.with_client .filter-objects-card-box-numbers-item {
-    margin-bottom: 0;
-}
+:root {--btn-color-2: #0bc53e;}
+.filter-objects {min-width: 834px;}
+img.session_image {border-radius: 50%;}
+.filter-objects-card-box__img {border-radius: 15px 15px 0 0;}
+.with_client .filter-objects-card-box-numbers-item.commission_hidden {display: none;}
+.with_client .filter-objects-card-box-numbers-item {margin-bottom: 0;}
 .select2-container.select2-container--realty-sorting .select2-selection--single {position: relative;padding-left: 16px;padding-right: 27px;height: inherit;color: #929292;}
 .select2-container.select2-container--realty-sorting .select2-selection--single .select2-selection__rendered {padding: 0;}
 .select2-container.select2-container--realty-sorting .select2-selection--single .select2-selection__arrow {display: none;visibility: hidden}
-.select2-container.select2-container--realty-sorting .select2-selection--single::after {
-    content: "";
-    display: block;
-    width: 25px;
-    height: 25px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background-image: url(../img/filter/Back-Arrow-Blue.svg);
-    background-repeat: no-repeat;
-    background-position: center center;
-    opacity: .6;
-    z-index: 3;
-    -webkit-transition: all .27s ease-in-out;
-    -o-transition: all .27s ease-in-out;
-    transition: all .27s ease-in-out;
-    -webkit-transform: rotate(0);
-    -ms-transform: rotate(0);
-    transform: rotate(0);
-}
-.select2-container.select2-container--realty-sorting.select2-container--open .select2-selection--single::after {
-    -webkit-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    transform: rotate(180deg);
-}
+.select2-container.select2-container--realty-sorting .select2-selection--single::after {content: "";display: block;width: 25px;height: 25px;position: absolute;top: 0;right: 0;background-image: url(../img/filter/Back-Arrow-Blue.svg);background-repeat: no-repeat;background-position: center center;opacity: .6;z-index: 3;-webkit-transition: all .27s ease-in-out;-o-transition: all .27s ease-in-out;transition: all .27s ease-in-out;-webkit-transform: rotate(0);-ms-transform: rotate(0);transform: rotate(0);}
+.select2-container.select2-container--realty-sorting.select2-container--open .select2-selection--single::after {-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);transform: rotate(180deg);}
 .select2-container.select2-container--realty-sorting.select2-container--open .select2-dropdown {cursor: pointer;z-index: 2;-webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;max-width: 163px;width: 100%;background: #f0f0f0;-webkit-box-shadow: 0 2px 4px rgb(0 0 0 / 25%);box-shadow: 0 2px 4px rgb(0 0 0 / 25%);border: none;border-radius: 12px;padding: 2.5px 0 2.5px 11px;color: #929292;}
 .select2-container.select2-container--realty-sorting.select2-container--open .select2-dropdown .select2-results__option {display: block;color: #929292;position: relative;text-align: right;padding: 7.5px 25px 7.5px 0;white-space: nowrap;}
 .select2-container.select2-container--realty-sorting.select2-container--open .select2-dropdown .select2-results__option::after {content: "";display: block;position: absolute;width: 117px;height: 1px;bottom: -4px;right: 25px;background: #929292;}
-[data-favorite="remove"] {
-    background-color: #ff6915;
-}
+.filter-settings-content-six__button,.filter-settings-content-three__button,.filter-settings-content-eight-block__button {display: flex;align-items: center;justify-content: center;font-family: inherit;line-height: inherit;cursor: pointer;}
+input[type="radio"]:checked + .filter-settings-content-six__button, input[type="radio"]:checked + .filter-settings-content-three__button, input[type="radio"]:checked + .filter-settings-content-eight-block__button {border: 1px solid var(--active-color);}
+[data-favorite="remove"] {background-color: #ff6915;}
