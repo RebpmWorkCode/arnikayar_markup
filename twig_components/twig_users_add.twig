@@ -1,0 +1,103 @@
+{% set flash = _view.loadHelper('Flash') %}
+
+<section class="register">
+    <div class="container">
+        <div class="row">
+            <div class="register__block col-12 d-flex flex-column align-items-center justify-content-center">
+                <h1 class="register__title title">Зарегистрироваться</h1>
+                {{ flash.render() }}
+                {{ form.create('User', {'url': {'plugin' : 'users','controller' : 'users', 'action' : 'add'}, 'class': 'register__form d-flex flex-column'}) }}
+                    {{ form.input('last_name', {
+                        'div': false,
+                        'id': 'UserLastName',
+                        'class': 'register__input grey-input',
+                        'type': 'text',
+                        'required': true,
+                        'label': false,
+                        'empty': true,
+                        'placeholder': 'Фамилия',
+                        'data-allow-clear': true,
+                        'searchField': false,
+                        'hiddenField': false,
+                        'multiple': false,
+                    }) }}
+                    {{ form.input('name', {
+                        'div': false,
+                        'id': 'UserName',
+                        'class': 'register__input grey-input',
+                        'type': 'text',
+                        'required': true,
+                        'label': false,
+                        'empty': true,
+                        'placeholder': 'Имя',
+                        'data-allow-clear': true,
+                        'searchField': false,
+                        'hiddenField': false,
+                        'multiple': false,
+                    }) }}
+                    {{ form.input('description', {
+                        'div': false,
+                        'id': 'UserDescription',
+                        'class': 'register__input grey-input',
+                        'type': 'text',
+                        'required': true,
+                        'label': false,
+                        'empty': true,
+                        'placeholder': 'Название агентства',
+                        'data-allow-clear': true,
+                        'searchField': false,
+                        'hiddenField': false,
+                        'multiple': false,
+                    }) }}
+                    {{ form.input('username', {
+                        'div': false,
+                        'id': 'UserUsername',
+                        'class': 'register__input grey-input',
+                        'type': 'text',
+                        'required': true,
+                        'label': false,
+                        'empty': true,
+                        'placeholder': 'Номер телефона',
+                        'data-allow-clear': true,
+                        'searchField': false,
+                        'hiddenField': false,
+                        'multiple': false,
+                    }) }}
+                    {{ form.input('email', {
+                        'div': false,
+                        'id': 'UserEmail',
+                        'class': 'register__input grey-input',
+                        'type': 'text',
+                        'required': true,
+                        'label': false,
+                        'empty': true,
+                        'placeholder': 'E-mail',
+                        'data-allow-clear': true,
+                        'searchField': false,
+                        'hiddenField': false,
+                        'multiple': false,
+                    }) }}
+                    {{ form.input('password', {
+                        'div': false,
+                        'id': 'UserPassword',
+                        'class': 'register__input grey-input',
+                        'type': 'password',
+                        'required': true,
+                        'label': false,
+                        'empty': true,
+                        'placeholder': 'Придумайте пароль',
+                        'data-allow-clear': true,
+                        'searchField': false,
+                        'hiddenField': false,
+                        'multiple': false,
+                    }) }}
+                    {% if recaptcha.hasKey() %}
+                        {{ recaptcha.display_form({'id': 'realty_form', 'div': 'recaptcha-block'}) }}
+                    {% endif %}
+
+                    <button class="register__btn blue-btn">Зарегистрироваться</button>
+                {{ form.end() }}
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,7 +1,15 @@
+img.session_image {
+    border-radius: 50%;
+}
 .filter-objects-card-box__img {
     border-radius: 15px 15px 0 0;
 }
-
+.with_client .filter-objects-card-box-numbers-item.commission_hidden {
+    display: none;
+}
+.with_client .filter-objects-card-box-numbers-item {
+    margin-bottom: 0;
+}
 .select2-container.select2-container--realty-sorting .select2-selection--single {position: relative;padding-left: 16px;padding-right: 27px;height: inherit;color: #929292;}
 .select2-container.select2-container--realty-sorting .select2-selection--single .select2-selection__rendered {padding: 0;}
 .select2-container.select2-container--realty-sorting .select2-selection--single .select2-selection__arrow {display: none;visibility: hidden}

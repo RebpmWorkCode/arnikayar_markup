@@ -11,6 +11,19 @@ $(() => {
         sortValue ? url.searchParams.set('sort', sortValue) : url.searchParams.delete('sort');
         directionValue ? url.searchParams.set('direction', directionValue) : url.searchParams.delete('direction');
         window.location.href = url.toString();
-    })
+    });
+    $('#btnLogout').on('click', (e) => {
+        $.get(e.target.href, function () {
+            window.location.reload();
+        });
+    });
+    $(".header-person-menu-list-btn").on('click', (e) => {
+        if($(e.currentTarget).hasClass('active')) {
+            $('body').addClass('with_client');
+        } else {
+            $('body').removeClass('with_client');
+        }
+
+    });
 
 })
