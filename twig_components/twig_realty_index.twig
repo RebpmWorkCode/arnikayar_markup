@@ -228,7 +228,7 @@
                                 <span class="filter-objects-card-box-numbers-item__price">{{ item.Advertisement.price|number_format(0, '', ' ') }}₽</span>
                             </div>
                             {% if session.read('Auth.User.id') and item.Advertisement.commission %}
-                                <div class="filter-objects-card-box-numbers-item">
+                                <div class="filter-objects-card-box-numbers-item commission_hidden">
                                     <span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия {{ item.Advertisement.commission }} %</span>
                                 </div>
                             {% endif %}
