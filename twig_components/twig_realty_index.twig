@@ -186,16 +186,7 @@
                         </div>
                         <div class="filter-objects-card-box-description">
                             <div class="filter-objects-card-box-description-item">
-                                <span>вид на море</span>
-                            </div>
-                            <div class="filter-objects-card-box-description-item">
-                                <span>хайтек</span>
-                            </div>
-                            <div class="filter-objects-card-box-description-item">
-                                <span>с ремонтом</span>
-                            </div>
-                            <div class="filter-objects-card-box-description-item">
-                                <span>с бассейном</span>
+                                <span>#</span>
                             </div>
                         </div>
                         <div class="filter-objects-card-box-elements">
@@ -215,7 +206,8 @@
                                         fill="white"/>
                                 </svg>
                             </button>
-                            <button class="filter-objects-card-box-elements-icon">
+                            {% if session.read('Auth.User.id') %}
+                                <button class="filter-objects-card-box-elements-icon">
                                 <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
                                      xmlns="http://www.w3.org/2000/svg">
                                     <path
@@ -229,6 +221,7 @@
                                         fill="white"/>
                                 </svg>
                             </button>
+                            {% endif %}
                         </div>
                         <div class="filter-objects-card-box-numbers">
                             <div class="filter-objects-card-box-numbers-item">
@@ -312,7 +305,9 @@
                                             fill="#929292"/>
                                     </svg>
                                 </div>
-                                <span class="filter-objects-card-info-bottom-item__text">{{ item.Location.Locality.title }}</span>
+                                {% if item.Location.Locality.title %}
+                                    <span class="filter-objects-card-info-bottom-item__text">{{ item.Location.Locality.title }}</span>
+                                {% endif %}
                             </div>
                         </div>
                     </div>
