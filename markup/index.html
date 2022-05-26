@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Главная</title>
+	<link rel="stylesheet" href="css/style.min.css?_v=20220523153133">
+</head>
+
+<body>
+	<header class="header">
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-between">
+            <div class="d-flex align-items-center justify-content-xl-between col-xl-5 col-lg-3 justify-content-lg-start col-md-3 justify-content-md-start col-sm-9 col-6 justify-content-between">
+                <!-- Бургер меню -->
+                <div class="header-burger-box">
+                    <div class="header-burger">
+                        <div class="header-burger-icon">
+                            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M5.80298 9.28832C5.80298 8.8262 5.98655 8.38301 6.31332 8.05624C6.64009 7.72948 7.08328 7.5459 7.5454 7.5459H28.4545C28.9166 7.5459 29.3598 7.72948 29.6866 8.05624C30.0133 8.38301 30.1969 8.8262 30.1969 9.28832C30.1969 9.75044 30.0133 10.1936 29.6866 10.5204C29.3598 10.8472 28.9166 11.0307 28.4545 11.0307H7.5454C7.08328 11.0307 6.64009 10.8472 6.31332 10.5204C5.98655 10.1936 5.80298 9.75044 5.80298 9.28832ZM5.80298 18.0005C5.80298 17.5383 5.98655 17.0951 6.31332 16.7684C6.64009 16.4416 7.08328 16.258 7.5454 16.258H17.9999C18.4621 16.258 18.9053 16.4416 19.232 16.7684C19.5588 17.0951 19.7424 17.5383 19.7424 18.0005C19.7424 18.4626 19.5588 18.9058 19.232 19.2325C18.9053 19.5593 18.4621 19.7429 17.9999 19.7429H7.5454C7.08328 19.7429 6.64009 19.5593 6.31332 19.2325C5.98655 18.9058 5.80298 18.4626 5.80298 18.0005ZM5.80298 26.7126C5.80298 26.2505 5.98655 25.8073 6.31332 25.4805C6.64009 25.1537 7.08328 24.9702 7.5454 24.9702H28.4545C28.9166 24.9702 29.3598 25.1537 29.6866 25.4805C30.0133 25.8073 30.1969 26.2505 30.1969 26.7126C30.1969 27.1747 30.0133 27.6179 29.6866 27.9447C29.3598 28.2714 28.9166 28.455 28.4545 28.455H7.5454C7.08328 28.455 6.64009 28.2714 6.31332 27.9447C5.98655 27.6179 5.80298 27.1747 5.80298 26.7126Z" fill="white"/>
+                            </svg> 
+                        </div>
+                        <div class="header-burger-open">
+                            <div class="header-burger-open-shadow"></div>
+                            <div class="header-burger-open-navigation">
+                                <nav>
+                                    <li>
+                                        <a href="" class="header-burger-open-navigation__link">Каталог</a>     
+                                    </li>
+                                    <li>
+                                        <a href="" class="header-burger-open-navigation__link">Ипотечный калькулятор</a>     
+                                    </li>
+                                    <li>
+                                        <a href="" class="header-burger-open-navigation__link">Кадастровая карта</a>     
+                                    </li>
+                                </nav>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <span class="header-name">real2u.ru</span>
+                <div class="header-search-min">
+                    <input class="header-search" type="search" name="q" placeholder="поиск по ID или названию объекта">
+                </div>
+            </div>
+            <div class="d-flex align-items-center col-xl-7 col-lg-9 col-md-9 col-sm-3 justify-content-sm-end justify-content-md-between col-6 justify-content-end">
+
+                <!-- Меню с иконками -->
+                <div class="header-btns">
+                    <div class="header-btns-info">
+                        <a href="index.html" class="header-btn active">
+                            <div class="header-btn-icon">
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3 3H7V7H3V3ZM11 3H15V7H11V3ZM23 3H19V7H23V3ZM3 11H7V15H3V11ZM15 11H11V15H15V11ZM19 11H23V15H19V11ZM7 19H3V23H7V19ZM11 19H15V23H11V19ZM23 19H19V23H23V19Z" fill="#929292"/>
+                                </svg>
+                            </div>
+                            <span class="header-btn-text">Все объекты</span>
+                        </a>
+                        <a href="" class="header-btn">
+                            <div class="header-btn-icon">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M3.80774 26.117V12.7901H5.92312V26.117C5.92312 26.3889 6.03456 26.6496 6.23291 26.8419C6.43127 27.0341 6.7003 27.1421 6.98082 27.1421H26.0193C26.2998 27.1421 26.5688 27.0341 26.7672 26.8419C26.9655 26.6496 27.077 26.3889 27.077 26.117V12.7901H29.1924V26.117C29.1924 26.9326 28.858 27.7149 28.263 28.2916C27.6679 28.8684 26.8608 29.1924 26.0193 29.1924H6.98082C6.13926 29.1924 5.33218 28.8684 4.73711 28.2916C4.14204 27.7149 3.80774 26.9326 3.80774 26.117ZM27.077 3.56372V10.7398L22.8462 6.63917V3.56372C22.8462 3.29184 22.9576 3.03109 23.156 2.83883C23.3543 2.64658 23.6234 2.53857 23.9039 2.53857H26.0193C26.2998 2.53857 26.5688 2.64658 26.7672 2.83883C26.9655 3.03109 27.077 3.29184 27.077 3.56372Z" fill="#929292"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.9447 1.97236C15.3573 1.58987 15.9167 1.375 16.5 1.375C17.0833 1.375 17.6427 1.58987 18.0553 1.97236L32.6774 15.532C32.884 15.7235 33 15.9833 33 16.2542C33 16.5251 32.884 16.7849 32.6774 16.9765C32.4709 17.168 32.1908 17.2756 31.8987 17.2756C31.6066 17.2756 31.3265 17.168 31.12 16.9765L16.5 3.41483L1.88003 16.9765C1.6735 17.168 1.39338 17.2756 1.1013 17.2756C0.809215 17.2756 0.529096 17.168 0.322562 16.9765C0.116029 16.7849 0 16.5251 0 16.2542C0 15.9833 0.116029 15.7235 0.322562 15.532L14.9447 1.97236Z" fill="#929292"/>
+                                </svg>                           
+                            </div>
+                            <span class="header-btn-text">КП и ТХ</span>
+                        </a>
+                        <a href="collection-name.html" class="header-btn">
+                            <div class="header-btn-icon">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M28.4671 6.98248H14.9245L12.6208 3.87775C12.4351 3.62898 12.192 3.42676 11.9112 3.28762C11.6304 3.14848 11.32 3.07636 11.0052 3.07716H4.53308C4.0041 3.07716 3.49679 3.28288 3.12275 3.64908C2.74871 4.01527 2.53857 4.51194 2.53857 5.02982V26.5091C2.53857 27.027 2.74871 27.5236 3.12275 27.8898C3.49679 28.256 4.0041 28.4618 4.53308 28.4618H28.4671C28.9961 28.4618 29.5034 28.256 29.8775 27.8898C30.2515 27.5236 30.4617 27.027 30.4617 26.5091V8.93514C30.4617 8.41726 30.2515 7.9206 29.8775 7.5544C29.5034 7.18821 28.9961 6.98248 28.4671 6.98248ZM28.4671 26.5091H4.53308V10.8878H11.823C12.352 10.8878 12.8593 10.6821 13.2333 10.3159C13.6074 9.94969 13.8175 9.45302 13.8175 8.93514H4.53308V5.02982H11.0052L13.6081 8.53485C13.7009 8.65923 13.8225 8.76034 13.9629 8.82991C14.1033 8.89948 14.2585 8.93554 14.4159 8.93514H28.4671V26.5091Z" fill="#929292"/>
+                                </svg>                            
+                            </div>
+                            <span class="header-btn-text">Подборки</span>
+                        </a>
+                        <a href="favorites.html" class="header-btn">
+                            <div class="header-btn-icon">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M9.625 5.39404C5.82863 5.39404 2.75 8.44104 2.75 12.2003C2.75 15.2349 3.95312 22.4372 15.796 29.7178C16.0081 29.8469 16.2517 29.9151 16.5 29.9151C16.7483 29.9151 16.9919 29.8469 17.204 29.7178C29.0469 22.4372 30.25 15.2349 30.25 12.2003C30.25 8.44104 27.1714 5.39404 23.375 5.39404C19.5786 5.39404 16.5 9.51904 16.5 9.51904C16.5 9.51904 13.4214 5.39404 9.625 5.39404Z" stroke="#929292" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </div>
+                            <span class="header-btn-text">Избранное</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="header-search-mobile">
+                        <span class="header-search-mobile-icon">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M29.975 24.9823L24.9073 19.9145L21.0093 18.3041C22.3072 16.4583 23.0025 14.2564 23 12C23 5.93456 18.0654 1 12 1C5.93456 1 1 5.93456 1 12C1 18.0654 5.93456 23 12 23C14.276 23.0026 16.4962 22.2952 18.3512 20.9764L19.9574 24.8639L25.025 29.9319C25.35 30.257 25.7358 30.5148 26.1605 30.6907C26.5851 30.8666 27.0403 30.9572 27.4999 30.9572C27.9595 30.9572 28.4147 30.8667 28.8393 30.6908C29.264 30.5149 29.6498 30.2571 29.9748 29.9321C30.2999 29.6071 30.5577 29.2213 30.7336 28.7966C30.9095 28.372 31.0001 27.9168 31.0001 27.4572C31.0001 26.9976 30.9096 26.5424 30.7337 26.1178C30.5578 25.6931 30.3 25.3073 29.975 24.9823V24.9823ZM3 12C3 7.0375 7.0375 3 12 3C16.9625 3 21 7.0375 21 12C21 16.9625 16.9625 21 12 21C7.0375 21 3 16.9625 3 12ZM28.5607 28.5178C28.2792 28.7986 27.8977 28.9564 27.5 28.9564C27.1023 28.9564 26.7208 28.7986 26.4393 28.5178L21.6536 23.732L20.1602 20.1173L23.775 21.6107L28.5608 26.3964C28.8417 26.678 28.9994 27.0594 28.9994 27.4571C28.9993 27.8548 28.8416 28.2362 28.5607 28.5178V28.5178Z" fill="white"/>
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="header-person">
+                        <div class="header-person__box">
+                            <div class="header-person-icon">
+                                <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.5 16.5C18.688 16.5 20.7865 15.6308 22.3336 14.0836C23.8808 12.5365 24.75 10.438 24.75 8.25C24.75 6.06196 23.8808 3.96354 22.3336 2.41637C20.7865 0.869194 18.688 0 16.5 0C14.312 0 12.2135 0.869194 10.6664 2.41637C9.11919 3.96354 8.25 6.06196 8.25 8.25C8.25 10.438 9.11919 12.5365 10.6664 14.0836C12.2135 15.6308 14.312 16.5 16.5 16.5V16.5ZM22 8.25C22 9.70869 21.4205 11.1076 20.3891 12.1391C19.3576 13.1705 17.9587 13.75 16.5 13.75C15.0413 13.75 13.6424 13.1705 12.6109 12.1391C11.5795 11.1076 11 9.70869 11 8.25C11 6.79131 11.5795 5.39236 12.6109 4.36091C13.6424 3.32946 15.0413 2.75 16.5 2.75C17.9587 2.75 19.3576 3.32946 20.3891 4.36091C21.4205 5.39236 22 6.79131 22 8.25V8.25ZM33 30.25C33 33 30.25 33 30.25 33H2.75C2.75 33 0 33 0 30.25C0 27.5 2.75 19.25 16.5 19.25C30.25 19.25 33 27.5 33 30.25ZM30.25 30.239C30.2472 29.5625 29.8265 27.5275 27.962 25.663C26.169 23.87 22.7948 22 16.5 22C10.2025 22 6.831 23.87 5.038 25.663C3.1735 27.5275 2.7555 29.5625 2.75 30.239H30.25Z" fill="white"/>
+                                </svg>     
+                            </div>
+                            <div class="header-person-session">
+                                <div class="header-person-session-icon">
+                                    <svg width="21" height="24" viewBox="0 0 21 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M10.5 11.5C11.7598 11.5 12.968 10.9996 13.8588 10.1088C14.7496 9.21796 15.25 8.00978 15.25 6.75C15.25 5.49022 14.7496 4.28204 13.8588 3.39124C12.968 2.50045 11.7598 2 10.5 2C9.24022 2 8.03204 2.50045 7.14124 3.39124C6.25045 4.28204 5.75 5.49022 5.75 6.75C5.75 8.00978 6.25045 9.21796 7.14124 10.1088C8.03204 10.9996 9.24022 11.5 10.5 11.5ZM13.6667 6.75C13.6667 7.58985 13.333 8.39531 12.7392 8.98917C12.1453 9.58304 11.3399 9.91667 10.5 9.91667C9.66015 9.91667 8.85469 9.58304 8.26083 8.98917C7.66696 8.39531 7.33333 7.58985 7.33333 6.75C7.33333 5.91015 7.66696 5.10469 8.26083 4.51083C8.85469 3.91696 9.66015 3.58333 10.5 3.58333C11.3399 3.58333 12.1453 3.91696 12.7392 4.51083C13.333 5.10469 13.6667 5.91015 13.6667 6.75ZM20 19.4167C20 21 18.4167 21 18.4167 21H2.58333C2.58333 21 1 21 1 19.4167C1 17.8333 2.58333 13.0833 10.5 13.0833C18.4167 13.0833 20 17.8333 20 19.4167ZM18.4167 19.4103C18.4151 19.0208 18.1728 17.8492 17.0993 16.7757C16.067 15.7433 14.1243 14.6667 10.5 14.6667C6.87417 14.6667 4.933 15.7433 3.90067 16.7757C2.82717 17.8492 2.5865 19.0208 2.58333 19.4103H18.4167Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-person-menu">
+                            <ul class="header-person-menu-list">
+                                <li>
+                                    <button class="header-person-menu-list-btn">
+                                        <span class="header-person-menu-list-btn__text">Я с клиентом</span>
+                                        <span class="header-person-menu-list-btn-shell"></span>
+                                    </button>
+                                </li>
+                                <li>
+                                    <span class="header-person-menu-list-btn__text">Профиль</span>
+                                </li>
+                                <li>
+                                    <span class="header-person-menu-list-btn__text">Выйти</span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+	<main>
+		<!-- Окно Добавить в подборку -->
+		<div class="add-to-collection">
+			<button class="add-to-collection-button">
+				<span class="add-to-collection-button__icon">
+					<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/>
+					</svg>
+				</span>
+				<span class="add-to-collection-button__text">Назад</span>
+			</button>
+			<div class="add-to-collection-block">
+				<h2 class="add-to-collection-block__title">Добавить в подборку</h2>
+				<div class="add-to-collection-block-top">
+ <picture><source srcset="img/filter/oval.webp" type="image/webp"><img src="img/filter/oval.png" alt="Изображение" class="add-to-collection-block-top__img"></picture> 
+					<div class="add-to-collection-block-top-info">
+						<span class="add-to-collection-block-top-info__text">Дом, баня и бассейн с видом на горы в с. Каштаны</span>
+						<div class="add-to-collection-block-top-info-description">
+							<div class="add-to-collection-block-top-info-description__icon">
+								<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M15.625 8.20825C15.625 6.71641 15.0324 5.28567 13.9775 4.23078C12.9226 3.17588 11.4918 2.58325 10 2.58325C8.50816 2.58325 7.07742 3.17588 6.02252 4.23078C4.96763 5.28567 4.375 6.71641 4.375 8.20825C4.375 10.5158 6.22125 13.5233 10 17.1258C13.7788 13.5233 15.625 10.5158 15.625 8.20825ZM10 18.8333C5.41625 14.667 3.125 11.1245 3.125 8.20825C3.125 6.38489 3.84933 4.63621 5.13864 3.34689C6.42795 2.05758 8.17664 1.33325 10 1.33325C11.8234 1.33325 13.572 2.05758 14.8614 3.34689C16.1507 4.63621 16.875 6.38489 16.875 8.20825C16.875 11.1245 14.5837 14.667 10 18.8333Z" fill="#929292"/>
+									<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+								</svg>
+							</div>
+							<span class="add-to-collection-block-top-info-description__text">село Каштаны</span>
+						</div>
+					</div>
+				</div>
+				<div class="add-to-collection-block-button">
+					<button class="add-to-collection-block-button-btn">
+						<span class="add-to-collection-block-button-btn__text">Создать новую подборку</span>
+						<span class="add-to-collection-block-button-btn__icon">
+							<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M5.95147 14.4231H7.31787C7.43933 14.4231 7.50006 14.374 7.50006 14.2757V1.3013C7.50006 1.20301 7.43933 1.15386 7.31787 1.15386H5.95147C5.83002 1.15386 5.76929 1.20301 5.76929 1.3013V14.2757C5.76929 14.374 5.83002 14.4231 5.95147 14.4231Z" fill="#929292"/>
+								<path d="M0.154293 8.65381H13.1149C13.2178 8.65381 13.2692 8.59308 13.2692 8.47162V7.10523C13.2692 6.98377 13.2178 6.92304 13.1149 6.92304H0.154293C0.0514311 6.92304 0 6.98377 0 7.10523V8.47162C0 8.59308 0.0514311 8.65381 0.154293 8.65381Z" fill="#929292"/>
+							</svg>
+						</span>
+					</button>
+				</div>
+				<div class="add-to-collection-block-content">
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+					<div class="add-to-collection-block-content-item">
+						<input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
+						<label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
+							<span class="add-to-collection-block-content-item__label-info">
+								<span class="add-to-collection-block-content-item__label-text">Донская</span>
+								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+							</span>
+						</label>
+					</div>
+				</div>
+				<button class="add-to-collection-block__btn">Готово</button>
+			</div>
+		</div>
+
+
+
+		<section class="filter">
+			<div class="container">
+				<div class="filter-block row">
+					<div class="col-xl-9 col-lg-8 col-md-7 col-sm-6">
+						<h1 class="filter-title">Все объекты</h1>
+					</div>
+					<div class="d-flex align-items-center justify-content-end col-xl-3 col-lg-4 col-md-5 col-sm-6">
+						<span class="filter-sorting">сортировка:</span>
+						<select class="select" name="language">
+							<option disabled>сначала дороже</option>
+							<option value="a">сначала дороже</option>
+							<option value="b">сначала дешевле</option>
+							<option value="c">сначала новые</option>
+						</select>
+					</div>
+				</div>
+				<div class="filter-content">
+					<div class="filter-objects">
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<a href="" class="filter-objects-card">
+							<div class="filter-objects-card-box">
+								<div class="filter-objects-card-box__img box">
+ <picture><source srcset="img/filter/object.webp" type="image/webp"><img src="img/filter/object.png" alt="#" class="filter-objects-card-box__img"></picture> 
+								</div>
+								<div class="filter-objects-card-box-description">
+									<div class="filter-objects-card-box-description-item">
+										<span>вид на море</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>хайтек</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с ремонтом</span>
+									</div>
+									<div class="filter-objects-card-box-description-item">
+										<span>с бассейном</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-box-elements">
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="23" viewBox="0 0 22 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/>
+										</svg>
+									</button>
+									<button class="filter-objects-card-box-elements-icon">
+										<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+											<path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+											<path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+										</svg>
+									</button>
+								</div>
+								<div class="filter-objects-card-box-numbers">
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__price">432M₽</span>
+									</div>
+									<div class="filter-objects-card-box-numbers-item">
+										<span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия 5 %</span>
+									</div>
+								</div>
+							</div>
+							<div class="filter-objects-card-info">
+								<div class="filter-objects-card-info-top">
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">12 сот</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/>
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/>
+												<path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">270 м²</span>
+									</div>
+									<div class="filter-objects-card-info-top-item">
+										<div class="filter-objects-card-info-top-item__icon">
+											<svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-top-item__text">3</span>
+									</div>
+								</div>
+								<div class="filter-objects-card-info-center">
+									<span>
+										Дом, баня и бассейн с видом на горы в с. Каштаны 
+									</span>
+								</div>
+								<div class="filter-objects-card-info-bottom">
+									<div class="filter-objects-card-info-bottom-item">
+										<div class="filter-objects-card-info-bottom-item-icon">
+											<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/>
+												<path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/>
+											</svg>
+										</div>
+										<span class="filter-objects-card-info-bottom-item__text">село Каштаны</span>
+									</div>
+								</div>
+							</div>
+						</a>
+						<button class="filter-objects-open filter-open">фильтр</button>
+					</div>
+					<div class="filter-settings">
+						<div class="filter-settings-position">
+							<div class="filter-settings-options">
+								<button class="filter-settings-options-button">
+									<span class="filter-settings-options-button-icon">
+										<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/>
+										</svg>
+									</span>
+									<span>Назад</span>
+								</button>
+								<button class="filter-settings-options-disable">Сбросить</button>
+							</div>
+							<div class="filter-settings-content">
+
+								<!-- Выбор микрорайона при клике на кнопку "выбран микрорайон"-->
+								<div class="filter-settings-content-selection">
+									<span class="filter-settings-content-selection-name">Микрорайон</span>
+
+									<!-- Навигация, закрыть и сбросить настройки"-->
+									<div class="filter-settings-content-selection-navigation">
+										<button class="filter-settings-content-selection-navigation-prev">
+											<span class="filter-settings-content-selection-navigation-prev__icon">
+												<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+													<path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/>
+												</svg>
+											</span>
+											<span class="filter-settings-content-selection-navigation-prev__text">Назад</span>
+										</button>
+										<button class="filter-settings-content-selection-navigation__reset">Сбросить</button>
+									</div>
+									<div class="filter-settings-content-selection-block">
+										<div class="filter-settings-content-selection-block__info">
+
+											<!-- Выбор микрорайона c кнопкой выбрать все-->
+											<div class="filter-settings-content-selection-block-district">
+												<span class="filter-settings-content-selection-block-district__text">Центральный район</span>
+												<button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+											</div>
+
+											<!-- Выбор микрорайона checkbox-->
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
+											</div>
+										</div>
+										<div class="filter-settings-content-selection-block__info">
+											<div class="filter-settings-content-selection-block-district">
+												<span class="filter-settings-content-selection-block-district__text">Центральный район</span>
+												<button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
+											</div>
+										</div>
+										<div class="filter-settings-content-selection-block__info">
+											<div class="filter-settings-content-selection-block-district">
+												<span class="filter-settings-content-selection-block-district__text">Центральный район</span>
+												<button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
+											</div>
+											<div class="filter-settings-content-selection-block-item">
+												<input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+												<label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
+											</div>
+										</div>
+									</div>
+									<div class="filter-settings-content-selection-buttons">
+										<button class="filter-settings-content-selection-buttons__btn">показать</button>
+									</div>
+								</div>
+
+								<!-- Основные опции фильтра -->
+								<div class="filter-settings-content-one">
+									<span class="filter-settings-content-one-text">Выбран микрорайон</span>
+									<div class="filter-settings-content-neighborhood  active">
+										<span class="filter-settings-content-neighborhood__text">Любой микрорайон</span>
+										<span class="filter-settings-content-neighborhood__icon">
+											<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path fill-rule="evenodd" clip-rule="evenodd" d="M1.26918 13L8 6.5L1.26918 5.88427e-07L-5.52509e-07 1.22565L5.46165 6.5L3.69687e-07 11.7743L1.26918 13Z" fill="#929292"/>
+											</svg>										
+										</span>
+									</div>
+								</div>
+								<div class="filter-settings-content-two">
+									<span class="filter-settings-content-two__text">Цена</span>
+									<div class="filter-settings-content-two-inputs">
+										<input type="text" placeholder="Цена от, ₽" class="filter-settings-content-two-inputs-input">
+										<input type="text" placeholder="Цена до, ₽" class="filter-settings-content-two-inputs-input">
+									</div>
+								</div>
+								<div class="filter-settings-content-two">
+									<span class="filter-settings-content-two__text">Участок</span>
+									<div class="filter-settings-content-two-inputs">
+										<input type="text" placeholder="Цена от, ₽" class="filter-settings-content-two-inputs-input">
+										<input type="text" placeholder="Цена до, ₽" class="filter-settings-content-two-inputs-input">
+									</div>
+								</div>
+								<div class="filter-settings-content-two">
+									<span class="filter-settings-content-two__text">Площадь дома</span>
+									<div class="filter-settings-content-two-inputs">
+										<input type="text" placeholder="Цена от, ₽" class="filter-settings-content-two-inputs-input">
+										<input type="text" placeholder="Цена до, ₽" class="filter-settings-content-two-inputs-input">
+									</div>
+								</div>
+								<div class="filter-settings-content-six">
+									<span class="filter-settings-content-six__text">Количество спален</span>
+									<div class="filter-settings-content-six-buttons">
+										<button class="filter-settings-content-six__button">1</button>
+										<button class="filter-settings-content-six__button active">2</button>
+										<button class="filter-settings-content-six__button">3</button>
+										<button class="filter-settings-content-six__button">4</button>
+										<button class="filter-settings-content-six__button">5</button>
+										<button class="filter-settings-content-six__button">6+</button>
+									</div>
+								</div>
+								<div class="filter-settings-content-three">
+									<span class="filter-settings-content-three__text">Ремонт</span>
+									<div class="filter-settings-content-three-buttons">
+										<button class="filter-settings-content-three__button active">Черновой</button>
+										<button class="filter-settings-content-three__button">White box</button>
+										<button class="filter-settings-content-three__button">с ремонтом</button>
+									</div>
+								</div>
+								<div class="filter-settings-content-six">
+									<span class="filter-settings-content-six__text">Количество этажей</span>
+									<div class="filter-settings-content-six-buttons">
+										<button class="filter-settings-content-six__button">1</button>
+										<button class="filter-settings-content-six__button">2</button>
+										<button class="filter-settings-content-six__button">3</button>
+										<button class="filter-settings-content-six__button active">4</button>
+										<button class="filter-settings-content-six__button">5</button>
+										<button class="filter-settings-content-six__button">6+</button>
+									</div>
+								</div>
+								<div class="filter-settings-content-three">
+									<span class="filter-settings-content-three__text">Ремонт</span>
+									<div class="filter-settings-content-three-buttons-flex">
+										<button class="filter-settings-content-three__button active">до 2км</button>
+										<button class="filter-settings-content-three__button">до 5км</button>
+										<button class="filter-settings-content-three__button">5км +</button>
+									</div>
+								</div>
+								<div class="filter-settings-content-eight">
+									<span class="filter-settings-content-eight__line"></span>
+									<div class="filter-settings-content-eight-block">
+										<button class="filter-settings-content-eight-block__button active">хайтек</button>
+										<button class="filter-settings-content-eight-block__button">с ремонтом</button>
+										<button class="filter-settings-content-eight-block__button">вид на море</button>
+										<button class="filter-settings-content-eight-block__button">с бассейном</button>
+										<button class="filter-settings-content-eight-block__button">с баней</button>
+										<button class="filter-settings-content-eight-block__button">с гаражом</button>
+										<button class="filter-settings-content-eight-block__button">шале</button>
+										<button class="filter-settings-content-eight-block__button">гостевой дом</button>
+									</div>
+								</div>
+								<button class="filter-settings-content-button active">Показать (3)</button>
+							</div>
+							<button class="filter-settings-button">
+								<svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<path d="M11.7188 6.09375C11.7188 4.97487 11.2743 3.90181 10.4831 3.11064C9.69194 2.31947 8.61888 1.875 7.5 1.875C6.38112 1.875 5.30806 2.31947 4.51689 3.11064C3.72572 3.90181 3.28125 4.97487 3.28125 6.09375C3.28125 7.82438 4.66594 10.08 7.5 12.7819C10.3341 10.08 11.7188 7.82438 11.7188 6.09375ZM7.5 14.0625C4.06219 10.9378 2.34375 8.28094 2.34375 6.09375C2.34375 4.72623 2.887 3.41472 3.85398 2.44773C4.82097 1.48075 6.13248 0.9375 7.5 0.9375C8.86752 0.9375 10.179 1.48075 11.146 2.44773C12.113 3.41472 12.6562 4.72623 12.6562 6.09375C12.6562 8.28094 10.9378 10.9378 7.5 14.0625Z" fill="white"/>
+									<path d="M7.5 6.5625C7.74864 6.5625 7.9871 6.46373 8.16291 6.28791C8.33873 6.1121 8.4375 5.87364 8.4375 5.625C8.4375 5.37636 8.33873 5.1379 8.16291 4.96209C7.9871 4.78627 7.74864 4.6875 7.5 4.6875C7.25136 4.6875 7.0129 4.78627 6.83709 4.96209C6.66127 5.1379 6.5625 5.37636 6.5625 5.625C6.5625 5.87364 6.66127 6.1121 6.83709 6.28791C7.0129 6.46373 7.25136 6.5625 7.5 6.5625ZM7.5 7.5C7.00272 7.5 6.52581 7.30246 6.17417 6.95083C5.82254 6.59919 5.625 6.12228 5.625 5.625C5.625 5.12772 5.82254 4.65081 6.17417 4.29917C6.52581 3.94754 7.00272 3.75 7.5 3.75C7.99728 3.75 8.47419 3.94754 8.82582 4.29917C9.17746 4.65081 9.375 5.12772 9.375 5.625C9.375 6.12228 9.17746 6.59919 8.82582 6.95083C8.47419 7.30246 7.99728 7.5 7.5 7.5ZM12.5625 10.3125L14.0625 14.0625H9.84375V13.125H5.15625V14.0625H0.9375L2.4375 10.3125H12.5625ZM11.5528 10.3125H3.44719L2.32219 13.125H12.6778L11.5528 10.3125Z" fill="white"/>
+								</svg>
+								<span>на карте</span>
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</main>
+	<section class="footer">
+	<div class="container">
+		<div class="row">
+			<div class="col-12 text-center d-flex flex-column align-items-center justify-content-center">
+				<div class="footer__line"></div>
+				<span class="footer__text">Ваш личный островок курорта.<br>Сочи - это 300 солнечных дней в году<br> это
+					море
+					и
+					горнолыжный курорт.<br>
+					Горный и морской воздух отсутствие заводов и вредных производств.<br>
+					Инвестиция, которая постоянно растет в цене</span>
+			</div>
+		</div>
+	</div>
+</section>
+	<script src="js/app.min.js?_v=20220523153133"></script>
+</body>
+
+</html>
