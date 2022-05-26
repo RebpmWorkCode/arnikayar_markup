@@ -321,19 +321,13 @@
                 <button class="filter-objects-open filter-open">фильтр</button>
             </div>
             <div class="filter-settings">
-
-
-                <div class="filter-settings-position">
+                {{ form.create('Advertisement', {
+                    'url': {'plugin':'agency','controller':'realty','action':'index'},
+                    'class':'filter-settings-position',
+                }) }}
                     <div class="filter-settings-options">
                         <button class="filter-settings-options-button">
-									<span class="filter-settings-options-button-icon">
-										<svg width="8" height="13" viewBox="0 0 8 13" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-											<path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z"
-                                                  fill="#929292"/>
-										</svg>
-									</span>
+                            <span class="filter-settings-options-button-icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
                             <span>Назад</span>
                         </button>
                         <button class="filter-settings-options-disable">Сбросить</button>
@@ -647,7 +641,7 @@
                         </svg>
                         <span>на карте</span>
                     </button>
-                </div>
+                {{ form.end() }}
             </div>
         </div>
     </div>
