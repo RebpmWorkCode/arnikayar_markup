@@ -1,0 +1,16 @@
+$(() => {
+    $('.select-sorting').select2({
+        theme: 'realty-sorting',
+        minimumResultsForSearch: Infinity,
+        width: 'auto',
+    });
+    $('.select-sorting').on('change', (e) => {
+        console.log(e);
+        let url = new URL(location.href), value = e.target.value, values = value.split('_');
+        let [sortValue, directionValue] = values.length === 3 ? [`${values[0]}_${values[1]}`, values[2]] : values;
+        sortValue ? url.searchParams.set('sort', sortValue) : url.searchParams.delete('sort');
+        directionValue ? url.searchParams.set('direction', directionValue) : url.searchParams.delete('direction');
+        window.location.href = url.toString();
+    })
+
+})

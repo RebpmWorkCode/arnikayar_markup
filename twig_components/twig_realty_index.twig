@@ -9,9 +9,6 @@
 {% set session = _view.loadHelper('Session') %}
 {{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
 {{ _view.assign('title', adSeo.titleList()) }}
-{{ _view.Html.css('/libraries/select2/css/select2.min.css', {'block': 'cssHeadBeforeAppCss'}) }}
-{{ _view.Html.script('/uploads/assets/js/favorites.js', {'block': 'scriptEndPage'}) }}
-{{ _view.Html.script('/uploads/assets/js/locations.js', {'block': 'scriptEndPage'}) }}
 
 <div class="add-to-collection">
     <button class="add-to-collection-button">
@@ -141,22 +138,35 @@
     </div>
 </div>
 
-
 <section class="filter">
     <div class="container">
         <div class="filter-block row">
             <div class="col-xl-9 col-lg-8 col-md-7 col-sm-6">
                 <h1 class="filter-title">Все объекты</h1>
             </div>
-            <div class="d-flex align-items-center justify-content-end col-xl-3 col-lg-4 col-md-5 col-sm-6">
+            {{ form.create('Advertisement', {
+                'url': {'plugin':'agency','controller':'realty','action':'index'},
+                'class':'d-flex align-items-center justify-content-end col-xl-3 col-lg-4 col-md-5 col-sm-6',
+                'id': 'realty-sorting',
+                'type': 'get'
+            }) }}
                 <span class="filter-sorting">сортировка:</span>
-                <select class="select" name="language">
-                    <option disabled>сначала дороже</option>
-                    <option value="a">сначала дороже</option>
-                    <option value="b">сначала дешевле</option>
-                    <option value="c">сначала новые</option>
-                </select>
-            </div>
+                {% set sortingValue = [_view.request.query('sort'), _view.request.query('direction')]|join('_') %}
+                {% set sortingValue = sortingValue != '_' ? sortingValue|replace({'Advertisement.': ''}) : '' %}
+                {{ form.input('sorting', {
+                    'type': 'select',
+                    'options': {
+                        'price_desc': 'сначала дороже',
+                        'price_asc': 'сначала дешевле',
+                        'created_desc': 'сначала новые',
+                    },
+                    'default': 'price_desc',
+                    'class': 'select-sorting',
+                    'label': false,
+                    'div': false,
+                    'value': sortingValue,
+                }) }}
+            {{ form.end() }}
         </div>
         <div class="filter-content">
             <div class="filter-objects">
@@ -311,6 +321,8 @@
                 <button class="filter-objects-open filter-open">фильтр</button>
             </div>
             <div class="filter-settings">
+
+
                 <div class="filter-settings-position">
                     <div class="filter-settings-options">
                         <button class="filter-settings-options-button">
