@@ -10,10 +10,8 @@
             <button class="filter-settings-options-disable" type="reset">Сбросить</button>
         </div>
         <div class="filter-settings-content">
-            <!-- Выбор микрорайона при клике на кнопку "выбран микрорайон"-->
             <div class="filter-settings-content-selection">
                 <span class="filter-settings-content-selection-name">Микрорайон</span>
-                <!-- Навигация, закрыть и сбросить настройки"-->
                 <div class="filter-settings-content-selection-navigation">
                     <button class="filter-settings-content-selection-navigation-prev" type="button">
                         <span class="filter-settings-content-selection-navigation-prev__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
@@ -22,135 +20,116 @@
                     <button class="filter-settings-content-selection-navigation__reset" type="reset">Сбросить</button>
                 </div>
                 <div class="filter-settings-content-selection-block">
-                    <div class="filter-settings-content-selection-block__info">
-                        <!-- Выбор микрорайона c кнопкой выбрать все-->
-                        <div class="filter-settings-content-selection-block-district">
-                            <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
-                            <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+                    {% set groupLocations = {
+                        'Центральный район': [
+                            {'fieldName': 'micro_district_id', 'value': '200', 'name': 'Больничный Городок',},
+                            {'fieldName': 'sub_locality_id', 'value': '498', 'name': 'Мамайка верх',},
+                            {'fieldName': 'sub_locality_id', 'value': '498', 'name': 'Мамайка низ',},
+                            {'fieldName': 'micro_district_id', 'value': '191', 'name': 'Макаренко',},
+                            {'fieldName': 'micro_district_id', 'value': '201', 'name': 'Ареда',},
+                            {'fieldName': 'sub_locality_id', 'value': '512', 'name': 'Донская',},
+                            {'fieldName': 'sub_locality_id', 'value': '510', 'name': 'Завокзальный',},
+                            {'fieldName': 'micro_district_id', 'value': '178', 'name': 'Заречный',},
+                            {'fieldName': 'sub_locality_id', 'value': '515', 'name': 'Новый Сочи',},
+                            {'fieldName': 'micro_district_id', 'value': '202', 'name': 'Пасечная',},
+                            {'fieldName': 'micro_district_id', 'value': '203', 'name': 'КСМ',},
+                            {'fieldName': 'micro_district_id', 'value': '172', 'name': 'Центр',},
+                        ],
+                        'Хостинский район': [
+                            {'fieldName': 'sub_locality_id', 'value': '518', 'name': 'Светлана',},
+                            {'fieldName': 'sub_locality_id', 'value': '506', 'name': 'Бытха',},
+                            {'fieldName': 'micro_district_id', 'value': '198', 'name': 'Мацеста',},
+                            {'fieldName': 'micro_district_id', 'value': '180', 'name': 'Малый Ахун',},
+                            {'fieldName': 'sub_locality_id', 'value': '513', 'name': 'Хоста',},
+                            {'fieldName': 'micro_district_id', 'value': '173', 'name': 'Кудепста',},
+                            {'fieldName': 'sub_locality_id', 'value': '501', 'name': 'Приморье',},
+                            {'fieldName': 'locality_id', 'value': '74358', 'name': 'Раздольное',},
+                            {'fieldName': 'micro_district_id', 'value': '195', 'name': 'Соболевка',},
+                            {'fieldName': 'sub_locality_id', 'value': '527', 'name': 'Фабрициуса',},
+                            {'fieldName': 'micro_district_id', 'value': '204', 'name': 'Транспортная',},
+                            {'fieldName': 'locality_id', 'value': '74298', 'name': 'Барановка',},
+                        ],
+                        'Адлерский район': [
+                            {'fieldName': 'sub_locality_id', 'value': '503', 'name': 'Адлер-центр',},
+                            {'fieldName': 'micro_district_id', 'value': '205', 'name': 'Курортный городок',},
+                            {'fieldName': 'micro_district_id', 'value': '206', 'name': 'Сириус',},
+                        ],
+                        'Краснополянский поселковый округ': [
+                            {'fieldName': 'locality_id', 'value': '74335', 'name': 'Кепша',},
+                            {'fieldName': 'locality_id', 'value': '74338', 'name': 'Красная Поляна',},
+                            {'fieldName': 'locality_id', 'value': '74346', 'name': 'Медовеевка',},
+                            {'fieldName': 'micro_district_id', 'value': '207', 'name': 'Эстосадок',},
+                        ],
+                        'Нижнешиловский сельский округ': [
+                            {'fieldName': 'micro_district_id', 'value': '208', 'name': 'Аигба',},
+                            {'fieldName': 'locality_id', 'value': '74297', 'name': 'Ахштырь',},
+                            {'fieldName': 'locality_id', 'value': '74309', 'name': 'Верхневеселое',},
+                            {'fieldName': 'locality_id', 'value': '74317', 'name': 'Веселое',},
+                            {'fieldName': 'locality_id', 'value': '74351', 'name': 'Нижняя Шиловка',},
+                            {'fieldName': 'locality_id', 'value': '74371', 'name': 'Черешня',},
+                        ],
+                        'Кудепстинский сельский округ': [
+                            {'fieldName': 'locality_id', 'value': '74300', 'name': 'Бестужевское',},
+                            {'fieldName': 'locality_id', 'value': '74305', 'name': 'Вардане-Верено',},
+                            {'fieldName': 'locality_id', 'value': '74312', 'name': 'Верхнениколаевское',},
+                            {'fieldName': 'locality_id', 'value': '74320', 'name': 'Воронцовка',},
+                            {'fieldName': 'locality_id', 'value': '74329', 'name': 'Илларионовка',},
+                            {'fieldName': 'locality_id', 'value': '74332', 'name': 'Калиновое Озеро',},
+                            {'fieldName': 'locality_id', 'value': '74334', 'name': 'Каштаны',},
+                            {'fieldName': 'locality_id', 'value': '74337', 'name': 'Красная Воля',},
+                            {'fieldName': 'locality_id', 'value': '74369', 'name': 'Хлебороб',},
+                        ],
+                        'Молдовский сельский округ': [
+                            {'fieldName': 'locality_id', 'value': '74321', 'name': 'Высокое',},
+                            {'fieldName': 'locality_id', 'value': '74322', 'name': 'Галицино',},
+                            {'fieldName': 'locality_id', 'value': '74330', 'name': 'Казачий Брод',},
+                            {'fieldName': 'locality_id', 'value': '74341', 'name': 'Липники',},
+                            {'fieldName': 'locality_id', 'value': '74347', 'name': 'Молдовка',},
+                            {'fieldName': 'locality_id', 'value': '74348', 'name': 'Монастырь',},
+                            {'fieldName': 'locality_id', 'value': '74353', 'name': 'Орел-Изумруд',},
+                        ],
+                        'Лазаревский район': [
+                            {'fieldName': 'locality_id', 'value': '183877', 'name': 'Дагомыс',},
+                            {'fieldName': 'locality_id', 'value': '74324', 'name': 'Детляжка',},
+                            {'fieldName': 'locality_id', 'value': '74305', 'name': 'Вардане',},
+                            {'fieldName': 'micro_district_id', 'value': '209', 'name': 'Головинка',},
+                            {'fieldName': 'locality_id', 'value': '74339', 'name': 'Лазаревское',},
+                            {'fieldName': 'locality_id', 'value': '74308', 'name': 'Лоо',},
+                            {'fieldName': 'locality_id', 'value': '74307', 'name': 'Хобза',},
+                            {'fieldName': 'micro_district_id', 'value': '210', 'name': 'Шаумяновка',},
+                            {'fieldName': 'locality_id', 'value': '74314', 'name': 'Якорная Щель',},
+                            {'fieldName': 'locality_id', 'value': '74362', 'name': 'Солохаул',},
+                            {'fieldName': 'locality_id', 'value': '74311', 'name': 'Учдере',},
+                            {'fieldName': 'locality_id', 'value': '74361', 'name': 'Сергей-Поле',},
+                            {'fieldName': 'locality_id', 'value': '74298', 'name': 'Барановка',},
+                            {'fieldName': 'locality_id', 'value': '74306', 'name': 'Васильевка',},
+                            {'fieldName': 'locality_id', 'value': '74318', 'name': 'Волковка',},
+                            {'fieldName': 'locality_id', 'value': '74357', 'name': 'Разбитый Котел',},
+                        ],
+                    } %}
+                    {% for groupLocationTitle, filterLocationList in groupLocations %}
+                        <div class="filter-settings-content-selection-block__info">
+                            <div class="filter-settings-content-selection-block-district">
+                                <span class="filter-settings-content-selection-block-district__text">{{ groupLocationTitle }}</span>
+                                <button class="filter-settings-content-selection-block-district__button" type="button">Выбрать все</button>
+                            </div>
+                            {% for filterLocationItem in filterLocationList %}
+                                {% if filterLocationItem.fieldName %}
+                                    {{ form.input(filterLocationItem.fieldName ~ '.', {
+                                        'type': 'checkbox',
+                                        'value': filterLocationItem.value,
+                                        'label': {'class': 'filter-settings-content-selection-block-item__label', 'text': filterLocationItem.name},
+                                        'div': 'filter-settings-content-selection-block-item',
+                                        'class': 'filter-settings-content-selection-block-item__checkbox',
+                                        'required': false,
+                                        'hiddenField': false,
+                                        'checked': filterLocationItem.value in _view.request.query(filterLocationItem.fieldName),
+                                        'id': filterLocationItem.fieldName ~ form.domIdSuffix(filterLocationItem.value),
+                                    }) }}
+                                {% endif %}
+                            {% endfor %}
                         </div>
-
-                        <!-- Выбор микрорайона checkbox-->
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
-                        </div>
-                    </div>
-                    <div class="filter-settings-content-selection-block__info">
-                        <div class="filter-settings-content-selection-block-district">
-                            <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
-                            <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
-                        </div>
-                    </div>
-                    <div class="filter-settings-content-selection-block__info">
-                        <div class="filter-settings-content-selection-block-district">
-                            <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
-                            <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
-                        </div>
-                        <div class="filter-settings-content-selection-block-item">
-                            <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
-                            <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
                 <div class="filter-settings-content-selection-buttons">
                     <button class="filter-settings-content-selection-buttons__btn" type="submit">показать</button>
@@ -159,13 +138,10 @@
             <!-- Основные опции фильтра -->
             <div class="filter-settings-content-one">
                 <span class="filter-settings-content-one-text">Выбран микрорайон</span>
-                <div class="filter-settings-content-neighborhood  active">
+                {% set classLocationsActive = _view.request.query('locality_id') or _view.request.query('micro_district_id') or _view.request.query('sub_locality_id') ? 'active' : '' %}
+                <div class="filter-settings-content-neighborhood {{ classLocationsActive }}">
                     <span class="filter-settings-content-neighborhood__text">Любой микрорайон</span>
-                    <span class="filter-settings-content-neighborhood__icon">
-                                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.26918 13L8 6.5L1.26918 5.88427e-07L-5.52509e-07 1.22565L5.46165 6.5L3.69687e-07 11.7743L1.26918 13Z" fill="#929292"/>
-                                        </svg>
-                                    </span>
+                    <span class="filter-settings-content-neighborhood__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.26918 13L8 6.5L1.26918 5.88427e-07L-5.52509e-07 1.22565L5.46165 6.5L3.69687e-07 11.7743L1.26918 13Z" fill="#929292"/></svg></span>
                 </div>
             </div>
             <div class="filter-settings-content-two" data-alias="price">

@@ -20,6 +20,10 @@ input[type="radio"]:checked + .filter-settings-content-six__button, input[type="
     height: 35rem;
 }
 
+.filter-settings-content-selection-block-item {
+    position: relative;
+}
+
 .header-object__group_block {
     margin-left: 15px;
 }
