@@ -1,4 +1,5 @@
 {% set adView = _view.loadHelper('Agency.AdView') %}
+{% set agencyIndexSite = _view.loadHelper('Agency.AgencyIndexSite') %}
 {% set imageResized = _view.loadHelper('ImageCompress.ImageResized') %}
 {% set adSeo = _view.loadHelper('Agency.AdSeo') %}
 {% set rusTime = _view.loadHelper('Fastadmin.RusTime') %}
@@ -9,97 +10,6 @@
 {{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
 {{ _view.assign('title', adSeo.titleList()) }}
 {{ _view.Html.script('/uploads/assets/js/favorites.js', {'block': 'scriptCustom'}) }}
-<div class="add-to-collection">
-    <button class="add-to-collection-button">
-        <span class="add-to-collection-button__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
-        <span class="add-to-collection-button__text">Назад</span>
-    </button>
-    <div class="add-to-collection-block">
-        <h2 class="add-to-collection-block__title">Добавить в подборку</h2>
-        <div class="add-to-collection-block-top">
-            <picture><source srcset="/uploads/assets/img/filter/oval.webp" type="image/webp"><img src="/uploads/assets/img/filter/oval.png" alt="Изображение" class="add-to-collection-block-top__img"></picture>
-            <div class="add-to-collection-block-top-info">
-                <span class="add-to-collection-block-top-info__text">Дом, баня и бассейн с видом на горы в с. Каштаны</span>
-                <div class="add-to-collection-block-top-info-description">
-                    <div class="add-to-collection-block-top-info-description__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.625 8.20825C15.625 6.71641 15.0324 5.28567 13.9775 4.23078C12.9226 3.17588 11.4918 2.58325 10 2.58325C8.50816 2.58325 7.07742 3.17588 6.02252 4.23078C4.96763 5.28567 4.375 6.71641 4.375 8.20825C4.375 10.5158 6.22125 13.5233 10 17.1258C13.7788 13.5233 15.625 10.5158 15.625 8.20825ZM10 18.8333C5.41625 14.667 3.125 11.1245 3.125 8.20825C3.125 6.38489 3.84933 4.63621 5.13864 3.34689C6.42795 2.05758 8.17664 1.33325 10 1.33325C11.8234 1.33325 13.572 2.05758 14.8614 3.34689C16.1507 4.63621 16.875 6.38489 16.875 8.20825C16.875 11.1245 14.5837 14.667 10 18.8333Z" fill="#929292"/><path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/></svg></div>
-                    <span class="add-to-collection-block-top-info-description__text">село Каштаны</span>
-                </div>
-            </div>
-        </div>
-        <div class="add-to-collection-block-button">
-            <button class="add-to-collection-block-button-btn">
-                <span class="add-to-collection-block-button-btn__text">Создать новую подборку</span>
-                <span class="add-to-collection-block-button-btn__icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.95147 14.4231H7.31787C7.43933 14.4231 7.50006 14.374 7.50006 14.2757V1.3013C7.50006 1.20301 7.43933 1.15386 7.31787 1.15386H5.95147C5.83002 1.15386 5.76929 1.20301 5.76929 1.3013V14.2757C5.76929 14.374 5.83002 14.4231 5.95147 14.4231Z" fill="#929292"/><path d="M0.154293 8.65381H13.1149C13.2178 8.65381 13.2692 8.59308 13.2692 8.47162V7.10523C13.2692 6.98377 13.2178 6.92304 13.1149 6.92304H0.154293C0.0514311 6.92304 0 6.98377 0 7.10523V8.47162C0 8.59308 0.0514311 8.65381 0.154293 8.65381Z" fill="#929292"/></svg></span>
-            </button>
-        </div>
-        <div class="add-to-collection-block-content">
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-            <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
-                <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-                    <span class="add-to-collection-block-content-item__label-info">
-                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
-                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-                    </span>
-                </label>
-            </div>
-        </div>
-        <button class="add-to-collection-block__btn">Готово</button>
-    </div>
-</div>
 <section class="filter">
     <div class="container">
         <div class="filter-block row">
@@ -160,8 +70,23 @@
                                     <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/></svg>
                                 </button>
                                 {% if session.read('Auth.User.id') %}
-                                    <button class="filter-objects-card-box-elements-icon">
-                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/><path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/><path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/></svg>
+                                    {% set agencyCompilation = agencyIndexSite.getAgencyCompilation() %}
+                                    {% set hasInCompilation = false %}
+                                    {% set titleButtonCompilation = 'Добавить в подборку' %}
+                                    {% if item.Advertisement.id in attribute(agencyCompilation, 'selection') %}
+                                        {% set hasInCompilation = true %}
+                                        {% set titleButtonCompilation = 'Убрать из подборки' %}
+                                    {% endif %}
+                                    <button class="filter-objects-card-box-elements-icon {{ hasInCompilation ? 'active' : ''}}" title="{{ titleButtonCompilation }}" data-id="{{ item.Advertisement.id }}" data-agency-compilation-id="{{ attribute(agencyCompilation, 'id') }}">
+                                        <svg data-action="delete" class="{{ hasInCompilation ? '' : 'd-none'}}" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+                                            <path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+                                        </svg>
+                                        <svg data-action="add" class="{{ hasInCompilation ? 'd-none' : ''}}" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/>
+                                            <path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/>
+                                            <path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/>
+                                        </svg>
                                     </button>
                                 {% endif %}
                             </div>

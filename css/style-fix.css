@@ -24,6 +24,11 @@ input[type="radio"]:checked + .filter-settings-content-six__button, input[type="
     position: relative;
 }
 
+.add-to-collection {
+    height: min-content;
+    max-height: 568px;
+}
+
 @media (min-width: 992px) {
     .filter-settings {
         width: 267px;

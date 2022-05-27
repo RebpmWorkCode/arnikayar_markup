@@ -57,4 +57,25 @@ $(() => {
         })
     })
 
+    let collectionBlock = $('#collection-block'), collectionAddBlock = undefined, collectionCreateBlock = undefined;
+    $('[data-agency-compilation-id]').on('click', (e) => {
+        e.preventDefault();
+        let agencyCompilationId = e.currentTarget.dataset.agencyCompilationId;
+        let id = e.currentTarget.dataset.id;
+        if (!agencyCompilationId) {
+            fetch(`/agency/agency_compilations/add/${id}`, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).then(res => res.text()).then((res) => {
+                collectionBlock.html(res);
+                collectionAddBlock = $('#add-to-collection');
+                collectionAddBlock.show();
+                collectionCreateBlock = $('#create-to-collection');
+            })
+        }
+    });
+    $('body').on('click', '.add-to-collection-block-button-btn', (e) => {
+        e.preventDefault();
+        collectionAddBlock.hide();
+        collectionCreateBlock.show();
+    });
+
+
 })
