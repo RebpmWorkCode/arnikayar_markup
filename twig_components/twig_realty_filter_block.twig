@@ -1,0 +1,239 @@
+<div class="filter-settings">
+    {{ form.create('Advertisement', {'url': filterUrl,'class':'filter-settings-position',}) }}
+        {{ form.hidden('sort', {'value': _view.request.query('sort')}) }}
+        {{ form.hidden('direction', {'value': _view.request.query('direction')}) }}
+        <div class="filter-settings-options">
+            <button class="filter-settings-options-button" type="button">
+                <span class="filter-settings-options-button-icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
+                <span>Назад</span>
+            </button>
+            <button class="filter-settings-options-disable" type="reset">Сбросить</button>
+        </div>
+        <div class="filter-settings-content">
+            <!-- Выбор микрорайона при клике на кнопку "выбран микрорайон"-->
+            <div class="filter-settings-content-selection">
+                <span class="filter-settings-content-selection-name">Микрорайон</span>
+                <!-- Навигация, закрыть и сбросить настройки"-->
+                <div class="filter-settings-content-selection-navigation">
+                    <button class="filter-settings-content-selection-navigation-prev" type="button">
+                        <span class="filter-settings-content-selection-navigation-prev__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
+                        <span class="filter-settings-content-selection-navigation-prev__text">Назад</span>
+                    </button>
+                    <button class="filter-settings-content-selection-navigation__reset" type="reset">Сбросить</button>
+                </div>
+                <div class="filter-settings-content-selection-block">
+                    <div class="filter-settings-content-selection-block__info">
+                        <!-- Выбор микрорайона c кнопкой выбрать все-->
+                        <div class="filter-settings-content-selection-block-district">
+                            <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
+                            <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+                        </div>
+
+                        <!-- Выбор микрорайона checkbox-->
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
+                        </div>
+                    </div>
+                    <div class="filter-settings-content-selection-block__info">
+                        <div class="filter-settings-content-selection-block-district">
+                            <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
+                            <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
+                        </div>
+                    </div>
+                    <div class="filter-settings-content-selection-block__info">
+                        <div class="filter-settings-content-selection-block-district">
+                            <span class="filter-settings-content-selection-block-district__text">Центральный район</span>
+                            <button class="filter-settings-content-selection-block-district__button">Выбрать все</button>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-1" name="item-1" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-1" class="filter-settings-content-selection-block-item__label">Донская</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-2" name="item-2" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-2" class="filter-settings-content-selection-block-item__label">Завокзальный</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-3" name="item-3" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-3" class="filter-settings-content-selection-block-item__label">КСМ</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-4" name="item-4" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-4" class="filter-settings-content-selection-block-item__label">Макаренко</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-5" name="item-5" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-5" class="filter-settings-content-selection-block-item__label">Мамайка низ</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-6" name="item-6" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-6" class="filter-settings-content-selection-block-item__label">Мамайка верх</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-7" name="item-7" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-7" class="filter-settings-content-selection-block-item__label">Новый Сочи</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-8" name="item-8" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-8" class="filter-settings-content-selection-block-item__label">Мамайка Клубничная</label>
+                        </div>
+                        <div class="filter-settings-content-selection-block-item">
+                            <input type="checkbox" id="item-9" name="item-9" value="yes" class="filter-settings-content-selection-block-item__checkbox">
+                            <label for="item-9" class="filter-settings-content-selection-block-item__label">Центр</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="filter-settings-content-selection-buttons">
+                    <button class="filter-settings-content-selection-buttons__btn" type="submit">показать</button>
+                </div>
+            </div>
+            <!-- Основные опции фильтра -->
+            <div class="filter-settings-content-one">
+                <span class="filter-settings-content-one-text">Выбран микрорайон</span>
+                <div class="filter-settings-content-neighborhood  active">
+                    <span class="filter-settings-content-neighborhood__text">Любой микрорайон</span>
+                    <span class="filter-settings-content-neighborhood__icon">
+                                        <svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path fill-rule="evenodd" clip-rule="evenodd" d="M1.26918 13L8 6.5L1.26918 5.88427e-07L-5.52509e-07 1.22565L5.46165 6.5L3.69687e-07 11.7743L1.26918 13Z" fill="#929292"/>
+                                        </svg>
+                                    </span>
+                </div>
+            </div>
+            <div class="filter-settings-content-two" data-alias="price">
+                <span class="filter-settings-content-two__text">Цена</span>
+                <div class="filter-settings-content-two-inputs">
+                    {{ form.input('price_from', {'class': 'filter-settings-content-two-inputs-input price-mask', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Цена от, ₽'}) }}
+                    {{ form.input('price_to', {'class': 'filter-settings-content-two-inputs-input price-mask', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Цена до, ₽'}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-two" data-alias="site_area">
+                <span class="filter-settings-content-two__text">Участок</span>
+                <div class="filter-settings-content-two-inputs">
+                    {{ form.input('site_area_from', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Участок от, сот'}) }}
+                    {{ form.input('site_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Участок до, сот'}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-two" data-alias="house_area">
+                <span class="filter-settings-content-two__text">Площадь дома</span>
+                <div class="filter-settings-content-two-inputs">
+                    {{ form.input('house_area_from', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь от, м²'}) }}
+                    {{ form.input('house_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь до, м²'}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-six" data-alias="kolichestvo_spalnyh_mest">
+                <span class="filter-settings-content-six__text">Количество спален</span>
+                <div class="filter-settings-content-six-buttons">
+                    {{ form.input('kolichestvo_spalnyh_mest', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'1': '1','2': '2','3': '3','4': '4','5': '5','6': '6+',},'hiddenField': false,'div': false,'legend': false,'label': {'class': 'filter-settings-content-six__button'},'fieldset': false,}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-three" data-alias="interior_decoration">
+                <span class="filter-settings-content-three__text">Ремонт</span>
+                <div class="filter-settings-content-three-buttons">
+                    {{ form.input('interior_decoration', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': interiorDecorations,'div': false,'legend': false,'hiddenField': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-six" data-alias="number_of_floors">
+                <span class="filter-settings-content-six__text">Количество этажей</span>
+                <div class="filter-settings-content-six-buttons">
+                    {{ form.input('number_of_floors', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'1': '1','2': '2','3': '3','4': '4','5': '5','6': '6+',},'hiddenField': false,'div': false,'legend': false,'label': {'class': 'filter-settings-content-six__button'},'fieldset': false,}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-three" data-alias="avtomob">
+                <span class="filter-settings-content-three__text">Расстояние до моря</span>
+                <div class="filter-settings-content-three-buttons-flex">
+                    {{ form.input('avtomob_from', {'type': 'radio', 'class': 'd-none', 'multiple': 'select','options': {'2': 'до 2 км','5': 'до 5 км',},'div': false,'hiddenField': false,'legend': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
+                    {{ form.input('avtomob_to', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'5': '5км +',},'div': false,'hiddenField': false,'legend': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
+                </div>
+            </div>
+            <div class="filter-settings-content-eight" data-group="checkbox-aliases">
+                <span class="filter-settings-content-eight__line"></span>
+                <div class="filter-settings-content-eight-block">
+                    {{ form.input('shale', {'type': 'checkbox','hiddenField': false,'label': {'text': 'хайтек', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                    {{ form.input('remont', {'type': 'checkbox','hiddenField': false,'label': {'text': 'с ремонтом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                    {{ form.input('sea_view', {'type': 'checkbox','hiddenField': false,'label': {'text': 'вид на море', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                    {{ form.input('swimming_pool', {'type': 'checkbox','hiddenField': false,'label': {'text': 'с бассейном', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                    {{ form.input('bath_house', {'type': 'checkbox','hiddenField': false,'label': {'text': 'с баней', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                    {{ form.input('garage_type', {'type': 'checkbox','hiddenField': false, 'label': {'text': 'с гаражом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                    {{ form.input('guest_house', {'type': 'checkbox', 'hiddenField': false, 'value': 2, 'label': {'text': 'гостевой дом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none' }) }}
+                </div>
+            </div>
+            {% set applyFilterClass = attribute(_view.request, 'query') ? 'active' : '' %}
+            <button class="filter-settings-content-button {{ applyFilterClass }}" type="submit">Показать</button>
+        </div>
+        {% if showMapButton %}
+            <button class="filter-settings-button" type="submit" formaction="{{ form.url({'plugin':'agency','controller':'realty','action':'map'}) }}">
+                <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7188 6.09375C11.7188 4.97487 11.2743 3.90181 10.4831 3.11064C9.69194 2.31947 8.61888 1.875 7.5 1.875C6.38112 1.875 5.30806 2.31947 4.51689 3.11064C3.72572 3.90181 3.28125 4.97487 3.28125 6.09375C3.28125 7.82438 4.66594 10.08 7.5 12.7819C10.3341 10.08 11.7188 7.82438 11.7188 6.09375ZM7.5 14.0625C4.06219 10.9378 2.34375 8.28094 2.34375 6.09375C2.34375 4.72623 2.887 3.41472 3.85398 2.44773C4.82097 1.48075 6.13248 0.9375 7.5 0.9375C8.86752 0.9375 10.179 1.48075 11.146 2.44773C12.113 3.41472 12.6562 4.72623 12.6562 6.09375C12.6562 8.28094 10.9378 10.9378 7.5 14.0625Z" fill="white"/><path d="M7.5 6.5625C7.74864 6.5625 7.9871 6.46373 8.16291 6.28791C8.33873 6.1121 8.4375 5.87364 8.4375 5.625C8.4375 5.37636 8.33873 5.1379 8.16291 4.96209C7.9871 4.78627 7.74864 4.6875 7.5 4.6875C7.25136 4.6875 7.0129 4.78627 6.83709 4.96209C6.66127 5.1379 6.5625 5.37636 6.5625 5.625C6.5625 5.87364 6.66127 6.1121 6.83709 6.28791C7.0129 6.46373 7.25136 6.5625 7.5 6.5625ZM7.5 7.5C7.00272 7.5 6.52581 7.30246 6.17417 6.95083C5.82254 6.59919 5.625 6.12228 5.625 5.625C5.625 5.12772 5.82254 4.65081 6.17417 4.29917C6.52581 3.94754 7.00272 3.75 7.5 3.75C7.99728 3.75 8.47419 3.94754 8.82582 4.29917C9.17746 4.65081 9.375 5.12772 9.375 5.625C9.375 6.12228 9.17746 6.59919 8.82582 6.95083C8.47419 7.30246 7.99728 7.5 7.5 7.5ZM12.5625 10.3125L14.0625 14.0625H9.84375V13.125H5.15625V14.0625H0.9375L2.4375 10.3125H12.5625ZM11.5528 10.3125H3.44719L2.32219 13.125H12.6778L11.5528 10.3125Z" fill="white"/></svg>
+                <span>на карте</span>
+            </button>
+        {% endif %}
+    {{ form.end() }}
+</div>
