@@ -221,7 +221,7 @@
                             </div>
                             <div class="filter-objects-card-box-numbers">
                                 <div class="filter-objects-card-box-numbers-item">
-                                    <span class="filter-objects-card-box-numbers-item__price">{{ item.Advertisement.price|number_format(0, '', ' ') }}₽</span>
+                                    <span class="filter-objects-card-box-numbers-item__price">{{ ((item.Advertisement.price) / 1000000)|round }}М₽</span>
                                 </div>
                                 {% if session.read('Auth.User.id') and item.Advertisement.commission %}
                                     <div class="filter-objects-card-box-numbers-item commission_hidden">

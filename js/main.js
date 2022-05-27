@@ -13,8 +13,8 @@ $(() => {
         window.location.href = url.toString();
     });
 
-    $('.phone-mask').mask('8 (000) 000-00-00');
-    $('.price-mask').mask("000 000 000 000 000", {reverse: true});
+    // $('.phone-mask').mask('8 (000) 000-00-00');
+    // $('.price-mask').mask("000 000 000 000 000", {reverse: true});
 
     $('#btnLogout').on('click', (e) => {
         $.get(e.target.href, function () {
@@ -22,7 +22,7 @@ $(() => {
         });
     });
 
-    $(".header-person-menu-list-btn").on('click', (e) => {
+    $('.header-person-menu-list-btn').on('click', (e) => {
         if($(e.currentTarget).hasClass('active')) {
             $('body').addClass('with_client');
         } else {

@@ -1,5 +1,34 @@
 </main>
-<section class="footer">
+{% if (attribute(_view.request, 'controller') == 'realty') and ((attribute(_view.request, 'action') == 'view') or (attribute(_view.request, 'action') == 'view_slug')) %}
+    <section class="footer-object">
+        <div class="container">
+            <div class="grid footer-object__grid">
+                <a href="#" class="footer-object__btn text-center">хайтек</a>
+                <a href="#" class="footer-object__btn text-center">с ремонтом</a>
+                <a href="#" class="footer-object__btn text-center">вид на море</a>
+                <a href="#" class="footer-object__btn text-center">шале</a>
+                <a href="#" class="footer-object__btn text-center">с бассейном</a>
+                <a href="#" class="footer-object__btn text-center">с баней</a>
+                <a href="#" class="footer-object__btn text-center">с гаражом</a>
+                <a href="#" class="footer-object__btn text-center">гостевой дом</a>
+            </div>
+            <div class="row">
+                <div class="col-12 d-flex justify-content-end footer-object__link">
+                    <a href="#" class="project-slider__more d-flex align-items-center">
+                        <span class="project-slider__look grey-text">Перейти к каталогу</span>
+                        <svg class="project-slider__arrow-grey" width="11" height="17" viewBox="0 0 11 17" fill="none"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                  d="M1.74512 17L11 8.5L1.74512 1.09826e-06L-5.61281e-07 1.60278L7.50977 8.5L-1.76723e-06 15.3972L1.74512 17Z"
+                                  fill="#929292"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+{% else %}
+    <section class="footer">
     <div class="container">
         <div class="row">
             <div class="col-12 text-center d-flex flex-column align-items-center justify-content-center">
@@ -14,3 +43,4 @@
         </div>
     </div>
 </section>
+{% endif %}

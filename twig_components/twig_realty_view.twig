@@ -1,0 +1,18 @@
+{% set adView = _view.loadHelper('Agency.AdView') %}
+{% set adSeo = _view.loadHelper('Agency.AdSeo') %}
+{% set favorite = _view.loadHelper('Favorites.Favorite') %}
+{% set complexCategory = _view.loadHelper('ComplexCategories.ComplexCategory') %}
+{{ adView.setOgparh(advertisement) }}
+{{ adSeo.imageSrcLink(advertisement) }}
+{{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
+{% set title = adSeo.pattern_title(advertisement) %}
+{{ _view.assign('title', title) }}
+{{ _view.Html.script('/uploads/assets/js/favorites.js', {'block': 'scriptEndPage'}) }}
+{% set currencyActive = currencyActive|lower %}
+{% set offerAdvertisement = adView.getInfo(advertisement) %}
+
+{% if Advertisement.contract_type_id == 1 %}
+    {{ croogo_region alias = "twig_realty_view_exclusive" }}
+{% else %}
+    {{ croogo_region alias = "twig_realty_view_main" }}
+{% endif %}
