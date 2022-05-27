@@ -43,6 +43,10 @@ $(() => {
 
     myLazyLoad = new LazyLoad();
 
+    $('#copyLink').on('click', function (){
+        navigator.clipboard.writeText(window.location.href);
+    })
+
     $('.filter-settings-content-selection-block-district__button').on('click', (e) => {
         let wrapper = $(e.target).closest('.filter-settings-content-selection-block__info');
         $('[type="checkbox"]', wrapper).each((i, el) => {

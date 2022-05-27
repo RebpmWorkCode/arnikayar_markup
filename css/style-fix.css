@@ -24,6 +24,15 @@ input[type="radio"]:checked + .filter-settings-content-six__button, input[type="
     position: relative;
 }
 
+.header-object__group_block {
+    margin-left: 15px;
+}
+
+.header-object__circle {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
 .add-to-collection {
     height: min-content;
     max-height: 568px;
