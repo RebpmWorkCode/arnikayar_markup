@@ -1,30 +1,16 @@
 <section class="main-slider">
     <div class="swiper main-slider-swiper">
         <div class="swiper-wrapper main-slider-wrapper">
-            <div class="swiper-slide main-slider-slide">
-                <picture>
-                    <source srcset="/uploads/assets/img/object-page/slide-1.webp" type="image/webp">
-                    <img src="/uploads/assets/img/object-page/slide-1.jpg" alt="фото объекта" class="main-slider__image">
-                </picture>
-            </div>
-            <div class="swiper-slide main-slider-slide">
-                <picture>
-                    <source srcset="/uploads/assets/img/object-page/slide-2.webp" type="image/webp">
-                    <img src="/uploads/assets/img/object-page/slide-2.jpg" alt="фото объекта" class="main-slider__image">
-                </picture>
-            </div>
-            <div class="swiper-slide main-slider-slide">
-                <picture>
-                    <source srcset="/uploads/assets/img/object-page/slide-3.webp" type="image/webp">
-                    <img src="/uploads/assets/img/object-page/slide-3.jpg" alt="фото объекта" class="main-slider__image">
-                </picture>
-            </div>
-            <div class="swiper-slide main-slider-slide">
-                <picture>
-                    <source srcset="/uploads/assets/img/object-page/slide-4.webp" type="image/webp">
-                    <img src="/uploads/assets/img/object-page/slide-4.jpg" alt="фото объекта" class="main-slider__image">
-                </picture>
-            </div>
+            {% set gallery = adView.getGallery(advertisement) %}
+            {% set galleryList = gallery.items ?: [gallery.first] %}
+            {% set galleryResizeList = imageResized.resizePicture(galleryList, {'width': '800', 'height': '610', 'mode': 'crop', 'paddings': false, 'folder': 'twig_crop_realty_view_1'}) %}
+            {% for galleryItem in galleryResizeList %}
+                <div class="swiper-slide main-slider-slide">
+                    <picture>
+                        <img src="{{ galleryItem.src }}" alt="{{ galleryItem.description }}" class="main-slider__image">
+                    </picture>
+                </div>
+            {% endfor %}
         </div>
         <div class="swiper-button-next main-slider-button-next main-slider-button">
             <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
@@ -58,8 +44,7 @@
                             d="M4.875 1.5H25.125C26.0201 1.5 26.8785 1.85558 27.5115 2.48851C28.1444 3.12145 28.5 3.97989 28.5 4.875V25.125C28.5 26.0201 28.1444 26.8785 27.5115 27.5115C26.8785 28.1444 26.0201 28.5 25.125 28.5H4.875C3.97989 28.5 3.12145 28.1444 2.48851 27.5115C1.85558 26.8785 1.5 26.0201 1.5 25.125V4.875C1.5 3.97989 1.85558 3.12145 2.48851 2.48851C3.12145 1.85558 3.97989 1.5 4.875 1.5ZM15.8438 15.8438V25.9688H25.9688V15.8438H15.8438ZM4.03125 15.8438V25.9688H14.1562V15.8438H4.03125ZM15.8438 4.03125V14.1562H25.9688V4.03125H15.8438ZM4.03125 4.03125V14.1562H14.1562V4.03125H4.03125Z"
                             fill="#929292"/>
                     </svg>
-                    <span class="description__desc-left">Участок по документам: <span>12
-                                        соток</span></span>
+                    <span class="description__desc-left">Участок по документам: <span>12соток</span></span>
                 </div>
                 <span class="description__desc grey-text">Участок по факту: <span>12
                                     соток</span></span>

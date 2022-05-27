@@ -1,3 +1,4 @@
+let myLazyLoad;
 $(() => {
     $('.select-sorting').select2({
         theme: 'realty-sorting',
@@ -39,5 +40,7 @@ $(() => {
             }
         })
     }
+
+    myLazyLoad = new LazyLoad();
 
 })

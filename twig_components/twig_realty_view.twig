@@ -11,7 +11,7 @@
 {% set currencyActive = currencyActive|lower %}
 {% set offerAdvertisement = adView.getInfo(advertisement) %}
 
-{% if Advertisement.contract_type_id == 1 %}
+{% if advertisement.Advertisement.contract_type_id == 1 %}
     {{ croogo_region alias = "twig_realty_view_exclusive" }}
 {% else %}
     {{ croogo_region alias = "twig_realty_view_main" }}
