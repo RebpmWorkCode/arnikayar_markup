@@ -43,4 +43,18 @@ $(() => {
 
     myLazyLoad = new LazyLoad();
 
+    $('.filter-settings-content-selection-block-district__button').on('click', (e) => {
+        let wrapper = $(e.target).closest('.filter-settings-content-selection-block__info');
+        $('[type="checkbox"]', wrapper).each((i, el) => {
+            $(el).get(0).checked = true;
+            $(el).trigger('change');
+        });
+    })
+    $('.filter-settings-content-selection-navigation__reset').on('click', (e) => {
+        $('.filter-settings-content-selection-block [type="checkbox"]:checked').each((i, el) => {
+            $(el).attr('checked', false);
+            $(el).trigger('change');
+        })
+    })
+
 })

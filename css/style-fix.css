@@ -20,6 +20,10 @@ input[type="radio"]:checked + .filter-settings-content-six__button, input[type="
     height: 35rem;
 }
 
+.filter-settings-content-selection-block-item {
+    position: relative;
+}
+
 @media (min-width: 992px) {
     .filter-settings {
         width: 267px;
