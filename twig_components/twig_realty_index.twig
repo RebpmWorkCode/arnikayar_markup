@@ -9,39 +9,19 @@
 {{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
 {{ _view.assign('title', adSeo.titleList()) }}
 {{ _view.Html.script('/uploads/assets/js/favorites.js', {'block': 'scriptCustom'}) }}
-
 <div class="add-to-collection">
     <button class="add-to-collection-button">
-				<span class="add-to-collection-button__icon">
-					<svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<path fill-rule="evenodd" clip-rule="evenodd"
-                              d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z"
-                              fill="#929292"/>
-					</svg>
-				</span>
+        <span class="add-to-collection-button__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
         <span class="add-to-collection-button__text">Назад</span>
     </button>
     <div class="add-to-collection-block">
         <h2 class="add-to-collection-block__title">Добавить в подборку</h2>
         <div class="add-to-collection-block-top">
-            <picture>
-                <source srcset="/uploads/assets/img/filter/oval.webp" type="image/webp">
-                <img src="/uploads/assets/img/filter/oval.png" alt="Изображение"
-                     class="add-to-collection-block-top__img"></picture>
+            <picture><source srcset="/uploads/assets/img/filter/oval.webp" type="image/webp"><img src="/uploads/assets/img/filter/oval.png" alt="Изображение" class="add-to-collection-block-top__img"></picture>
             <div class="add-to-collection-block-top-info">
-                <span
-                    class="add-to-collection-block-top-info__text">Дом, баня и бассейн с видом на горы в с. Каштаны</span>
+                <span class="add-to-collection-block-top-info__text">Дом, баня и бассейн с видом на горы в с. Каштаны</span>
                 <div class="add-to-collection-block-top-info-description">
-                    <div class="add-to-collection-block-top-info-description__icon">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M15.625 8.20825C15.625 6.71641 15.0324 5.28567 13.9775 4.23078C12.9226 3.17588 11.4918 2.58325 10 2.58325C8.50816 2.58325 7.07742 3.17588 6.02252 4.23078C4.96763 5.28567 4.375 6.71641 4.375 8.20825C4.375 10.5158 6.22125 13.5233 10 17.1258C13.7788 13.5233 15.625 10.5158 15.625 8.20825ZM10 18.8333C5.41625 14.667 3.125 11.1245 3.125 8.20825C3.125 6.38489 3.84933 4.63621 5.13864 3.34689C6.42795 2.05758 8.17664 1.33325 10 1.33325C11.8234 1.33325 13.572 2.05758 14.8614 3.34689C16.1507 4.63621 16.875 6.38489 16.875 8.20825C16.875 11.1245 14.5837 14.667 10 18.8333Z"
-                                fill="#929292"/>
-                            <path
-                                d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z"
-                                fill="#929292"/>
-                        </svg>
-                    </div>
+                    <div class="add-to-collection-block-top-info-description__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.625 8.20825C15.625 6.71641 15.0324 5.28567 13.9775 4.23078C12.9226 3.17588 11.4918 2.58325 10 2.58325C8.50816 2.58325 7.07742 3.17588 6.02252 4.23078C4.96763 5.28567 4.375 6.71641 4.375 8.20825C4.375 10.5158 6.22125 13.5233 10 17.1258C13.7788 13.5233 15.625 10.5158 15.625 8.20825ZM10 18.8333C5.41625 14.667 3.125 11.1245 3.125 8.20825C3.125 6.38489 3.84933 4.63621 5.13864 3.34689C6.42795 2.05758 8.17664 1.33325 10 1.33325C11.8234 1.33325 13.572 2.05758 14.8614 3.34689C16.1507 4.63621 16.875 6.38489 16.875 8.20825C16.875 11.1245 14.5837 14.667 10 18.8333Z" fill="#929292"/><path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/></svg></div>
                     <span class="add-to-collection-block-top-info-description__text">село Каштаны</span>
                 </div>
             </div>
@@ -49,95 +29,77 @@
         <div class="add-to-collection-block-button">
             <button class="add-to-collection-block-button-btn">
                 <span class="add-to-collection-block-button-btn__text">Создать новую подборку</span>
-                <span class="add-to-collection-block-button-btn__icon">
-							<svg width="15" height="15" viewBox="0 0 15 15" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-								<path
-                                    d="M5.95147 14.4231H7.31787C7.43933 14.4231 7.50006 14.374 7.50006 14.2757V1.3013C7.50006 1.20301 7.43933 1.15386 7.31787 1.15386H5.95147C5.83002 1.15386 5.76929 1.20301 5.76929 1.3013V14.2757C5.76929 14.374 5.83002 14.4231 5.95147 14.4231Z"
-                                    fill="#929292"/>
-								<path
-                                    d="M0.154293 8.65381H13.1149C13.2178 8.65381 13.2692 8.59308 13.2692 8.47162V7.10523C13.2692 6.98377 13.2178 6.92304 13.1149 6.92304H0.154293C0.0514311 6.92304 0 6.98377 0 7.10523V8.47162C0 8.59308 0.0514311 8.65381 0.154293 8.65381Z"
-                                    fill="#929292"/>
-							</svg>
-						</span>
+                <span class="add-to-collection-block-button-btn__icon"><svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.95147 14.4231H7.31787C7.43933 14.4231 7.50006 14.374 7.50006 14.2757V1.3013C7.50006 1.20301 7.43933 1.15386 7.31787 1.15386H5.95147C5.83002 1.15386 5.76929 1.20301 5.76929 1.3013V14.2757C5.76929 14.374 5.83002 14.4231 5.95147 14.4231Z" fill="#929292"/><path d="M0.154293 8.65381H13.1149C13.2178 8.65381 13.2692 8.59308 13.2692 8.47162V7.10523C13.2692 6.98377 13.2178 6.92304 13.1149 6.92304H0.154293C0.0514311 6.92304 0 6.98377 0 7.10523V8.47162C0 8.59308 0.0514311 8.65381 0.154293 8.65381Z" fill="#929292"/></svg></span>
             </button>
         </div>
         <div class="add-to-collection-block-content">
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
             <div class="add-to-collection-block-content-item">
-                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes"
-                       class="add-to-collection-block-content-item__checkbox">
+                <input type="checkbox" id="add-to-collection-1" name="add-to-collection-1" value="yes" class="add-to-collection-block-content-item__checkbox">
                 <label for="add-to-collection-1" class="add-to-collection-block-content-item__label">
-							<span class="add-to-collection-block-content-item__label-info">
-								<span class="add-to-collection-block-content-item__label-text">Донская</span>
-								<span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
-							</span>
+                    <span class="add-to-collection-block-content-item__label-info">
+                        <span class="add-to-collection-block-content-item__label-text">Донская</span>
+                        <span class="add-to-collection-block-content-item__label-number">1 ЖК</span>
+                    </span>
                 </label>
             </div>
         </div>
         <button class="add-to-collection-block__btn">Готово</button>
     </div>
 </div>
-
 <section class="filter">
     <div class="container">
         <div class="filter-block row">
@@ -195,28 +157,12 @@
                                     <svg data-icon="remove" class="{{ isFavorite ? '' : 'd-none'}}" width="22" height="23" viewBox="0 0 22 23" fill="#ff6915" xmlns="http://www.w3.org/2000/svg"><path d="M6.57967 3.50586C4.13854 3.50586 2.15894 5.46513 2.15894 7.88238C2.15894 9.83369 2.93256 14.4649 10.5477 19.1464C10.6841 19.2294 10.8407 19.2733 11.0004 19.2733C11.1601 19.2733 11.3167 19.2294 11.4531 19.1464C19.0682 14.4649 19.8419 9.83369 19.8419 7.88238C19.8419 5.46513 17.8623 3.50586 15.4211 3.50586C12.98 3.50586 11.0004 6.1583 11.0004 6.1583C11.0004 6.1583 9.0208 3.50586 6.57967 3.50586Z" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
                                 </button>
                                 <button class="filter-objects-card-box-elements-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z"
-                                            fill="white"/>
-                                    </svg>
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M16.4394 8.59472C15.8009 8.59472 15.2117 8.37069 14.7502 7.99655L10.1082 11.3548C10.1859 11.7815 10.1859 12.2186 10.1082 12.6453L14.7502 16.0036C15.2117 15.6294 15.8009 15.4054 16.4394 15.4054C17.9225 15.4054 19.1278 16.6107 19.1278 18.0938C19.1278 19.5769 17.9225 20.7822 16.4394 20.7822C14.9563 20.7822 13.751 19.5769 13.751 18.0938C13.751 17.8339 13.7868 17.5852 13.8563 17.3478L9.44728 14.1553C8.7931 15.0223 7.75358 15.5846 6.58187 15.5846C4.6014 15.5846 2.99731 13.9805 2.99731 12.0001C2.99731 10.0196 4.6014 8.4155 6.58187 8.4155C7.75358 8.4155 8.7931 8.97782 9.44728 9.84484L13.8563 6.65234C13.7868 6.41486 13.751 6.16395 13.751 5.90631C13.751 4.42319 14.9563 3.21789 16.4394 3.21789C17.9225 3.21789 19.1278 4.42319 19.1278 5.90631C19.1278 7.38942 17.9225 8.59472 16.4394 8.59472ZM16.4394 19.2588C17.0824 19.2588 17.6044 18.7368 17.6044 18.0938C17.6044 17.4508 17.0824 16.9288 16.4394 16.9288C15.7964 16.9288 15.2744 17.4508 15.2744 18.0938C15.2744 18.7368 15.7964 19.2588 16.4394 19.2588ZM6.58187 10.0285C5.4953 10.0285 4.61037 10.9135 4.61037 12.0001C4.61037 13.0866 5.4953 13.9716 6.58187 13.9716C7.66844 13.9716 8.55338 13.0866 8.55338 12.0001C8.55338 10.9135 7.66844 10.0285 6.58187 10.0285ZM16.4394 4.74132C15.7964 4.74132 15.2744 5.26333 15.2744 5.90631C15.2744 6.54929 15.7964 7.07129 16.4394 7.07129C17.0824 7.07129 17.6044 6.54929 17.6044 5.90631C17.6044 5.26333 17.0824 4.74132 16.4394 4.74132Z" fill="white"/></svg>
                                 </button>
                                 {% if session.read('Auth.User.id') %}
                                     <button class="filter-objects-card-box-elements-icon">
-                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z"
-                                            fill="white"/>
-                                        <path
-                                            d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z"
-                                            fill="white"/>
-                                        <path
-                                            d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z"
-                                            fill="white"/>
-                                    </svg>
-                                </button>
+                                        <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M18.4794 6.30118H10.0152L8.57544 4.36073C8.45939 4.20525 8.30741 4.07886 8.13192 3.9919C7.95643 3.90493 7.76241 3.85986 7.56572 3.86036H3.52061C3.19 3.86036 2.87293 3.98893 2.63916 4.21781C2.40538 4.44668 2.27405 4.7571 2.27405 5.08077V18.5053C2.27405 18.829 2.40538 19.1394 2.63916 19.3683C2.87293 19.5972 3.19 19.7257 3.52061 19.7257H18.4794C18.81 19.7257 19.1271 19.5972 19.3609 19.3683C19.5946 19.1394 19.726 18.829 19.726 18.5053V7.5216C19.726 7.19792 19.5946 6.88751 19.3609 6.65863C19.1271 6.42976 18.81 6.30118 18.4794 6.30118ZM18.4794 18.5053H3.52061V8.74201H8.07681C8.40742 8.74201 8.72449 8.61343 8.95827 8.38456C9.19204 8.15569 9.32338 7.84527 9.32338 7.5216H3.52061V5.08077H7.56572L9.19249 7.27141C9.25051 7.34915 9.3265 7.41234 9.41425 7.45583C9.50199 7.49931 9.599 7.52185 9.69735 7.5216H18.4794V18.5053Z" fill="white"/><path d="M11.0987 16.625H11.8388C11.9046 16.625 11.9375 16.6007 11.9375 16.5521V10.1354C11.9375 10.0868 11.9046 10.0625 11.8388 10.0625H11.0987C11.0329 10.0625 11 10.0868 11 10.1354V16.5521C11 16.6007 11.0329 16.625 11.0987 16.625Z" fill="white"/><path d="M8.26381 13.8125H14.6737C14.7246 13.8125 14.75 13.7796 14.75 13.7138V12.9737C14.75 12.9079 14.7246 12.875 14.6737 12.875H8.26381C8.21294 12.875 8.1875 12.9079 8.1875 12.9737V13.7138C8.1875 13.7796 8.21294 13.8125 8.26381 13.8125Z" fill="white"/></svg>
+                                    </button>
                                 {% endif %}
                             </div>
                             <div class="filter-objects-card-box-numbers">
@@ -231,83 +177,44 @@
                             </div>
                         </div>
                         <div class="filter-objects-card-info">
-                        <div class="filter-objects-card-info-top">
-                            {% set siteArea = complexCategory.getViewAliasesOptions('site_area', paramsValues) %}
-                            {% if siteArea %}
-                                <div class="filter-objects-card-info-top-item">
-                                    <div class="filter-objects-card-info-top-item__icon">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z"
-                                                fill="#929292"/>
-                                        </svg>
+                            <div class="filter-objects-card-info-top">
+                                {% set siteArea = complexCategory.getViewAliasesOptions('site_area', paramsValues) %}
+                                {% if siteArea %}
+                                    <div class="filter-objects-card-info-top-item">
+                                        <div class="filter-objects-card-info-top-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3.25 1H16.75C17.3467 1 17.919 1.23705 18.341 1.65901C18.7629 2.08097 19 2.65326 19 3.25V16.75C19 17.3467 18.7629 17.919 18.341 18.341C17.919 18.7629 17.3467 19 16.75 19H3.25C2.65326 19 2.08097 18.7629 1.65901 18.341C1.23705 17.919 1 17.3467 1 16.75V3.25C1 2.65326 1.23705 2.08097 1.65901 1.65901C2.08097 1.23705 2.65326 1 3.25 1ZM10.5625 10.5625V17.3125H17.3125V10.5625H10.5625ZM2.6875 10.5625V17.3125H9.4375V10.5625H2.6875ZM10.5625 2.6875V9.4375H17.3125V2.6875H10.5625ZM2.6875 2.6875V9.4375H9.4375V2.6875H2.6875Z" fill="#929292"/></svg></div>
+                                        <span class="filter-objects-card-info-top-item__text">{{ siteArea }} сот</span>
                                     </div>
-                                    <span class="filter-objects-card-info-top-item__text">{{ siteArea }} сот</span>
-                                </div>
-                            {% endif %}
+                                {% endif %}
 
-                            {% set area = complexCategory.getViewAliasesOptions('area', paramsValues) %}
-                            {% if area %}
-                                <div class="filter-objects-card-info-top-item">
-                                    <div class="filter-objects-card-info-top-item__icon">
-                                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z"
-                                                  fill="#929292"/>
-                                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                                  d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z"
-                                                  fill="#929292"/>
-                                            <path
-                                                d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806"
-                                                stroke="#929292"/>
-                                        </svg>
+                                {% set area = complexCategory.getViewAliasesOptions('area', paramsValues) %}
+                                {% if area %}
+                                    <div class="filter-objects-card-info-top-item">
+                                        <div class="filter-objects-card-info-top-item__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.93823 13.1458V6.19466H6.00763V13.1458C6.00763 13.2876 6.06397 13.4236 6.16424 13.5239C6.26452 13.6241 6.40052 13.6805 6.54233 13.6805H16.1669C16.3088 13.6805 16.4448 13.6241 16.545 13.5239C16.6453 13.4236 16.7016 13.2876 16.7016 13.1458V6.19466H17.771V13.1458C17.771 13.5712 17.602 13.9792 17.3012 14.28C17.0004 14.5809 16.5924 14.7499 16.1669 14.7499H6.54233C6.1169 14.7499 5.70889 14.5809 5.40806 14.28C5.10724 13.9792 4.93823 13.5712 4.93823 13.1458ZM16.7016 1.38236V5.12526L14.5628 2.98646V1.38236C14.5628 1.24055 14.6192 1.10454 14.7194 1.00427C14.8197 0.903991 14.9557 0.847656 15.0975 0.847656H16.1669C16.3088 0.847656 16.4448 0.903991 16.545 1.00427C16.6453 1.10454 16.7016 1.24055 16.7016 1.38236Z" fill="#929292"/><path fill-rule="evenodd" clip-rule="evenodd" d="M10.5986 0.313106C10.7992 0.112624 11.0711 0 11.3547 0C11.6382 0 11.9102 0.112624 12.1107 0.313106L19.2191 7.42034C19.3195 7.52075 19.3759 7.65692 19.3759 7.79891C19.3759 7.9409 19.3195 8.07708 19.2191 8.17748C19.1186 8.27788 18.9825 8.33429 18.8405 8.33429C18.6985 8.33429 18.5623 8.27788 18.4619 8.17748L11.3547 1.06917L4.24744 8.17748C4.14704 8.27788 4.01086 8.33429 3.86887 8.33429C3.72688 8.33429 3.59071 8.27788 3.4903 8.17748C3.3899 8.07708 3.3335 7.9409 3.3335 7.79891C3.3335 7.65692 3.3899 7.52075 3.4903 7.42034L10.5986 0.313106Z" fill="#929292"/><path d="M1.45946 15.0001V1.09766M4 17.3904C4 17.3904 13.0327 17.3904 18.5 17.3904M4 17.3904C4 16.8474 4 16.543 4 16.0001M4 17.3904C4 17.9333 4 18.2377 4 18.7806M0 1.09766H2.91892M0 15.0001H2.91892M18.5 16.0001C18.5 17.086 18.5 18.7806 18.5 18.7806" stroke="#929292"/></svg></div>
+                                        <span class="filter-objects-card-info-top-item__text">{{ area }} м<sup>2</sup></span>
                                     </div>
-                                    <span class="filter-objects-card-info-top-item__text">{{ area }} м<sup>2</sup></span>
-                                </div>
-                            {% endif %}
+                                {% endif %}
 
-                            {% set roomsNum = complexCategory.getViewAliasesOptions('rooms_num', paramsValues) %}
-                            {% if roomsNum %}
-                                <div class="filter-objects-card-info-top-item">
-                                    <div class="filter-objects-card-info-top-item__icon">
-                                        <svg width="22" height="20" viewBox="0 0 22 20" fill="none"
-                                             xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z"
-                                                fill="#929292"/>
-                                        </svg>
+                                {% set roomsNum = complexCategory.getViewAliasesOptions('rooms_num', paramsValues) %}
+                                {% if roomsNum %}
+                                    <div class="filter-objects-card-info-top-item">
+                                        <div class="filter-objects-card-info-top-item__icon"><svg width="22" height="20" viewBox="0 0 22 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M19.6446 14.8864H20.1446V14.3864H19.6446V14.8864ZM19.6651 9.9395V10.4395H20.1651V9.9395H19.6651ZM2.33492 9.9395H1.83492V10.4395H2.33492V9.9395ZM2.35478 14.8864V14.3864H1.85478V14.8864H2.35478ZM3.72217 8.83761V4.42829H2.72217V8.83761H3.72217ZM3.72217 4.42829C3.72217 4.47048 3.68868 4.5 3.65254 4.5V3.5C3.14195 3.5 2.72217 3.91266 2.72217 4.42829H3.72217ZM3.65254 4.5H18.3474V3.5H3.65254V4.5ZM18.3474 4.5C18.3114 4.5 18.2777 4.46999 18.2777 4.42829H19.2777C19.2777 3.91314 18.8591 3.5 18.3474 3.5V4.5ZM18.2777 4.42829V8.83761H19.2777V4.42829H18.2777ZM4.83301 8.82308V7.87007H3.83301V8.82308H4.83301ZM4.83301 7.87007C4.83301 7.68379 4.88221 7.53832 4.93539 7.45497C4.99233 7.36572 5.00971 7.40255 4.95029 7.40255V6.40255C4.55014 6.40255 4.25887 6.65611 4.09236 6.91711C3.92208 7.184 3.83301 7.52229 3.83301 7.87007H4.83301ZM4.95029 7.40255H9.27128V6.40255H4.95029V7.40255ZM9.27128 7.40255C9.21186 7.40255 9.22924 7.36572 9.28618 7.45497C9.33936 7.53832 9.38856 7.68379 9.38856 7.87007H10.3886C10.3886 7.52229 10.2995 7.184 10.1292 6.91711C9.9627 6.65611 9.67144 6.40255 9.27128 6.40255V7.40255ZM9.38856 7.87007V8.83759H10.3886V7.87007H9.38856ZM12.6108 8.82308V7.87007H11.6108V8.82308H12.6108ZM12.6108 7.87007C12.6108 7.68379 12.66 7.53832 12.7132 7.45497C12.7702 7.36572 12.7875 7.40255 12.7281 7.40255V6.40255C12.328 6.40255 12.0367 6.65611 11.8702 6.91711C11.6999 7.184 11.6108 7.52229 11.6108 7.87007H12.6108ZM12.7281 7.40255H17.0491V6.40255H12.7281V7.40255ZM17.0491 7.40255C16.9897 7.40255 17.0071 7.36572 17.064 7.45497C17.1172 7.53832 17.1664 7.68379 17.1664 7.87007H18.1664C18.1664 7.52229 18.0773 7.184 17.907 6.91711C17.7405 6.65611 17.4493 6.40255 17.0491 6.40255V7.40255ZM17.1664 7.87007V8.83759H18.1664V7.87007H17.1664ZM9.721 15.3864H19.6446V14.3864H9.721V15.3864ZM19.1446 14.8864V16.0263H20.1446V14.8864H19.1446ZM19.1446 16.0263C19.1446 16.6884 19.7542 17.0778 20.3064 17.0778V16.0778C20.2347 16.0778 20.184 16.0533 20.1586 16.0321C20.1341 16.0117 20.1446 16.0074 20.1446 16.0263H19.1446ZM20.3064 17.0778H20.3382V16.0778H20.3064V17.0778ZM20.3382 17.0778C20.8904 17.0778 21.5 16.6884 21.5 16.0263H20.5C20.5 16.0074 20.5104 16.0117 20.486 16.0321C20.4606 16.0533 20.4098 16.0778 20.3382 16.0778V17.0778ZM21.5 16.0263V9.38911H20.5V16.0263H21.5ZM21.5 9.38911C21.5 8.72703 20.8904 8.33762 20.3382 8.33762V9.33762C20.4098 9.33762 20.4606 9.36212 20.486 9.38333C20.5104 9.40368 20.5 9.40796 20.5 9.38911H21.5ZM20.3382 8.33762H20.3269V9.33762H20.3382V8.33762ZM20.3269 8.33762C19.7737 8.33762 19.1651 8.72732 19.1651 9.38911H20.1651C20.1651 9.40759 20.1548 9.40335 20.179 9.38322C20.2042 9.36221 20.2548 9.33762 20.3269 9.33762V8.33762ZM19.1651 9.38911V9.9395H20.1651V9.38911H19.1651ZM19.6651 9.4395H10.1757V10.4395H19.6651V9.4395ZM10.1757 10.4395H10.907V9.4395H10.1757V10.4395ZM10.907 9.4395H2.33492V10.4395H10.907V9.4395ZM2.83492 9.9395V9.38911H1.83492V9.9395H2.83492ZM2.83492 9.38911C2.83492 8.72703 2.2253 8.33762 1.67309 8.33762V9.33762C1.74476 9.33762 1.79547 9.36212 1.82093 9.38333C1.84535 9.40368 1.83492 9.40796 1.83492 9.38911H2.83492ZM1.67309 8.33762H1.66184V9.33762H1.67309V8.33762ZM1.66184 8.33762C1.10963 8.33762 0.5 8.72703 0.5 9.38911H1.5C1.5 9.40796 1.48957 9.40368 1.514 9.38333C1.53945 9.36212 1.59016 9.33762 1.66184 9.33762V8.33762ZM0.5 9.38911V16.0263H1.5V9.38911H0.5ZM0.5 16.0263C0.5 16.6884 1.10963 17.0778 1.66184 17.0778V16.0778C1.59016 16.0778 1.53945 16.0533 1.514 16.0321C1.48957 16.0117 1.5 16.0074 1.5 16.0263H0.5ZM1.66184 17.0778H1.69294V16.0778H1.66184V17.0778ZM1.69294 17.0778C2.24616 17.0778 2.85478 16.6881 2.85478 16.0263H1.85478C1.85478 16.0078 1.86504 16.0121 1.8409 16.0322C1.8157 16.0532 1.7651 16.0778 1.69294 16.0778V17.0778ZM2.85478 16.0263V14.8864H1.85478V16.0263H2.85478ZM2.35478 15.3864H11.3061V14.3864H2.35478V15.3864Z" fill="#929292"/></svg></div>
+                                        <span class="filter-objects-card-info-top-item__text">{{ roomsNum }}</span>
                                     </div>
-                                    <span class="filter-objects-card-info-top-item__text">{{ roomsNum }}</span>
-                                </div>
-                            {% endif %}
-                        </div>
-                        <div class="filter-objects-card-info-center">
-									<span>
-										{{ offerItem.title[:50] }}
-									</span>
-                        </div>
-                        <div class="filter-objects-card-info-bottom">
-                            <div class="filter-objects-card-info-bottom-item">
-                                <div class="filter-objects-card-info-bottom-item-icon">
-                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
-                                         xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z"
-                                            fill="#929292"/>
-                                        <path
-                                            d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z"
-                                            fill="#929292"/>
-                                    </svg>
-                                </div>
-                                {% if item.Location.Locality.title %}
-                                    <span class="filter-objects-card-info-bottom-item__text">{{ item.Location.Locality.title }}</span>
                                 {% endif %}
                             </div>
+                            <div class="filter-objects-card-info-center">
+                                <span>{{ offerItem.title[:50] }}</span>
+                            </div>
+                            <div class="filter-objects-card-info-bottom">
+                                <div class="filter-objects-card-info-bottom-item">
+                                    <div class="filter-objects-card-info-bottom-item-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.625 8.125C15.625 6.63316 15.0324 5.20242 13.9775 4.14752C12.9226 3.09263 11.4918 2.5 10 2.5C8.50816 2.5 7.07742 3.09263 6.02252 4.14752C4.96763 5.20242 4.375 6.63316 4.375 8.125C4.375 10.4325 6.22125 13.44 10 17.0425C13.7788 13.44 15.625 10.4325 15.625 8.125ZM10 18.75C5.41625 14.5837 3.125 11.0413 3.125 8.125C3.125 6.30164 3.84933 4.55295 5.13864 3.26364C6.42795 1.97433 8.17664 1.25 10 1.25C11.8234 1.25 13.572 1.97433 14.8614 3.26364C16.1507 4.55295 16.875 6.30164 16.875 8.125C16.875 11.0413 14.5837 14.5837 10 18.75Z" fill="#929292"/><path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/></svg></div>
+                                    {% if item.Location.Locality.title %}
+                                        <span class="filter-objects-card-info-bottom-item__text">{{ item.Location.Locality.title }}</span>
+                                    {% endif %}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </a>
+                    </a>
                 {% endfor %}
                 <button class="filter-objects-open filter-open">фильтр</button>
             </div>
@@ -479,161 +386,69 @@
                                 </span>
                             </div>
                         </div>
-                        {% set priceOptions = attribute(searchFields, 'Advertisement.price') %}
-                        {% if priceOptions %}
-                            <div class="filter-settings-content-two" data-alias="price">
-                                <span class="filter-settings-content-two__text">Цена</span>
-                                <div class="filter-settings-content-two-inputs">
-                                    {{ form.input('price_from', {'class': 'filter-settings-content-two-inputs-input price-mask', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Цена от, ₽'}) }}
-                                    {{ form.input('price_to', {'class': 'filter-settings-content-two-inputs-input price-mask', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Цена до, ₽'}) }}
-                                </div>
+                        <div class="filter-settings-content-two" data-alias="price">
+                            <span class="filter-settings-content-two__text">Цена</span>
+                            <div class="filter-settings-content-two-inputs">
+                                {{ form.input('price_from', {'class': 'filter-settings-content-two-inputs-input price-mask', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Цена от, ₽'}) }}
+                                {{ form.input('price_to', {'class': 'filter-settings-content-two-inputs-input price-mask', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Цена до, ₽'}) }}
                             </div>
-                        {% endif %}
-                        {% set siteAreaOptions = attribute(searchFields, 'site_area') %}
-                        {% if siteAreaOptions %}
-                            <div class="filter-settings-content-two" data-alias="site_area">
-                                <span class="filter-settings-content-two__text">Участок</span>
-                                <div class="filter-settings-content-two-inputs">
-                                    {{ form.input('site_area_from', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Участок от, сот'}) }}
-                                    {{ form.input('site_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Участок до, сот'}) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-two" data-alias="site_area">
+                            <span class="filter-settings-content-two__text">Участок</span>
+                            <div class="filter-settings-content-two-inputs">
+                                {{ form.input('site_area_from', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Участок от, сот'}) }}
+                                {{ form.input('site_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Участок до, сот'}) }}
                             </div>
-                        {% endif %}
-                        {% set houseAreaOptions = attribute(searchFields, 'house_area') %}
-                        {% if houseAreaOptions %}
-                            <div class="filter-settings-content-two" data-alias="house_area">
-                                <span class="filter-settings-content-two__text">Площадь дома</span>
-                                <div class="filter-settings-content-two-inputs">
-                                    {{ form.input('house_area_from', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь от, м²'}) }}
-                                    {{ form.input('house_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь до, м²'}) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-two" data-alias="house_area">
+                            <span class="filter-settings-content-two__text">Площадь дома</span>
+                            <div class="filter-settings-content-two-inputs">
+                                {{ form.input('house_area_from', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь от, м²'}) }}
+                                {{ form.input('house_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь до, м²'}) }}
                             </div>
-                        {% endif %}
-                        {% set kolichestvoSpalnyhMestOptions = attribute(searchFields, 'kolichestvo_spalnyh_mest') %}
-                        {% if kolichestvoSpalnyhMestOptions %}
-                            <div class="filter-settings-content-six" data-alias="kolichestvo_spalnyh_mest">
-                                <span class="filter-settings-content-six__text">Количество спален</span>
-                                <div class="filter-settings-content-six-buttons">
-                                    {{ form.input('kolichestvo_spalnyh_mest', {
-                                        'type': 'radio',
-                                        'multiple': 'select',
-                                        'options': {
-                                            '1': '1',
-                                            '2': '2',
-                                            '3': '3',
-                                            '4': '4',
-                                            '5': '5',
-                                            '6': '6+',
-                                        },
-                                        'hiddenField': false,
-                                        'div': false,
-                                        'legend': false,
-                                        'label': {'class': 'filter-settings-content-six__button'},
-                                        'fieldset': false,
-                                    }) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-six" data-alias="kolichestvo_spalnyh_mest">
+                            <span class="filter-settings-content-six__text">Количество спален</span>
+                            <div class="filter-settings-content-six-buttons">
+                                {{ form.input('kolichestvo_spalnyh_mest', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'1': '1','2': '2','3': '3','4': '4','5': '5','6': '6+',},'hiddenField': false,'div': false,'legend': false,'label': {'class': 'filter-settings-content-six__button'},'fieldset': false,}) }}
                             </div>
-                        {% endif %}
-                        {% set interiorDecorationOptions = attribute(searchFields, 'interior_decoration') %}
-                        {% if interiorDecorationOptions %}
-                            <div class="filter-settings-content-three" data-alias="interior_decoration">
-                                <span class="filter-settings-content-three__text">Ремонт</span>
-                                <div class="filter-settings-content-three-buttons">
-                                    {{ form.input('interior_decoration', {
-                                        'type': 'radio',
-                                        'multiple': 'select',
-                                        'options': interiorDecorations,
-                                        'div': false,
-                                        'legend': false,
-                                        'hiddenField': false,
-                                        'label': {'class': 'filter-settings-content-three__button'},
-                                        'fieldset': false,
-                                    }) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-three" data-alias="interior_decoration">
+                            <span class="filter-settings-content-three__text">Ремонт</span>
+                            <div class="filter-settings-content-three-buttons">
+                                {{ form.input('interior_decoration', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': interiorDecorations,'div': false,'legend': false,'hiddenField': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
                             </div>
-                        {% endif %}
-                        {% set numberOfFloorsOptions = attribute(searchFields, 'number_of_floors') %}
-                        {% if numberOfFloorsOptions %}
-                            <div class="filter-settings-content-six" data-alias="number_of_floors">
-                                <span class="filter-settings-content-six__text">Количество этажей</span>
-                                <div class="filter-settings-content-six-buttons">
-                                    {{ form.input('number_of_floors', {
-                                        'type': 'radio',
-                                        'multiple': 'select',
-                                        'options': {
-                                            '1': '1',
-                                            '2': '2',
-                                            '3': '3',
-                                            '4': '4',
-                                            '5': '5',
-                                            '6': '6+',
-                                        },
-                                        'hiddenField': false,
-                                        'div': false,
-                                        'legend': false,
-                                        'label': {'class': 'filter-settings-content-six__button'},
-                                        'fieldset': false,
-                                    }) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-six" data-alias="number_of_floors">
+                            <span class="filter-settings-content-six__text">Количество этажей</span>
+                            <div class="filter-settings-content-six-buttons">
+                                {{ form.input('number_of_floors', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'1': '1','2': '2','3': '3','4': '4','5': '5','6': '6+',},'hiddenField': false,'div': false,'legend': false,'label': {'class': 'filter-settings-content-six__button'},'fieldset': false,}) }}
                             </div>
-                        {% endif %}
-                        {% set avtomobOptions = attribute(searchFields, 'avtomob') %}
-                        {% if avtomobOptions %}
-                            <div class="filter-settings-content-three" data-alias="avtomob">
-                                <span class="filter-settings-content-three__text">Расстояние до моря</span>
-                                <div class="filter-settings-content-three-buttons-flex">
-                                    {{ form.input('avtomob_from', {
-                                        'type': 'radio',
-                                        'multiple': 'select',
-                                        'options': {
-                                            '2': 'до 2 км',
-                                            '5': 'до 5 км',
-                                        },
-                                        'div': false,
-                                        'hiddenField': false,
-                                        'legend': false,
-                                        'label': {'class': 'filter-settings-content-three__button'},
-                                        'fieldset': false,
-                                    }) }}
-                                    {{ form.input('avtomob_to', {
-                                        'type': 'radio',
-                                        'multiple': 'select',
-                                        'options': {
-                                            '5': '5км +',
-                                        },
-                                        'div': false,
-                                        'hiddenField': false,
-                                        'legend': false,
-                                        'label': {'class': 'filter-settings-content-three__button'},
-                                        'fieldset': false,
-                                    }) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-three" data-alias="avtomob">
+                            <span class="filter-settings-content-three__text">Расстояние до моря</span>
+                            <div class="filter-settings-content-three-buttons-flex">
+                                {{ form.input('avtomob_from', {'type': 'radio', 'class': 'd-none', 'multiple': 'select','options': {'2': 'до 2 км','5': 'до 5 км',},'div': false,'hiddenField': false,'legend': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
+                                {{ form.input('avtomob_to', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'5': '5км +',},'div': false,'hiddenField': false,'legend': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
                             </div>
-                        {% endif %}
-                        {% if tagsList %}
-                            <div class="filter-settings-content-eight">
-                                <span class="filter-settings-content-eight__line"></span>
-                                <div class="filter-settings-content-eight-block">
-                                    {{ form.input('universal_tag_id', {
-                                        'type': 'radio',
-                                        'multiple': 'select',
-                                        'options': tagsList,
-                                        'div': false,
-                                        'legend': false,
-                                        'hiddenField': false,
-                                        'label': {'class': 'filter-settings-content-eight-block__button'},
-                                        'fieldset': false,
-                                    }) }}
-                                </div>
+                        </div>
+                        <div class="filter-settings-content-eight" data-group="checkbox-aliases">
+                            <span class="filter-settings-content-eight__line"></span>
+                            <div class="filter-settings-content-eight-block">
+                                {{ form.input('shale', {'type': 'checkbox','hiddenField': false,'label': {'text': 'хайтек', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                                {{ form.input('remont', {'type': 'checkbox','hiddenField': false,'label': {'text': 'с ремонтом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                                {{ form.input('sea_view', {'type': 'checkbox','hiddenField': false,'label': {'text': 'вид на море', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                                {{ form.input('swimming_pool', {'type': 'checkbox','hiddenField': false,'label': {'text': 'с бассейном', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                                {{ form.input('bath_house', {'type': 'checkbox','hiddenField': false,'label': {'text': 'с баней', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                                {{ form.input('garage_type', {'type': 'checkbox','hiddenField': false, 'label': {'text': 'с гаражом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                                {{ form.input('guest_house', {'type': 'checkbox', 'hiddenField': false, 'value': 2, 'label': {'text': 'гостевой дом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none' }) }}
                             </div>
-                        {% endif %}
-                        <button class="filter-settings-content-button active" type="submit">Показать</button>
+                        </div>
+                        {% set applyFilterClass = attribute(_view.request, 'query') ? 'active' : '' %}
+                        <button class="filter-settings-content-button {{ applyFilterClass }}" type="submit">Показать</button>
                     </div>
                     <button class="filter-settings-button">
-                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M11.7188 6.09375C11.7188 4.97487 11.2743 3.90181 10.4831 3.11064C9.69194 2.31947 8.61888 1.875 7.5 1.875C6.38112 1.875 5.30806 2.31947 4.51689 3.11064C3.72572 3.90181 3.28125 4.97487 3.28125 6.09375C3.28125 7.82438 4.66594 10.08 7.5 12.7819C10.3341 10.08 11.7188 7.82438 11.7188 6.09375ZM7.5 14.0625C4.06219 10.9378 2.34375 8.28094 2.34375 6.09375C2.34375 4.72623 2.887 3.41472 3.85398 2.44773C4.82097 1.48075 6.13248 0.9375 7.5 0.9375C8.86752 0.9375 10.179 1.48075 11.146 2.44773C12.113 3.41472 12.6562 4.72623 12.6562 6.09375C12.6562 8.28094 10.9378 10.9378 7.5 14.0625Z" fill="white"/>
-                            <path d="M7.5 6.5625C7.74864 6.5625 7.9871 6.46373 8.16291 6.28791C8.33873 6.1121 8.4375 5.87364 8.4375 5.625C8.4375 5.37636 8.33873 5.1379 8.16291 4.96209C7.9871 4.78627 7.74864 4.6875 7.5 4.6875C7.25136 4.6875 7.0129 4.78627 6.83709 4.96209C6.66127 5.1379 6.5625 5.37636 6.5625 5.625C6.5625 5.87364 6.66127 6.1121 6.83709 6.28791C7.0129 6.46373 7.25136 6.5625 7.5 6.5625ZM7.5 7.5C7.00272 7.5 6.52581 7.30246 6.17417 6.95083C5.82254 6.59919 5.625 6.12228 5.625 5.625C5.625 5.12772 5.82254 4.65081 6.17417 4.29917C6.52581 3.94754 7.00272 3.75 7.5 3.75C7.99728 3.75 8.47419 3.94754 8.82582 4.29917C9.17746 4.65081 9.375 5.12772 9.375 5.625C9.375 6.12228 9.17746 6.59919 8.82582 6.95083C8.47419 7.30246 7.99728 7.5 7.5 7.5ZM12.5625 10.3125L14.0625 14.0625H9.84375V13.125H5.15625V14.0625H0.9375L2.4375 10.3125H12.5625ZM11.5528 10.3125H3.44719L2.32219 13.125H12.6778L11.5528 10.3125Z" fill="white"/>
-                        </svg>
+                        <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.7188 6.09375C11.7188 4.97487 11.2743 3.90181 10.4831 3.11064C9.69194 2.31947 8.61888 1.875 7.5 1.875C6.38112 1.875 5.30806 2.31947 4.51689 3.11064C3.72572 3.90181 3.28125 4.97487 3.28125 6.09375C3.28125 7.82438 4.66594 10.08 7.5 12.7819C10.3341 10.08 11.7188 7.82438 11.7188 6.09375ZM7.5 14.0625C4.06219 10.9378 2.34375 8.28094 2.34375 6.09375C2.34375 4.72623 2.887 3.41472 3.85398 2.44773C4.82097 1.48075 6.13248 0.9375 7.5 0.9375C8.86752 0.9375 10.179 1.48075 11.146 2.44773C12.113 3.41472 12.6562 4.72623 12.6562 6.09375C12.6562 8.28094 10.9378 10.9378 7.5 14.0625Z" fill="white"/><path d="M7.5 6.5625C7.74864 6.5625 7.9871 6.46373 8.16291 6.28791C8.33873 6.1121 8.4375 5.87364 8.4375 5.625C8.4375 5.37636 8.33873 5.1379 8.16291 4.96209C7.9871 4.78627 7.74864 4.6875 7.5 4.6875C7.25136 4.6875 7.0129 4.78627 6.83709 4.96209C6.66127 5.1379 6.5625 5.37636 6.5625 5.625C6.5625 5.87364 6.66127 6.1121 6.83709 6.28791C7.0129 6.46373 7.25136 6.5625 7.5 6.5625ZM7.5 7.5C7.00272 7.5 6.52581 7.30246 6.17417 6.95083C5.82254 6.59919 5.625 6.12228 5.625 5.625C5.625 5.12772 5.82254 4.65081 6.17417 4.29917C6.52581 3.94754 7.00272 3.75 7.5 3.75C7.99728 3.75 8.47419 3.94754 8.82582 4.29917C9.17746 4.65081 9.375 5.12772 9.375 5.625C9.375 6.12228 9.17746 6.59919 8.82582 6.95083C8.47419 7.30246 7.99728 7.5 7.5 7.5ZM12.5625 10.3125L14.0625 14.0625H9.84375V13.125H5.15625V14.0625H0.9375L2.4375 10.3125H12.5625ZM11.5528 10.3125H3.44719L2.32219 13.125H12.6778L11.5528 10.3125Z" fill="white"/></svg>
                         <span>на карте</span>
                     </button>
                 {{ form.end() }}

@@ -13,5 +13,5 @@ img.session_image {border-radius: 50%;}
 .select2-container.select2-container--realty-sorting.select2-container--open .select2-dropdown .select2-results__option {display: block;color: #929292;position: relative;text-align: right;padding: 7.5px 25px 7.5px 0;white-space: nowrap;}
 .select2-container.select2-container--realty-sorting.select2-container--open .select2-dropdown .select2-results__option::after {content: "";display: block;position: absolute;width: 117px;height: 1px;bottom: -4px;right: 25px;background: #929292;}
 .filter-settings-content-six__button,.filter-settings-content-three__button,.filter-settings-content-eight-block__button {display: flex;align-items: center;justify-content: center;font-family: inherit;line-height: inherit;cursor: pointer;}
-input[type="radio"]:checked + .filter-settings-content-six__button, input[type="radio"]:checked + .filter-settings-content-three__button, input[type="radio"]:checked + .filter-settings-content-eight-block__button {border: 1px solid var(--active-color);}
+input[type="radio"]:checked + .filter-settings-content-six__button, input[type="radio"]:checked + .filter-settings-content-three__button, input[type="checkbox"]:checked + .filter-settings-content-eight-block__button {border: 1px solid var(--active-color);}
 [data-favorite="remove"] {background-color: #ff6915;}
