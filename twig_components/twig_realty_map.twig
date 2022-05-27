@@ -1,0 +1,18 @@
+{% set adSeo = _view.loadHelper('Agency.AdSeo') %}
+{{ _view.assign('title', adSeo.titleList()) }}
+<div class="filter">
+    <div class="container">
+        <div class="filter-block row">
+            <div class="col-xl-9 col-lg-8 col-md-7 col-sm-6">
+                <h1 class="filter-title">Все объекты на карте</h1>
+            </div>
+        </div>
+        <div class="filter-content">
+            <div class="filter-objects">
+
+            </div>
+            {% set filterUrl = {'plugin':'agency','controller':'realty','action':'map'} %}
+            {{ croogo_region alias = "twig_realty_filter_block" }}
+        </div>
+    </div>
+</div>
