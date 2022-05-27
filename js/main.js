@@ -1,4 +1,5 @@
 let myLazyLoad;
+
 $(() => {
     $('.select-sorting').select2({
         theme: 'realty-sorting',
@@ -42,5 +43,9 @@ $(() => {
     }
 
     myLazyLoad = new LazyLoad();
+
+    $('#copyLink').on('click', function (){
+        navigator.clipboard.writeText(window.location.href);
+    })
 
 })

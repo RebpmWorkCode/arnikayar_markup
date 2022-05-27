@@ -15,9 +15,17 @@
                                     <img src="{{ galleryFirstItem.src }}" alt="{{ galleryFirstItem.description }}" class="header-object__image">
                                 </picture>
                             </div>
-                            <div class="header-object__circle">
-                                <span class="header-object__price">{{ ((advertisement.Advertisement.price) / 1000000)|round }}М₽</span>
+                            <div class="header-object__group_block d-flex flex-column">
+                                <div class="header-object__circle">
+                                    <span class="header-object__price">{{ ((advertisement.Advertisement.price) / 1000000)|round }}М₽</span>
+                                </div>
+                                {% if session.read('Auth.User.id') and advertisement.Advertisement.commission %}
+                                    <div class="filter-objects-card-box-numbers-item commission_hidden">
+                                        <span class="filter-objects-card-box-numbers-item__commission">Ваша комиссия {{ advertisement.Advertisement.commission }} %</span>
+                                    </div>
+                                {% endif %}
                             </div>
+
                         </div>
                     </div>
                     <div class="col-xl-6 col-lg-5 col-md-7 col-sm-6 col-6 text-center">
@@ -35,7 +43,7 @@
                                 </svg>
                             </div>
                         </a>
-                        <div class="header-object__btn">
+                        <div id="copyLink" class="header-object__btn">
                             <svg class="header-object__icon" width="28" height="30" viewBox="0 0 28 30" fill="none"
                                  xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -43,13 +51,57 @@
                                     fill="white"/>
                             </svg>
                         </div>
-                        <div class="header-object__btn d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
-                            <svg class="header-object__icon" width="33" height="34" viewBox="0 0 33 34" fill="none"
-                                 xmlns="http://www.w3.org/2000/svg">
-                                <path
-                                    d="M16.5 17.3906C18.688 17.3906 20.7865 16.5214 22.3336 14.9743C23.8808 13.4271 24.75 11.3287 24.75 9.14062C24.75 6.95259 23.8808 4.85417 22.3336 3.30699C20.7865 1.75982 18.688 0.890625 16.5 0.890625C14.312 0.890625 12.2135 1.75982 10.6664 3.30699C9.11919 4.85417 8.25 6.95259 8.25 9.14062C8.25 11.3287 9.11919 13.4271 10.6664 14.9743C12.2135 16.5214 14.312 17.3906 16.5 17.3906ZM22 9.14062C22 10.5993 21.4205 11.9983 20.3891 13.0297C19.3576 14.0612 17.9587 14.6406 16.5 14.6406C15.0413 14.6406 13.6424 14.0612 12.6109 13.0297C11.5795 11.9983 11 10.5993 11 9.14062C11 7.68193 11.5795 6.28299 12.6109 5.25154C13.6424 4.22009 15.0413 3.64062 16.5 3.64062C17.9587 3.64062 19.3576 4.22009 20.3891 5.25154C21.4205 6.28299 22 7.68193 22 9.14062ZM33 31.1406C33 33.8906 30.25 33.8906 30.25 33.8906H2.75C2.75 33.8906 0 33.8906 0 31.1406C0 28.3906 2.75 20.1406 16.5 20.1406C30.25 20.1406 33 28.3906 33 31.1406ZM30.25 31.1296C30.2472 30.4531 29.8265 28.4181 27.962 26.5536C26.169 24.7606 22.7948 22.8906 16.5 22.8906C10.2025 22.8906 6.831 24.7606 5.038 26.5536C3.1735 28.4181 2.7555 30.4531 2.75 31.1296H30.25Z"
-                                    fill="white"/>
-                            </svg>
+                        <div class="header-person header-object__btn d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+                            <div class="header-person__box">
+                                <div class="header-person-icon">
+                                    {% if session.read('Auth.User.image') %}
+                                        <picture>
+                                            <img src="{{ session.read('Auth.User.image_small') }}" alt="" class="session_image">
+                                        </picture>
+                                    {% else %}
+                                        <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M16.5 16.5C18.688 16.5 20.7865 15.6308 22.3336 14.0836C23.8808 12.5365 24.75 10.438 24.75 8.25C24.75 6.06196 23.8808 3.96354 22.3336 2.41637C20.7865 0.869194 18.688 0 16.5 0C14.312 0 12.2135 0.869194 10.6664 2.41637C9.11919 3.96354 8.25 6.06196 8.25 8.25C8.25 10.438 9.11919 12.5365 10.6664 14.0836C12.2135 15.6308 14.312 16.5 16.5 16.5V16.5ZM22 8.25C22 9.70869 21.4205 11.1076 20.3891 12.1391C19.3576 13.1705 17.9587 13.75 16.5 13.75C15.0413 13.75 13.6424 13.1705 12.6109 12.1391C11.5795 11.1076 11 9.70869 11 8.25C11 6.79131 11.5795 5.39236 12.6109 4.36091C13.6424 3.32946 15.0413 2.75 16.5 2.75C17.9587 2.75 19.3576 3.32946 20.3891 4.36091C21.4205 5.39236 22 6.79131 22 8.25V8.25ZM33 30.25C33 33 30.25 33 30.25 33H2.75C2.75 33 0 33 0 30.25C0 27.5 2.75 19.25 16.5 19.25C30.25 19.25 33 27.5 33 30.25ZM30.25 30.239C30.2472 29.5625 29.8265 27.5275 27.962 25.663C26.169 23.87 22.7948 22 16.5 22C10.2025 22 6.831 23.87 5.038 25.663C3.1735 27.5275 2.7555 29.5625 2.75 30.239H30.25Z"
+                                                fill="white" />
+                                        </svg>
+                                    {% endif %}
+                                </div>
+                                <div class="header-person-session">
+                                    <div class="header-person-session-icon">
+                                        <svg width="21" height="24" viewBox="0 0 21 24" fill="none"
+                                             xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M10.5 11.5C11.7598 11.5 12.968 10.9996 13.8588 10.1088C14.7496 9.21796 15.25 8.00978 15.25 6.75C15.25 5.49022 14.7496 4.28204 13.8588 3.39124C12.968 2.50045 11.7598 2 10.5 2C9.24022 2 8.03204 2.50045 7.14124 3.39124C6.25045 4.28204 5.75 5.49022 5.75 6.75C5.75 8.00978 6.25045 9.21796 7.14124 10.1088C8.03204 10.9996 9.24022 11.5 10.5 11.5ZM13.6667 6.75C13.6667 7.58985 13.333 8.39531 12.7392 8.98917C12.1453 9.58304 11.3399 9.91667 10.5 9.91667C9.66015 9.91667 8.85469 9.58304 8.26083 8.98917C7.66696 8.39531 7.33333 7.58985 7.33333 6.75C7.33333 5.91015 7.66696 5.10469 8.26083 4.51083C8.85469 3.91696 9.66015 3.58333 10.5 3.58333C11.3399 3.58333 12.1453 3.91696 12.7392 4.51083C13.333 5.10469 13.6667 5.91015 13.6667 6.75ZM20 19.4167C20 21 18.4167 21 18.4167 21H2.58333C2.58333 21 1 21 1 19.4167C1 17.8333 2.58333 13.0833 10.5 13.0833C18.4167 13.0833 20 17.8333 20 19.4167ZM18.4167 19.4103C18.4151 19.0208 18.1728 17.8492 17.0993 16.7757C16.067 15.7433 14.1243 14.6667 10.5 14.6667C6.87417 14.6667 4.933 15.7433 3.90067 16.7757C2.82717 17.8492 2.5865 19.0208 2.58333 19.4103H18.4167Z"
+                                                fill="white" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="header-person-menu">
+                                <ul class="header-person-menu-list">
+                                    {% if session.read('Auth.User.id') %}
+                                        <li>
+                                            <button class="header-person-menu-list-btn">
+                                                <span class="header-person-menu-list-btn__text">Я с клиентом</span>
+                                                <span class="header-person-menu-list-btn-shell"></span>
+                                            </button>
+                                        </li>
+                                    {% endif %}
+                                    {% if session.read('Auth.User.id') %}
+                                        <li>
+                                            <span class="header-person-menu-list-btn__text">Профиль</span>
+                                        </li>
+                                    {% endif %}
+                                    <li>
+                                        {% if session.read('Auth.User.id') %}
+                                            <a href="/users/users/logout" id="btnLogout" class="header-person-menu-list-btn__text">Выйти</a>
+                                        {% else %}
+                                            <a href="/login" class="header-person-menu-list-btn__text">Авторизация</a>
+                                        {% endif %}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -60,8 +112,7 @@
     <header class="header">
     <div class="container">
         <div class="row d-flex align-items-center justify-content-between">
-            <div
-                class="d-flex align-items-center justify-content-xl-between col-xl-5 col-lg-3 justify-content-lg-start col-md-3 justify-content-md-start col-sm-9 col-6 justify-content-between">
+            <div class="d-flex align-items-center justify-content-xl-between col-xl-5 col-lg-3 justify-content-lg-start col-md-3 justify-content-md-start col-sm-9 col-6 justify-content-between">
                 <!-- Бургер меню -->
                 <div class="header-burger-box">
                     <div class="header-burger">
@@ -111,9 +162,7 @@
                     {{ form.end() }}
                 </div>
             </div>
-            <div
-                class="d-flex align-items-center col-xl-7 col-lg-9 col-md-9 col-sm-3 justify-content-sm-end justify-content-md-between col-6 justify-content-end">
-
+            <div class="d-flex align-items-center col-xl-7 col-lg-9 col-md-9 col-sm-3 justify-content-sm-end justify-content-md-between col-6 justify-content-end">
                 <!-- Меню с иконками -->
                 <div class="header-btns">
                     <div class="header-btns-info">

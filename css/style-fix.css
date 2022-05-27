@@ -20,6 +20,15 @@ input[type="radio"]:checked + .filter-settings-content-six__button, input[type="
     height: 35rem;
 }
 
+.header-object__group_block {
+    margin-left: 15px;
+}
+
+.header-object__circle {
+    margin-left: 0;
+    margin-bottom: 5px;
+}
+
 @media (min-width: 992px) {
     .filter-settings {
         width: 267px;
