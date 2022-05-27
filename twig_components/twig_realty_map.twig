@@ -53,6 +53,6 @@
         }
     };
     ymaps.ready(function () {
-        ClusterIs2bMapSite.init({{ yaMaps.YandexMapCenter() }}, window.location.protocol + '//' + window.location.hostname + '/agency/realty/map' + (window.location.search || '?1=1'));
+        ClusterIs2bMapSite.init({{ yaMaps.YandexMapCenter() }}, window.location.protocol + '//' + window.location.hostname + '/agency/realty/map' + (window.location.search || '?'));
     })
 {{ html.scriptEnd() }}
