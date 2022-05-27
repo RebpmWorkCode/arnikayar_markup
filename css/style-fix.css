@@ -1,5 +1,4 @@
 :root {--btn-color-2: #0bc53e;}
-.filter-objects {min-width: 834px;}
 img.session_image {border-radius: 50%;}
 .filter-objects-card-box__img {border-radius: 15px 15px 0 0;}
 .with_client .filter-objects-card-box-numbers-item.commission_hidden {display: none;}
@@ -15,3 +14,9 @@ img.session_image {border-radius: 50%;}
 .filter-settings-content-six__button,.filter-settings-content-three__button,.filter-settings-content-eight-block__button {display: flex;align-items: center;justify-content: center;font-family: inherit;line-height: inherit;cursor: pointer;}
 input[type="radio"]:checked + .filter-settings-content-six__button, input[type="radio"]:checked + .filter-settings-content-three__button, input[type="checkbox"]:checked + .filter-settings-content-eight-block__button {border: 1px solid var(--active-color);}
 [data-favorite="remove"] {background-color: #ff6915;}
+
+@media (min-width: 992px) {
+    .filter-settings {
+        width: 267px;
+    }
+}
