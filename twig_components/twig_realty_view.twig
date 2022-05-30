@@ -1,3 +1,4 @@
+{{ html.script(['https://api-maps.yandex.ru/2.1/?lang=ru_RU', 'Agency.filter-map-site', 'YandexMaps.simplify','YandexMaps.view-map.js'], {'block': 'scriptCustom'}) }}
 {% set adView = _view.loadHelper('Agency.AdView') %}
 {% set adSeo = _view.loadHelper('Agency.AdSeo') %}
 {% set favorite = _view.loadHelper('Favorites.Favorite') %}
@@ -11,12 +12,13 @@
 {% set currencyActive = currencyActive|lower %}
 {% set offerAdvertisement = adView.getInfo(advertisement) %}
 
+{# Слайдер в просмотре объекта #}
 {% set gallery = adView.getGallery(advertisement) %}
 {% set galleryList = gallery.items ?: [gallery.first] %}
 {% set galleryResizeList = imageResized.resizePicture(galleryList, {'width': '800', 'height': '610', 'mode': 'crop', 'paddings': false, 'folder': 'twig_crop_realty_view_1'}) %}
 
+{# Инициализируем переменные с параметрами категории #}
 {% set paramsValues = advertisement.CategoryParamValues ?? [] %}
-
 {% set site_area = complexCategory.getViewAliasesOptions('site_area', paramsValues) %}
 {% set plot_area = complexCategory.getViewAliasesOptions('plot_area', paramsValues) %}
 {% set lot_type = complexCategory.getViewAliasesOptions('lot_type', paramsValues) %}
@@ -68,6 +70,7 @@
 {% set place_car = complexCategory.getViewAliasesOptions('place_car', paramsValues) %}
 {% set names_trees = complexCategory.getViewAliasesOptions('names_trees', paramsValues) %}
 
+{# Проверяем эксклюзивный ли объект, если да выводим эксклюзивный просмотр, иначе обычный #}
 {% if advertisement.Advertisement.contract_type_id == 1 %}
     {{ croogo_region alias = "twig_realty_view_exclusive" }}
 {% else %}
