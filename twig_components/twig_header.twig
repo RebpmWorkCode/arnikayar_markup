@@ -56,7 +56,7 @@
                                 <div class="header-person-icon">
                                     {% if session.read('Auth.User.image') %}
                                         <picture>
-                                            <img src="{{ session.read('Auth.User.image_small') }}" alt="" class="session_image">
+                                            <img src="{{ '/' ~ session.read('Auth.User.image_small')|trim('/', 'left') }}" alt="" class="session_image">
                                         </picture>
                                     {% else %}
                                         <svg width="33" height="33" viewBox="0 0 33 33" fill="none"
