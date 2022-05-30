@@ -1,7 +1,7 @@
 <div class="modal-1 modal-general" id="create-to-collection" style="display: none">
     <div class="modal-1__block d-flex flex-column">
         <h2 class="modal-1__title title text-xl-center text-lg-center text-md-center text-sm-center text-start">Введите название подборки</h2>
-        {{ form.create(false, {'class': 'modal-1__form d-flex flex-column'}) }}
+        {{ form.create(false, {'class': 'modal-1__form d-flex flex-column', 'id': 'create-to-collection-form'}) }}
             {{ form.hidden('id', {'value': id}) }}
             {{ form.input('title', {'class': 'modal-1__input grey-input', 'placeholder': 'Название подборки', 'required': true, 'div': false, 'label': false}) }}
             <button class="modal-1__btn grey-btn" type="submit">готово</button>
@@ -9,22 +9,29 @@
     </div>
 </div>
 <div class="add-to-collection" id="add-to-collection">
-    <button class="add-to-collection-button">
-        <span class="add-to-collection-button__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
-        <span class="add-to-collection-button__text">Назад</span>
+    <button class="add-to-collection-button-close" style="background-color: transparent">
+        <span class="add-to-collection-button-close__icon"><svg width="8" height="13" viewBox="0 0 8 13" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.73082 1.17685e-06L-1.1365e-06 6.5L6.73082 13L8 11.7744L2.53835 6.5L8 1.22565L6.73082 1.17685e-06Z" fill="#929292"/></svg></span>
+        <span class="add-to-collection-button-close__text">Назад</span>
     </button>
     <div class="add-to-collection-block">
         <h2 class="add-to-collection-block__title">Добавить в подборку</h2>
-        <div class="add-to-collection-block-top">
-            <picture><source srcset="/uploads/assets/img/filter/oval.webp" type="image/webp"><img src="/uploads/assets/img/filter/oval.png" alt="Изображение" class="add-to-collection-block-top__img"></picture>
-            <div class="add-to-collection-block-top-info">
-                <span class="add-to-collection-block-top-info__text">Дом, баня и бассейн с видом на горы в с. Каштаны</span>
-                <div class="add-to-collection-block-top-info-description">
-                    <div class="add-to-collection-block-top-info-description__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.625 8.20825C15.625 6.71641 15.0324 5.28567 13.9775 4.23078C12.9226 3.17588 11.4918 2.58325 10 2.58325C8.50816 2.58325 7.07742 3.17588 6.02252 4.23078C4.96763 5.28567 4.375 6.71641 4.375 8.20825C4.375 10.5158 6.22125 13.5233 10 17.1258C13.7788 13.5233 15.625 10.5158 15.625 8.20825ZM10 18.8333C5.41625 14.667 3.125 11.1245 3.125 8.20825C3.125 6.38489 3.84933 4.63621 5.13864 3.34689C6.42795 2.05758 8.17664 1.33325 10 1.33325C11.8234 1.33325 13.572 2.05758 14.8614 3.34689C16.1507 4.63621 16.875 6.38489 16.875 8.20825C16.875 11.1245 14.5837 14.667 10 18.8333Z" fill="#929292"/><path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/></svg></div>
-                    <span class="add-to-collection-block-top-info-description__text">село Каштаны</span>
+        {% if object %}
+            <div class="add-to-collection-block-top">
+                {% set imageResized = _view.loadHelper('ImageCompress.ImageResized') %}
+                {% set gallery = adView.getGallery(object) %}
+                {% set galleryFirstItem = imageResized.resizeItemPicture(gallery.first, {'width': '66', 'height': '66', 'mode': 'crop', 'paddings': false, 'folder': 'twig_crop_agency_compilation_small'}) %}
+                <picture>
+                    <img src="{{ galleryFirstItem.src }}" alt="{{ galleryFirstItem.description }}" class="add-to-collection-block-top__img">
+                </picture>
+                <div class="add-to-collection-block-top-info">
+                    <span class="add-to-collection-block-top-info__text">{{ object.Advertisement.title ?: object.Advertisement.location_full  }}</span>
+                    <div class="add-to-collection-block-top-info-description">
+                        <div class="add-to-collection-block-top-info-description__icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15.625 8.20825C15.625 6.71641 15.0324 5.28567 13.9775 4.23078C12.9226 3.17588 11.4918 2.58325 10 2.58325C8.50816 2.58325 7.07742 3.17588 6.02252 4.23078C4.96763 5.28567 4.375 6.71641 4.375 8.20825C4.375 10.5158 6.22125 13.5233 10 17.1258C13.7788 13.5233 15.625 10.5158 15.625 8.20825ZM10 18.8333C5.41625 14.667 3.125 11.1245 3.125 8.20825C3.125 6.38489 3.84933 4.63621 5.13864 3.34689C6.42795 2.05758 8.17664 1.33325 10 1.33325C11.8234 1.33325 13.572 2.05758 14.8614 3.34689C16.1507 4.63621 16.875 6.38489 16.875 8.20825C16.875 11.1245 14.5837 14.667 10 18.8333Z" fill="#929292"/><path d="M10 8.75C10.3315 8.75 10.6495 8.6183 10.8839 8.38388C11.1183 8.14946 11.25 7.83152 11.25 7.5C11.25 7.16848 11.1183 6.85054 10.8839 6.61612C10.6495 6.3817 10.3315 6.25 10 6.25C9.66848 6.25 9.35054 6.3817 9.11612 6.61612C8.8817 6.85054 8.75 7.16848 8.75 7.5C8.75 7.83152 8.8817 8.14946 9.11612 8.38388C9.35054 8.6183 9.66848 8.75 10 8.75ZM10 10C9.33696 10 8.70107 9.73661 8.23223 9.26777C7.76339 8.79893 7.5 8.16304 7.5 7.5C7.5 6.83696 7.76339 6.20107 8.23223 5.73223C8.70107 5.26339 9.33696 5 10 5C10.663 5 11.2989 5.26339 11.7678 5.73223C12.2366 6.20107 12.5 6.83696 12.5 7.5C12.5 8.16304 12.2366 8.79893 11.7678 9.26777C11.2989 9.73661 10.663 10 10 10ZM16.75 13.75L18.75 18.75H13.125V17.5H6.875V18.75H1.25L3.25 13.75H16.75ZM15.4037 13.75H4.59625L3.09625 17.5H16.9037L15.4037 13.75Z" fill="#929292"/></svg></div>
+                        <span class="add-to-collection-block-top-info-description__text">{{ object.Location.Locality.title }}</span>
+                    </div>
                 </div>
             </div>
-        </div>
+        {% endif %}
         <div class="add-to-collection-block-button">
             <button class="add-to-collection-block-button-btn" type="button">
                 <span class="add-to-collection-block-button-btn__text">Создать новую подборку</span>
@@ -33,19 +40,19 @@
         </div>
         {% if agencyCompilations %}
             {{ form.create(false, {'url': '/agency/agency_compilations/append', 'class': 'add-to-collection-block-content'}) }}
-            {{ form.hidden('id', {'value': id}) }}
-            {% for agencyCompilationId,agencyCompilationTitle in agencyCompilations %}
-                <div class="add-to-collection-block-content-item">
-                    {{ form.checkbox('agency_compilation_id.', {id: 'agency_compilation_id'~agencyCompilationId, 'value': agencyCompilationId, 'class': 'add-to-collection-block-content-item__checkbox', 'div': false, 'hiddenField': false}) }}
-                    <label for="{{ 'agency_compilation_id'~agencyCompilationId }}" class="add-to-collection-block-content-item__label">
-                        <span class="add-to-collection-block-content-item__label-info">
-                            <span class="add-to-collection-block-content-item__label-text">{{ agencyCompilationTitle }}</span>
-                            <span class="add-to-collection-block-content-item__label-number"></span>
-                        </span>
-                    </label>
-                </div>
-            {% endfor %}
-            <button class="add-to-collection-block__btn" type="submit">Готово</button>
+                {{ form.hidden('id', {'value': id}) }}
+                {% for agencyCompilationId,agencyCompilationTitle in agencyCompilations %}
+                    <div class="add-to-collection-block-content-item">
+                        <input type="radio" name="data[agency_compilation_id]" id="agency_compilation_id{{ agencyCompilationId }}" value="{{ agencyCompilationId }}" class="add-to-collection-block-content-item__checkbox">
+                        <label for="agency_compilation_id{{ agencyCompilationId }}" class="add-to-collection-block-content-item__label">
+                            <span class="add-to-collection-block-content-item__label-info">
+                                <span class="add-to-collection-block-content-item__label-text">{{ agencyCompilationTitle }}</span>
+                                <span class="add-to-collection-block-content-item__label-number"></span>
+                            </span>
+                        </label>
+                    </div>
+                {% endfor %}
+                <button class="add-to-collection-block__btn" type="submit">Готово</button>
             {{ form.end() }}
         {% endif %}
     </div>
