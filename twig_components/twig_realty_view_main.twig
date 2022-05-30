@@ -1,9 +1,6 @@
 <section class="main-slider">
     <div class="swiper main-slider-swiper">
         <div class="swiper-wrapper main-slider-wrapper">
-            {% set gallery = adView.getGallery(advertisement) %}
-            {% set galleryList = gallery.items ?: [gallery.first] %}
-            {% set galleryResizeList = imageResized.resizePicture(galleryList, {'width': '800', 'height': '610', 'mode': 'crop', 'paddings': false, 'folder': 'twig_crop_realty_view_1'}) %}
             {% for galleryItem in galleryResizeList %}
                 <div class="swiper-slide main-slider-slide">
                     <picture>
@@ -31,14 +28,12 @@
     </div>
 </section>
 <section class="description">
-    {% set paramsValues = advertisement.CategoryParamValues ?? [] %}
     <div class="container">
         <div class="row description__block d-flex justify-content-center">
             <div class="col-xl-8 col-lg-8 col-md-12 d-flex flex-column align-items-start">
                 <div class="description__wrapper">
                     <h3 class="description__title">Основные параметры объекта</h3>
                 </div>
-                {% set site_area = complexCategory.getViewAliasesOptions('site_area', paramsValues) %}
                 {% if site_area %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -50,23 +45,15 @@
                         <span class="description__desc-left">Участок по документам: <span>{{ site_area }} соток</span></span>
                     </div>
                 {% endif %}
-
-                {% set plot_area = complexCategory.getViewAliasesOptions('plot_area', paramsValues) %}
                 {% if plot_area %}
                     <span class="description__desc grey-text">Участок по факту: <span>{{ plot_area }} соток</span></span>
                 {% endif %}
-
-                {% set lot_type = complexCategory.getViewAliasesOptions('lot_type', paramsValues) %}
                 {% if lot_type %}
                     <span class="description__desc">Вид разрешенного использования: <span>{{ lot_type }}</span></span>
                 {% endif %}
-
-                {% set area_buildings = complexCategory.getViewAliasesOptions('area_buildings', paramsValues) %}
                 {% if area_buildings %}
                     <span class="description__desc">Площадь всех строений: <span>{{ area_buildings }} м²</span></span>
                 {% endif %}
-
-                {% set house_area = complexCategory.getViewAliasesOptions('house_area', paramsValues) %}
                 {% if house_area %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -91,13 +78,9 @@
                         <span class="description__desc-left">Площадь дома по документам: <span>{{ house_area }} м²</span></span>
                     </div>
                 {% endif %}
-
-                {% set area_house = complexCategory.getViewAliasesOptions('area_house', paramsValues) %}
                 {% if area_house %}
                     <span class="description__desc grey-text">Площадь дома по факту: <span>{{ area_house }} м²</span></span>
                 {% endif %}
-
-                {% set kolichestvo_spalnyh_mest = complexCategory.getViewAliasesOptions('kolichestvo_spalnyh_mest', paramsValues) %}
                 {% if kolichestvo_spalnyh_mest %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -109,8 +92,6 @@
                         <span class="description__desc-left">Спален: <span>{{ kolichestvo_spalnyh_mest }}</span></span>
                     </div>
                 {% endif %}
-
-                {% set number_bathrooms = complexCategory.getViewAliasesOptions('number_bathrooms', paramsValues) %}
                 {% if number_bathrooms %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
@@ -125,35 +106,24 @@
                         <span class="description__desc-left">Сан.узлов: <span>{{ number_bathrooms }}</span></span>
                     </div>
                 {% endif %}
-
-                {% set electricity_supply = complexCategory.getViewAliasesOptions('electricity_supply', paramsValues) %}
                 {% if electricity_supply %}
                     <span class="description__desc">Электричество: <span>{{ electricity_supply }} кВт</span></span>
                 {% endif %}
-
-                {% set water = complexCategory.getViewAliasesOptions('water', paramsValues) %}
                 {% if water %}
                     <span class="description__desc">Водоснабжение: <span>{{ water }}</span></span>
                 {% endif %}
-
-                {% set sewerage_supply = complexCategory.getViewAliasesOptions('sewerage_supply', paramsValues) %}
                 {% if sewerage_supply %}
                     <span class="description__desc">Канализация: <span>{{ sewerage_supply }}</span></span>
                 {% endif %}
-
-                {% set gas_supply = complexCategory.getViewAliasesOptions('gas_supply', paramsValues) %}
                 {% if gas_supply %}
                     <span class="description__desc">Газ: <span>{{ gas_supply }}</span></span>
                 {% endif %}
-
-                {% set number_of_floors = complexCategory.getViewAliasesOptions('number_of_floors', paramsValues) %}
                 {% if number_of_floors %}
                     <span class="description__desc">Этажность: <span>{{ number_of_floors }}</span></span>
                 {% endif %}
 
 {#                <span class="description__desc">Цокол, мансарда</span>#}
 
-                {% set object_type = complexCategory.getViewAliasesOptions('object_type', paramsValues) %}
                 {% if object_type %}
                     <span class="description__desc">Тип объекта: <span>{{ object_type }}</span></span>
                 {% endif %}
@@ -177,16 +147,9 @@
                 {% if advertisement.Advertisement.location_full %}
                     <span class="description__desc">{{ advertisement.Advertisement.location_full }}</span>
                 {% endif %}
-
-                {% set avtomob = complexCategory.getViewAliasesOptions('avtomob', paramsValues) %}
-                {% set aeroport = complexCategory.getViewAliasesOptions('aeroport', paramsValues) %}
-                {% set vokzal = complexCategory.getViewAliasesOptions('vokzal', paramsValues) %}
-                {% set olimpik = complexCategory.getViewAliasesOptions('olimpik', paramsValues) %}
-                {% set estosadok = complexCategory.getViewAliasesOptions('estosadok', paramsValues) %}
                 {% if avtomob or aeroport or vokzal or olimpik or estosadok %}
                     <span class="description__desc">Расстояние до:</span>
                 {% endif %}
-
                 {% if avtomob %}
                     <div class="description__item d-flex align-items-center ">
                         <svg class="description__pic" width="24" height="22" viewBox="0 0 24 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -204,7 +167,6 @@
                         <span class="description__text">моря по автомобильной дороге: <span class="description__value">{{ avtomob }} км</span></span>
                     </div>
                 {% endif %}
-
                 {% if aeroport %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -219,7 +181,6 @@
                         <span class="description__text">Аэропорта: </span><span class="description__value">{{ aeroport }} км</span></span>
                     </div>
                 {% endif %}
-
                 {% if vokzal %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -231,7 +192,6 @@
                         <span class="description__text">Центр Сочи центральный ЖД Вокзал Сочи: <span class="description__value">{{ vokzal }} км</span></span>
                     </div>
                 {% endif %}
-
                 {% if olimpik %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -272,7 +232,6 @@
                         <span class="description__text">пгт Сириус ЖД Вокзал Олимпийский парк: <span class="description__value">{{ olimpik }} км</span></span>
                     </div>
                 {% endif %}
-
                 {% if estosadok %}
                     <div class="description__item d-flex align-items-center">
                         <svg class="description__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -303,53 +262,33 @@
                     <h3 class="description__title">Преимущества</h3>
                     <div class="description__line description__line_2"></div>
                 </div>
-                {% set end_street = complexCategory.getViewAliasesOptions('end_street', paramsValues) %}
-                {% set panoramic_windows = complexCategory.getViewAliasesOptions('panoramic_windows', paramsValues) %}
-                {% set aluminum_window = complexCategory.getViewAliasesOptions('aluminum_window', paramsValues) %}
-                {% set region = complexCategory.getViewAliasesOptions('region', paramsValues) %}
-                {% set children_playground = complexCategory.getViewAliasesOptions('children_playground', paramsValues) %}
-                {% set work_out = complexCategory.getViewAliasesOptions('work_out', paramsValues) %}
-                {% set free_layout = complexCategory.getViewAliasesOptions('free_layout', paramsValues) %}
-                {% set before_school = complexCategory.getViewAliasesOptions('before_school', paramsValues) %}
-                {% set fireplace = complexCategory.getViewAliasesOptions('fireplace', paramsValues) %}
-                {% set supply_exhaust = complexCategory.getViewAliasesOptions('supply_exhaust', paramsValues) %}
-
                 {% if end_street == "да" or end_street == "Да" or end_street == 1 %}
                     <span class="description__desc">Тупиковая улица: <span>{{ end_street }}</span></span>
                 {% endif %}
-
                 {% if panoramic_windows == "да" or panoramic_windows == "Да" or panoramic_windows == 1 %}
                     <span class="description__desc">Панорамные окна: <span>{{ panoramic_windows }}</span></span>
                 {% endif %}
-
                 {% if aluminum_window == "да" or aluminum_window == "Да" or aluminum_window == 1 %}
                     <span class="description__desc">Алюминиевые оконные профили: <span>{{ aluminum_window }}</span></span>
                 {% endif %}
-
                 {% if region %}
                     <span class="description__desc">Участок: <span>{{ region }}</span></span>
                 {% endif %}
-
                 {% if children_playground == "да" or children_playground == "Да" or children_playground == 1 %}
                     <span class="description__desc">Детская площадка: <span>{{ children_playground }}</span></span>
                 {% endif %}
-
                 {% if work_out == "да" or work_out == "Да" or work_out == 1 %}
                     <span class="description__desc">Спортивная площадка/Зона WorkOut: <span>{{ work_out }}</span></span>
                 {% endif %}
-
                 {% if free_layout == "да" or free_layout == "Да" or free_layout == 1 %}
                     <span class="description__desc">Свободная планировка: <span>{{ free_layout }}</span></span>
                 {% endif %}
-
                 {% if before_school == "да" or before_school == "Да" or before_school == 1 %}
                     <span class="description__desc">До школы/сада пешком: <span>{{ before_school }}</span></span>
                 {% endif %}
-
                 {% if fireplace == "да" or fireplace == "Да" or fireplace == 1 %}
                     <span class="description__desc">Камин: <span>{{ fireplace }}</span></span>
                 {% endif %}
-
                 {% if supply_exhaust == "да" or supply_exhaust == "Да" or supply_exhaust == 1 %}
                     <span class="description__desc">Установлена приточно-вытяжная вентиляция: <span>{{ supply_exhaust }}</span></span>
                 {% endif %}
@@ -357,73 +296,46 @@
         </div>
         <div class="row description__block d-flex justify-content-center">
             <div class="col-xl-8 col-lg-8 col-md-12 d-flex flex-column align-items-end text-end">
-                <div
-                    class="description__wrapper d-flex align-items-center justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-between justify-content-end">
+                <div class="description__wrapper d-flex align-items-center justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-between justify-content-end">
                     <div class="description__line description__line_3"></div>
                     <h3 class="description__title">Дополнительные параметры объекта</h3>
                 </div>
-                {% set material = complexCategory.getViewAliasesOptions('material', paramsValues) %}
-                {% set foundation = complexCategory.getViewAliasesOptions('foundation', paramsValues) %}
-                {% set facade_decoration = complexCategory.getViewAliasesOptions('facade_decoration', paramsValues) %}
-                {% set facade_insulation = complexCategory.getViewAliasesOptions('facade_insulation', paramsValues) %}
-                {% set house_rented = complexCategory.getViewAliasesOptions('house_rented', paramsValues) %}
-                {% set recreation_areas = complexCategory.getViewAliasesOptions('recreation_areas', paramsValues) %}
-                {% set renovation = complexCategory.getViewAliasesOptions('renovation', paramsValues) %}
-                {% set interior_decoration = complexCategory.getViewAliasesOptions('interior_decoration', paramsValues) %}
-                {% set bath_house = complexCategory.getViewAliasesOptions('bath_house', paramsValues) %}
-                {% set swimming_pool = complexCategory.getViewAliasesOptions('swimming_pool', paramsValues) %}
-                {% set guest_house = complexCategory.getViewAliasesOptions('guest_house', paramsValues) %}
-                {% set pool_size = complexCategory.getViewAliasesOptions('pool_size', paramsValues) %}
-                {% set pool_functions = complexCategory.getViewAliasesOptions('pool_functions', paramsValues) %}
-
                 {% if material %}
                     <span class="description__desc">Материал стен: <span>{{ material }}</span></span>
                 {% endif %}
-
                 {% if foundation %}
                     <span class="description__desc">Фундамент: <span>{{ foundation }}</span></span>
                 {% endif %}
-
                 {% if facade_decoration %}
                     <span class="description__desc">Фасад: <span>{{ facade_decoration }}</span></span>
                 {% endif %}
-
                 {% if facade_insulation %}
                     <span class="description__desc">Утепление фасада: <span>{{ facade_insulation }}</span></span>
                 {% endif %}
-
                 {% if house_rented %}
                     <span class="description__desc">Дом сдан: <span>{{ house_rented }}</span></span>
                 {% endif %}
-
                 {% if recreation_areas %}
                     <span class="description__desc">Зоны отдыха: <span>{{ recreation_areas }}</span></span>
                 {% endif %}
-
                 {% if renovation %}
                     <span class="description__desc">Ремонт: <span>{{ renovation }}</span></span>
                 {% endif %}
-
                 {% if interior_decoration %}
                     <span class="description__desc">Внутренняя отделка: <span>{{ interior_decoration }}</span></span>
                 {% endif %}
-
                 {% if bath_house %}
-                <span class="description__desc">Баня\Сауна: <span>{{ bath_house }}</span></span>
+                    <span class="description__desc">Баня\Сауна: <span>{{ bath_house }}</span></span>
                 {% endif %}
-
                 {% if swimming_pool %}
                     <span class="description__desc">Бассейн: <span>{{ swimming_pool }}</span></span>
                 {% endif %}
-
                 {% if guest_house %}
                     <span class="description__desc">Гостевой дом: <span>{{ guest_house }}</span></span>
                 {% endif %}
-
                 {% if pool_size %}
                     <span class="description__desc">Размер бассейна: <span>{{ pool_size }}</span></span>
                 {% endif %}
-
                 {% if pool_functions %}
                     <span class="description__desc">Функции бассейна: <span>{{ pool_functions }}</span></span>
                 {% endif %}
@@ -431,48 +343,31 @@
         </div>
         <div class="row description__block d-flex justify-content-center">
             <div class="col-xl-8 col-lg-8 col-md-12 d-flex flex-column align-items-start">
-                <div
-                    class="description__wrapper description__wrapper_last d-flex align-items-center justify-content-between">
+                <div class="description__wrapper description__wrapper_last d-flex align-items-center justify-content-between">
                     <h3 class="description__title">Территория, Участок</h3>
                     <div class="description__line description__line_4"></div>
                 </div>
-                {% set landscape = complexCategory.getViewAliasesOptions('landscape', paramsValues) %}
-                {% set automatic_watering = complexCategory.getViewAliasesOptions('automatic_watering', paramsValues) %}
-                {% set fence = complexCategory.getViewAliasesOptions('fence', paramsValues) %}
-                {% set altitude = complexCategory.getViewAliasesOptions('altitude', paramsValues) %}
-                {% set view_house = complexCategory.getViewAliasesOptions('view_house', paramsValues) %}
-                {% set security = complexCategory.getViewAliasesOptions('security', paramsValues) %}
-                {% set place_car = complexCategory.getViewAliasesOptions('place_car', paramsValues) %}
-                {% set names_trees = complexCategory.getViewAliasesOptions('names_trees', paramsValues) %}
-
                 {% if landscape %}
                     <span class="description__desc">Ландшафт: <span>{{ landscape }}</span></span>
                 {% endif %}
-
                 {% if automatic_watering %}
                     <span class="description__desc">Автополив: <span>{{ automatic_watering }}</span></span>
                 {% endif %}
-
                 {% if fence %}
                     <span class="description__desc">Забор: <span>{{ fence }}</span></span>
                 {% endif %}
-
                 {% if altitude %}
                     <span class="description__desc">Высота над уровнем моря: <span>{{ altitude }}м</span></span>
                 {% endif %}
-
                 {% if view_house %}
                     <span class="description__desc">Вид из дома: <span>{{ view_house }}</span></span>
                 {% endif %}
-
                 {% if security %}
                     <span class="description__desc">Охрана: <span>{{ security }}</span></span>
                 {% endif %}
-
                 {% if place_car %}
                     <span class="description__desc">Место для машины: <span>{{ place_car }}</span></span>
                 {% endif %}
-
                 {% if names_trees %}
                     <span class="description__desc">{{ names_trees }}</span>
                 {% endif %}

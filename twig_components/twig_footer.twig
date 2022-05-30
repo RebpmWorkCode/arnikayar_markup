@@ -3,18 +3,46 @@
     <section class="footer-object">
         <div class="container">
             <div class="grid footer-object__grid">
-                <a href="#" class="footer-object__btn text-center">хайтек</a>
-                <a href="#" class="footer-object__btn text-center">с ремонтом</a>
-                <a href="#" class="footer-object__btn text-center">вид на море</a>
-                <a href="#" class="footer-object__btn text-center">шале</a>
-                <a href="#" class="footer-object__btn text-center">с бассейном</a>
-                <a href="#" class="footer-object__btn text-center">с баней</a>
-                <a href="#" class="footer-object__btn text-center">с гаражом</a>
-                <a href="#" class="footer-object__btn text-center">гостевой дом</a>
+                {% set paramsValues = advertisement.CategoryParamValues ?? [] %}
+                {% set arhitectyr = complexCategory.getViewAliasesOptions('arhitectyr', paramsValues) %}
+                {% set renovation = complexCategory.getViewAliasesOptions('renovation', paramsValues) %}
+                {% set view_house = complexCategory.getViewAliasesOptions('view_house', paramsValues) %}
+                {% set swimming_pool = complexCategory.getViewAliasesOptions('swimming_pool', paramsValues) %}
+                {% set bath_house = complexCategory.getViewAliasesOptions('bath_house', paramsValues) %}
+                {% set guest_house = complexCategory.getViewAliasesOptions('guest_house', paramsValues) %}
+                {% set place_car = complexCategory.getViewAliasesOptions('place_car', paramsValues) %}
+
+                {% if arhitectyr and (advertisement.CategoryParamValues.arhitectyr.value == 1 or advertisement.CategoryParamValues.arhitectyr.value == 2) %}
+                    <a href="/?arhitectyr={{ advertisement.CategoryParamValues.arhitectyr.value }}" class="footer-object__btn text-center">{{ arhitectyr }}</a>
+                {% endif %}
+
+                {% if renovation and advertisement.CategoryParamValues.renovation.value == 1 %}
+                    <a href="/?renovation={{ advertisement.CategoryParamValues.renovation.value }}" class="footer-object__btn text-center">с ремонтом</a>
+                {% endif %}
+
+                {% if view_house %}
+                    <a href="/?view_house={{ view_house }}" class="footer-object__btn text-center">{{ view_house }}</a>
+                {% endif %}
+
+                {% if swimming_pool and advertisement.CategoryParamValues.swimming_pool.value == 1 %}
+                    <a href="/?swimming_pool={{ advertisement.CategoryParamValues.swimming_pool.value }}" class="footer-object__btn text-center">с бассейном</a>
+                {% endif %}
+
+                {% if bath_house and advertisement.CategoryParamValues.bath_house.value == 1 %}
+                    <a href="/?bath_house={{ advertisement.CategoryParamValues.bath_house.value }}" class="footer-object__btn text-center">с баней</a>
+                {% endif %}
+
+                {% if place_car %}
+                    <a href="/?place_car={{ place_car }}" class="footer-object__btn text-center">с гаражом</a>
+                {% endif %}
+
+                {% if guest_house and advertisement.CategoryParamValues.guest_house.value != 1 %}
+                    <a href="/?guest_house={{ advertisement.CategoryParamValues.guest_house.value }}" class="footer-object__btn text-center">гостевой дом</a>
+                {% endif %}
             </div>
             <div class="row">
                 <div class="col-12 d-flex justify-content-end footer-object__link">
-                    <a href="#" class="project-slider__more d-flex align-items-center">
+                    <a href="/" class="project-slider__more d-flex align-items-center">
                         <span class="project-slider__look grey-text">Перейти к каталогу</span>
                         <svg class="project-slider__arrow-grey" width="11" height="17" viewBox="0 0 11 17" fill="none"
                              xmlns="http://www.w3.org/2000/svg">
