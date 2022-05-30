@@ -73,6 +73,10 @@ $(() => {
                 collectionAddBlock.show();
                 collectionCreateBlock = $('#create-to-collection');
             })
+        } else {
+            fetch(`/agency/agency_compilations/delete/${agencyCompilationId}/${id}`, {headers: {'X-Requested-With': 'XMLHttpRequest'}}).then(res => {
+                window.location.reload();
+            })
         }
     });
     $('body').on('click', '.add-to-collection-block-button-btn', (e) => {
@@ -80,6 +84,11 @@ $(() => {
         collectionAddBlock.hide();
         collectionCreateBlock.show();
     });
+    $('body').on('click', '.add-to-collection-button-close', (e) => {
+        e.preventDefault();
+        collectionAddBlock.hide();
+        collectionCreateBlock.hide();
+    })
 
     $('.selection').on('click', '.selection__share', (e) => {
         e.preventDefault();
@@ -104,12 +113,22 @@ $(() => {
     })
     $('#delete-collections').on('click', '[data-delete]', (e) => {
         e.preventDefault();
-        fetch(`/agency/agency_compilations/drop/${e.currentTarget.dataset.id}`, {
+        fetch(`/agency/agency_compilations/drop/${e.currentTarget.dataset.id}.json`, {
             method: 'POST',
-            headers: {'X-Requested-With': 'XMLHttpRequest'}
-        }).then((res) => {
-            console.log(res);
-            // window.location.reload();
+            body: JSON.stringify({
+                agency_compilation_id: e.currentTarget.dataset.id,
+            }),
+            headers: {
+                Accept: 'application/json, text/javascript, */*; q=0.01',
+                'Content-Type': 'application/json; charset=UTF-8',
+                'X-Requested-With': 'XMLHttpRequest'
+            }
+        }).then(res => res.json()).then((res) => {
+            if (res.result) {
+                window.location.reload();
+            } else {
+                alert(res.error);
+            }
         })
     })
 })
