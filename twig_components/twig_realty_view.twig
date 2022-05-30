@@ -69,6 +69,8 @@
 {% set security = complexCategory.getViewAliasesOptions('security', paramsValues) %}
 {% set place_car = complexCategory.getViewAliasesOptions('place_car', paramsValues) %}
 {% set names_trees = complexCategory.getViewAliasesOptions('names_trees', paramsValues) %}
+{% set myself_add = complexCategory.getViewAliasesOptions('myself_add', paramsValues) %}
+{% set zagolovok = complexCategory.getViewAliasesOptions('zagolovok', paramsValues) %}
 
 {# Проверяем эксклюзивный ли объект, если да выводим эксклюзивный просмотр, иначе обычный #}
 {% if advertisement.Advertisement.contract_type_id == 1 %}
