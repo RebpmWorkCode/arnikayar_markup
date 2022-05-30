@@ -1,0 +1,68 @@
+<div class="modal-2 modal-general" id="delete-collections">
+    <div class="modal-2__block d-flex flex-column">
+        <h2 class="modal-2__title title text-center">Вы действительно хотите удалить подборку?</h2>
+        <div class="modal-2__inform d-flex flex-column align-items-center">
+            <span class="modal-2__name" data-collection-name></span>
+            <span class="modal-2__amount grey-text" data-collection-count></span>
+        </div>
+        <div class="modal-2__buttons d-flex justify-content-between">
+            <button class="modal-2__btn grey-btn" data-delete type="button" data-id>Да</button>
+            <button class="modal-2__btn grey-btn" data-close type="button">Нет</button>
+        </div>
+    </div>
+</div>
+<section class="selection">
+    <div class="container">
+        <div class="row selection__header">
+            <div class="col-12 d-flex justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-end justify-content-end align-items-end">
+                <h1 class="selection__title title">Мои подборки</h1>
+                {#<button class="selection__create d-flex align-items-center"> //TODO подборку без объекта нельзя создать, только с объектом
+                    Создать новую подборку
+                    <svg class="selection__plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M5.95147 14.4231H7.31787C7.43933 14.4231 7.50006 14.374 7.50006 14.2757V1.3013C7.50006 1.20301 7.43933 1.15386 7.31787 1.15386H5.95147C5.83002 1.15386 5.76929 1.20301 5.76929 1.3013V14.2757C5.76929 14.374 5.83002 14.4231 5.95147 14.4231Z" fill="#929292" />
+                        <path d="M0.154293 8.65381H13.1149C13.2178 8.65381 13.2692 8.59308 13.2692 8.47162V7.10523C13.2692 6.98377 13.2178 6.92304 13.1149 6.92304H0.154293C0.0514311 6.92304 0 6.98377 0 7.10523V8.47162C0 8.59308 0.0514311 8.65381 0.154293 8.65381Z" fill="#929292" />
+                    </svg>
+                </button>#}
+            </div>
+        </div>
+        {% for item in list %}
+            <div class="selection__stroke row align-items-center justify-content-sm-between" data-id="{{ item.AgencyCompilation.id }}">
+                <div class="col-4 d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
+                    <div class="box selection__box">
+                        <picture><source srcset="../img/selections/select-1.webp" type="image/webp"><img src="../img/selections/select-1.png" alt="фото подборки" class="selection__image"></picture>
+                    </div>
+                    <div class="box selection__box">
+                        <picture><source srcset="../img/selections/select-2.webp" type="image/webp"><img src="../img/selections/select-2.png" alt="фото подборки" class="selection__image"></picture>
+                    </div>
+                    <div class="box selection__box">
+                        <picture><source srcset="../img/selections/select-1.webp" type="image/webp"><img src="../img/selections/select-1.png" alt="фото подборки" class="selection__image"></picture>
+                    </div>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-8 d-flex flex-column align-items-xl-center align-items-lg-center align-items-md-center align-items-sm-start">
+                    <span class="selection__name" data-collection-name>{{ item.AgencyCompilation.title }}</span>
+                    <span class="selection__amount grey-text" data-collection-count></span>
+                </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-4 d-flex align-items-center justify-content-end">
+                    <button class="selection__btn selection__share d-flex flex-column align-items-center justify-content-center" data-share-link="/agency/realty/index/?agency_compilation={{ item.AgencyCompilation.id }}">
+                        <svg class="selection__icon" width="31" height="32" viewBox="0 0 31 32" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M25.8333 9.79592C24.6063 9.79592 23.4739 9.38775 22.5869 8.70612L13.6658 14.8245C13.8152 15.6018 13.8152 16.3982 13.6658 17.1755L22.5869 23.2939C23.4739 22.6122 24.6063 22.2041 25.8333 22.2041C28.6836 22.2041 31 24.4 31 27.102C31 29.8041 28.6836 32 25.8333 32C22.9831 32 20.6667 29.8041 20.6667 27.102C20.6667 26.6286 20.7356 26.1755 20.869 25.7429L12.3957 19.9265C11.1385 21.5061 9.14069 22.5306 6.88889 22.5306C3.08278 22.5306 0 19.6082 0 16C0 12.3918 3.08278 9.46939 6.88889 9.46939C9.14069 9.46939 11.1385 10.4939 12.3957 12.0735L20.869 6.25714C20.7356 5.82449 20.6667 5.36735 20.6667 4.89796C20.6667 2.19592 22.9831 -4.76837e-07 25.8333 -4.76837e-07C28.6836 -4.76837e-07 31 2.19592 31 4.89796C31 7.6 28.6836 9.79592 25.8333 9.79592ZM25.8333 29.2245C27.069 29.2245 28.0722 28.2735 28.0722 27.102C28.0722 25.9306 27.069 24.9796 25.8333 24.9796C24.5976 24.9796 23.5944 25.9306 23.5944 27.102C23.5944 28.2735 24.5976 29.2245 25.8333 29.2245ZM6.88889 12.4082C4.80069 12.4082 3.1 14.0204 3.1 16C3.1 17.9796 4.80069 19.5918 6.88889 19.5918C8.97708 19.5918 10.6778 17.9796 10.6778 16C10.6778 14.0204 8.97708 12.4082 6.88889 12.4082ZM25.8333 2.77551C24.5976 2.77551 23.5944 3.72653 23.5944 4.89796C23.5944 6.06939 24.5976 7.02041 25.8333 7.02041C27.069 7.02041 28.0722 6.06939 28.0722 4.89796C28.0722 3.72653 27.069 2.77551 25.8333 2.77551Z" fill="white" /></svg>
+                    </button>
+                    <button class="selection__btn selection__delete">
+                        <svg class="selection__trash" width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g clip-path="url(#clip0_243_10996)">
+                                <path d="M33 10L30.7194 31.7689C30.6466 32.3836 30.3489 32.9503 29.8829 33.3615C29.4169 33.7728 28.815 34 28.1915 34H9.80932C9.18575 34 8.58388 33.7728 8.11789 33.3615C7.65191 32.9503 7.35424 32.3836 7.28136 31.7689L5 10" stroke="#929292" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M35.7143 4H2.28571C1.57563 4 1 4.53726 1 5.2V8.8C1 9.46274 1.57563 10 2.28571 10H35.7143C36.4244 10 37 9.46274 37 8.8V5.2C37 4.53726 36.4244 4 35.7143 4Z" stroke="#929292" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M23 27L14 18M23 18L14 27L23 18Z" stroke="#929292" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" />
+                            </g>
+                            <defs><clipPath id="clip0_243_10996"><rect width="38" height="38" fill="white" /></clipPath></defs>
+                        </svg>
+                    </button>
+                    <a href="/agency/realty/index/?agency_compilation={{ item.AgencyCompilation.id }}" class="selection__btn selection__arrow" target="_blank">
+                        <svg class="selection__grey" width="22" height="38" viewBox="0 0 22 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M3.49023 38L22 19L3.49023 1.59856e-06L-3.04578e-06 3.58267L15.0195 19L-3.1705e-07 34.4173L3.49023 38Z" fill="#929292"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>

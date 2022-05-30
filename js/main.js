@@ -81,5 +81,35 @@ $(() => {
         collectionCreateBlock.show();
     });
 
+    $('.selection').on('click', '.selection__share', (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(window.location.origin + e.currentTarget.dataset.shareLink);
+    })
 
+    let deleteCollections = $('#delete-collections');
+    $('.selection').on('click', '.selection__delete', (e) => {
+        e.preventDefault();
+        let wrapper = $(e.currentTarget).closest('.selection__stroke');
+        let collectionName = wrapper.find('[data-collection-name]').text();
+        let collectionCount = wrapper.find('[data-collection-count]').text();
+        let collectionId = wrapper.data('id');
+        deleteCollections.find('[data-collection-name]').text(collectionName)
+        deleteCollections.find('[data-id]').attr('data-id', collectionId);
+        deleteCollections.find('[data-collection-count]').text(collectionCount);
+        deleteCollections.show();
+    })
+    $('#delete-collections').on('click', '[data-close]', (e) => {
+        e.preventDefault();
+        deleteCollections.hide();
+    })
+    $('#delete-collections').on('click', '[data-delete]', (e) => {
+        e.preventDefault();
+        fetch(`/agency/agency_compilations/drop/${e.currentTarget.dataset.id}`, {
+            method: 'POST',
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
+        }).then((res) => {
+            console.log(res);
+            // window.location.reload();
+        })
+    })
 })
