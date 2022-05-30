@@ -11,6 +11,63 @@
 {% set currencyActive = currencyActive|lower %}
 {% set offerAdvertisement = adView.getInfo(advertisement) %}
 
+{% set gallery = adView.getGallery(advertisement) %}
+{% set galleryList = gallery.items ?: [gallery.first] %}
+{% set galleryResizeList = imageResized.resizePicture(galleryList, {'width': '800', 'height': '610', 'mode': 'crop', 'paddings': false, 'folder': 'twig_crop_realty_view_1'}) %}
+
+{% set paramsValues = advertisement.CategoryParamValues ?? [] %}
+
+{% set site_area = complexCategory.getViewAliasesOptions('site_area', paramsValues) %}
+{% set plot_area = complexCategory.getViewAliasesOptions('plot_area', paramsValues) %}
+{% set lot_type = complexCategory.getViewAliasesOptions('lot_type', paramsValues) %}
+{% set area_buildings = complexCategory.getViewAliasesOptions('area_buildings', paramsValues) %}
+{% set house_area = complexCategory.getViewAliasesOptions('house_area', paramsValues) %}
+{% set area_house = complexCategory.getViewAliasesOptions('area_house', paramsValues) %}
+{% set kolichestvo_spalnyh_mest = complexCategory.getViewAliasesOptions('kolichestvo_spalnyh_mest', paramsValues) %}
+{% set number_bathrooms = complexCategory.getViewAliasesOptions('number_bathrooms', paramsValues) %}
+{% set electricity_supply = complexCategory.getViewAliasesOptions('electricity_supply', paramsValues) %}
+{% set water = complexCategory.getViewAliasesOptions('water', paramsValues) %}
+{% set sewerage_supply = complexCategory.getViewAliasesOptions('sewerage_supply', paramsValues) %}
+{% set gas_supply = complexCategory.getViewAliasesOptions('gas_supply', paramsValues) %}
+{% set number_of_floors = complexCategory.getViewAliasesOptions('number_of_floors', paramsValues) %}
+{% set object_type = complexCategory.getViewAliasesOptions('object_type', paramsValues) %}
+{% set avtomob = complexCategory.getViewAliasesOptions('avtomob', paramsValues) %}
+{% set aeroport = complexCategory.getViewAliasesOptions('aeroport', paramsValues) %}
+{% set vokzal = complexCategory.getViewAliasesOptions('vokzal', paramsValues) %}
+{% set olimpik = complexCategory.getViewAliasesOptions('olimpik', paramsValues) %}
+{% set estosadok = complexCategory.getViewAliasesOptions('estosadok', paramsValues) %}
+{% set end_street = complexCategory.getViewAliasesOptions('end_street', paramsValues) %}
+{% set panoramic_windows = complexCategory.getViewAliasesOptions('panoramic_windows', paramsValues) %}
+{% set aluminum_window = complexCategory.getViewAliasesOptions('aluminum_window', paramsValues) %}
+{% set region = complexCategory.getViewAliasesOptions('region', paramsValues) %}
+{% set children_playground = complexCategory.getViewAliasesOptions('children_playground', paramsValues) %}
+{% set work_out = complexCategory.getViewAliasesOptions('work_out', paramsValues) %}
+{% set free_layout = complexCategory.getViewAliasesOptions('free_layout', paramsValues) %}
+{% set before_school = complexCategory.getViewAliasesOptions('before_school', paramsValues) %}
+{% set fireplace = complexCategory.getViewAliasesOptions('fireplace', paramsValues) %}
+{% set supply_exhaust = complexCategory.getViewAliasesOptions('supply_exhaust', paramsValues) %}
+{% set material = complexCategory.getViewAliasesOptions('material', paramsValues) %}
+{% set foundation = complexCategory.getViewAliasesOptions('foundation', paramsValues) %}
+{% set facade_decoration = complexCategory.getViewAliasesOptions('facade_decoration', paramsValues) %}
+{% set facade_insulation = complexCategory.getViewAliasesOptions('facade_insulation', paramsValues) %}
+{% set house_rented = complexCategory.getViewAliasesOptions('house_rented', paramsValues) %}
+{% set recreation_areas = complexCategory.getViewAliasesOptions('recreation_areas', paramsValues) %}
+{% set renovation = complexCategory.getViewAliasesOptions('renovation', paramsValues) %}
+{% set interior_decoration = complexCategory.getViewAliasesOptions('interior_decoration', paramsValues) %}
+{% set bath_house = complexCategory.getViewAliasesOptions('bath_house', paramsValues) %}
+{% set swimming_pool = complexCategory.getViewAliasesOptions('swimming_pool', paramsValues) %}
+{% set guest_house = complexCategory.getViewAliasesOptions('guest_house', paramsValues) %}
+{% set pool_size = complexCategory.getViewAliasesOptions('pool_size', paramsValues) %}
+{% set pool_functions = complexCategory.getViewAliasesOptions('pool_functions', paramsValues) %}
+{% set landscape = complexCategory.getViewAliasesOptions('landscape', paramsValues) %}
+{% set automatic_watering = complexCategory.getViewAliasesOptions('automatic_watering', paramsValues) %}
+{% set fence = complexCategory.getViewAliasesOptions('fence', paramsValues) %}
+{% set altitude = complexCategory.getViewAliasesOptions('altitude', paramsValues) %}
+{% set view_house = complexCategory.getViewAliasesOptions('view_house', paramsValues) %}
+{% set security = complexCategory.getViewAliasesOptions('security', paramsValues) %}
+{% set place_car = complexCategory.getViewAliasesOptions('place_car', paramsValues) %}
+{% set names_trees = complexCategory.getViewAliasesOptions('names_trees', paramsValues) %}
+
 {% if advertisement.Advertisement.contract_type_id == 1 %}
     {{ croogo_region alias = "twig_realty_view_exclusive" }}
 {% else %}

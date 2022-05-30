@@ -1,18 +1,14 @@
 <section class="main-slider">
     <div class="swiper main-slider-swiper">
         <div class="swiper-wrapper main-slider-wrapper">
-            <div class="swiper-slide main-slider-slide">
-                <picture><source srcset="/uploads/assets/img/object-page/slide-1.webp" type="image/webp"><img src="/uploads/assets/img/object-page/slide-1.jpg" alt="фото объекта" class="main-slider__image"></picture>
-            </div>
-            <div class="swiper-slide main-slider-slide">
-                <picture><source srcset="/uploads/assets/img/object-page/slide-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/slide-2.jpg" alt="фото объекта" class="main-slider__image"></picture>
-            </div>
-            <div class="swiper-slide main-slider-slide">
-                <picture><source srcset="/uploads/assets/img/object-page/slide-3.webp" type="image/webp"><img src="/uploads/assets/img/object-page/slide-3.jpg" alt="фото объекта" class="main-slider__image"></picture>
-            </div>
-            <div class="swiper-slide main-slider-slide">
-                <picture><source srcset="/uploads/assets/img/object-page/slide-4.webp" type="image/webp"><img src="/uploads/assets/img/object-page/slide-4.jpg" alt="фото объекта" class="main-slider__image"></picture>
-            </div>
+
+            {% for galleryItem in galleryResizeList %}
+                <div class="swiper-slide main-slider-slide">
+                    <picture>
+                        <img src="{{ galleryItem.src }}" alt="{{ galleryItem.description }}" class="main-slider__image">
+                    </picture>
+                </div>
+            {% endfor %}
         </div>
         <div class="swiper-button-next main-slider-button-next main-slider-button">
             <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
@@ -48,11 +44,9 @@
                             d="M4.875 1.5H25.125C26.0201 1.5 26.8785 1.85558 27.5115 2.48851C28.1444 3.12145 28.5 3.97989 28.5 4.875V25.125C28.5 26.0201 28.1444 26.8785 27.5115 27.5115C26.8785 28.1444 26.0201 28.5 25.125 28.5H4.875C3.97989 28.5 3.12145 28.1444 2.48851 27.5115C1.85558 26.8785 1.5 26.0201 1.5 25.125V4.875C1.5 3.97989 1.85558 3.12145 2.48851 2.48851C3.12145 1.85558 3.97989 1.5 4.875 1.5ZM15.8438 15.8438V25.9688H25.9688V15.8438H15.8438ZM4.03125 15.8438V25.9688H14.1562V15.8438H4.03125ZM15.8438 4.03125V14.1562H25.9688V4.03125H15.8438ZM4.03125 4.03125V14.1562H14.1562V4.03125H4.03125Z"
                             fill="#929292" />
                     </svg>
-                    <span class="parameter__desc-left">Участок по документам: <span>12
-									соток</span></span>
+                    <span class="parameter__desc-left">Участок по документам: <span>12 соток</span></span>
                 </div>
-                <span class="parameter__desc grey-text">Участок по факту: <span>12
-								соток</span></span>
+                <span class="parameter__desc grey-text">Участок по факту: <span>12 соток</span></span>
                 <span class="parameter__desc">Вид разрешенного использования: <span>ИЖС</span></span>
                 <span class="parameter__desc">Площадь всех строений: <span>480 м²</span></span>
                 <div class="parameter__item d-flex align-items-xl-center align-items-lg-center">
@@ -107,8 +101,7 @@
             <div class="parameter__dop col-xl-4 col-lg-5 col-md-5 col-sm-5 col-5 d-flex flex-column align-items-end">
                 <span class="parameter__desc-right">Электричество: <span>15 кВт</span></span>
                 <span class="parameter__desc-right">Водоснабжение: <span>центральное</span></span>
-                <span class="parameter__desc-right">Канализация: <span>ЛОС<br>(Локальные Очистные
-								Сооружения)</span></span>
+                <span class="parameter__desc-right">Канализация: <span>ЛОС<br>(Локальные Очистные Сооружения)</span></span>
                 <span class="parameter__desc-right">Газ: <span>центральный</span></span>
                 <span class="parameter__desc-right">Этажность: <span>2</span></span>
                 <span class="parameter__desc-right grey-text">Цокол, мансарда</span>
@@ -148,23 +141,19 @@
                 <span class="benefits__desc">Спортивная площадка/Зона WorkOut: <span>да</span></span>
                 <span class="benefits__desc grey-text">Свободная планировка: <span>да</span></span>
                 <span class="benefits__desc">До школы/сада пешком: <span>да</span></span>
-                <span class="benefits__desc grey-text">Установлена приточно-вытяжная вентиляция:
-							<span>да</span></span>
+                <span class="benefits__desc grey-text">Установлена приточно-вытяжная вентиляция: <span>да</span></span>
                 <span class="benefits__desc">Камин: <span>да</span></span>
             </div>
-            <div
-                class="parameter__col col-xl-1 justify-content-xl-start col-lg-2 d-flex justify-content-center col-md-2 col-sm-2 col-1">
+            <div class="parameter__col col-xl-1 justify-content-xl-start col-lg-2 d-flex justify-content-center col-md-2 col-sm-2 col-1">
                 <div class="benefits__line"></div>
             </div>
             <div class="parameter__dop col-xl-4 d-flex flex-column align-items-end col-lg-5 col-md-5 col-sm-5 col-5">
                 <h2 class="benefits__sub subtitle">Особенности</h2>
                 <span class="benefits__desc-right grey-text">Парящая лестница из массива дерева</span>
                 <span class="benefits__desc-right">Удобный выход из гостиной во двор к бассейну</span>
-                <span class="benefits__desc-right grey-text">Выдвижной навес "маркиза", который укроет от солнца и
-							дождя</span>
+                <span class="benefits__desc-right grey-text">Выдвижной навес "маркиза", который укроет от солнца и дождя</span>
                 <span class="benefits__desc-right">Выдвижной навес "маркиза", который укроет от солнца и дождя</span>
-                <span class="benefits__desc-right grey-text">Функциональная постирочная на 2 этаже - это облегчает
-							стирку и сушку, ведь все спальни именно здесь</span>
+                <span class="benefits__desc-right grey-text">Функциональная постирочная на 2 этаже - это облегчает стирку и сушку, ведь все спальни именно здесь</span>
             </div>
         </div>
     </div>
@@ -203,12 +192,10 @@
                     </svg>
                     <h2 class="location__sub subtitle">Местоположение</h2>
                 </div>
-                <span class="location__adress">Хостинский район, село Каштаны, вблизи улиц Мичурина,
-							Ленина</span>
+                <span class="location__adress">Хостинский район, село Каштаны, вблизи улиц Мичурина, Ленина</span>
                 <div class="location__two d-flex flex-column">
                     <button
-                        class="location__btn grey-btn content_toggle order-xl-1 order-lg-1 order-md-1 order-sm-1 order-2">Показать
-                        на карте</button>
+                        class="location__btn grey-btn content_toggle order-xl-1 order-lg-1 order-md-1 order-sm-1 order-2">Показать на карте</button>
                     <div class="location__line order-xl-2 order-lg-2 order-md-2 order-sm-2 order-1"></div>
                 </div>
                 <div class="location__map content_block">
@@ -232,8 +219,7 @@
                             </clipPath>
                         </defs>
                     </svg>
-                    <span class="location__desc">моря <span class="grey-text">по автомобильной дороге: </span><span
-                            class="location__value">5 км</span></span>
+                    <span class="location__desc">моря <span class="grey-text">по автомобильной дороге: </span><span class="location__value">5 км</span></span>
                 </div>
                 <div class="location__wrapper d-flex align-items-center">
                     <svg class="location__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -254,8 +240,7 @@
                             d="M4.8 21H9.3V19.8H4.8C4.64093 19.7998 4.48843 19.7365 4.37594 19.6241C4.26346 19.5116 4.20019 19.3591 4.2 19.2V14.7H3V19.2C3.00054 19.6772 3.19035 20.1348 3.5278 20.4722C3.86525 20.8097 4.32277 20.9995 4.8 21ZM4.2 4.8C4.20019 4.64093 4.26346 4.48843 4.37594 4.37594C4.48843 4.26346 4.64093 4.20019 4.8 4.2H9.3V3H4.8C4.32277 3.00054 3.86525 3.19035 3.5278 3.5278C3.19035 3.86525 3.00054 4.32277 3 4.8V9.3H4.2V4.8ZM19.2 3H14.7V4.2H19.2C19.3591 4.20019 19.5116 4.26346 19.6241 4.37594C19.7365 4.48843 19.7998 4.64093 19.8 4.8V9.3H21V4.8C20.9995 4.32277 20.8097 3.86525 20.4722 3.5278C20.1348 3.19035 19.6772 3.00054 19.2 3ZM19.8 19.2C19.7998 19.3591 19.7365 19.5116 19.6241 19.6241C19.5116 19.7365 19.3591 19.7998 19.2 19.8H14.7V21H19.2C19.6772 20.9995 20.1348 20.8097 20.4722 20.4722C20.8097 20.1348 20.9995 19.6772 21 19.2V14.7H19.8V19.2ZM17.4 12C17.4 9.0225 14.9775 6.6 12 6.6C9.0225 6.6 6.6 9.0225 6.6 12C6.6 14.9775 9.0225 17.4 12 17.4C14.9775 17.4 17.4 14.9775 17.4 12ZM12 16.2C11.1693 16.2 10.3573 15.9537 9.66661 15.4922C8.97592 15.0307 8.43759 14.3747 8.11971 13.6073C7.80182 12.8398 7.71864 11.9953 7.8807 11.1806C8.04276 10.3659 8.44277 9.61753 9.03015 9.03015C9.61753 8.44277 10.3659 8.04276 11.1806 7.8807C11.9953 7.71864 12.8398 7.80182 13.6073 8.11971C14.3747 8.43759 15.0307 8.97592 15.4922 9.66661C15.9537 10.3573 16.2 11.1693 16.2 12C16.1987 13.1135 15.7558 14.1811 14.9685 14.9685C14.1811 15.7558 13.1135 16.1987 12 16.2Z"
                             fill="black" />
                     </svg>
-                    <span class="location__desc">Центр Сочи <span class="grey-text">центральный ЖД Вокзал Сочи:
-								</span><span class="location__value">36 км</span></span>
+                    <span class="location__desc">Центр Сочи <span class="grey-text">центральный ЖД Вокзал Сочи: </span><span class="location__value">36 км</span></span>
                 </div>
                 <div class="location__wrapper d-flex align-items-center">
                     <svg class="location__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -293,8 +278,7 @@
                         <path d="M8 22L12 12L16 22M5.5 22H18.5" stroke="black" stroke-linecap="round"
                               stroke-linejoin="round" />
                     </svg>
-                    <span class="location__desc">пгт Сириус <span class="grey-text">ЖД Вокзал Олимпийский парк:
-								</span><span class="location__value">4 км</span></span>
+                    <span class="location__desc">пгт Сириус <span class="grey-text">ЖД Вокзал Олимпийский парк: </span><span class="location__value">4 км</span></span>
                 </div>
                 <div class="location__wrapper d-flex align-items-center">
                     <svg class="location__pic" width="24" height="24" viewBox="0 0 24 24" fill="none"
@@ -303,8 +287,7 @@
                             d="M12.5827 3L11.8988 4.245L7.00725 13.137L5.57025 11.7L5.07525 12.5235L0.68025 19.8487L0 20.9842H23.463L23.0145 19.938L20.7645 14.688L20.328 13.6702L18.777 15.2212L13.2247 4.2675L12.5835 3H12.5827ZM12.528 6.2115L14.808 10.7085L14.2275 11.2065L12.5175 9.74175L10.8083 11.2065L10.1108 10.6072L12.528 6.2115ZM12.5182 11.7165L14.2282 13.1812L15.5048 12.0862L17.9047 16.8225L18.3713 17.7472L19.8202 16.2982L21.1852 19.4842H2.64825C3.72075 17.6955 4.79475 15.9067 5.868 14.1187L7.359 15.6097L7.8405 14.7352C8.35125 13.8067 8.86275 12.879 9.37275 11.9505L10.8083 13.1805L12.5182 11.7165Z"
                             fill="black" />
                     </svg>
-                    <span class="location__desc">Красная Поляна <span class="grey-text">ЖД Вокзал Эсто-Садок:
-								</span><span class="location__value">55 км</span></span>
+                    <span class="location__desc">Красная Поляна <span class="grey-text">ЖД Вокзал Эсто-Садок: </span><span class="location__value">55 км</span></span>
                 </div>
             </div>
         </div>
@@ -337,8 +320,7 @@
                 <span class="more__desc-right">Бассейн: <span>да</span></span>
                 <span class="more__desc-right">Гостевой дом: <span>да</span></span>
                 <span class="more__desc-right">Размер бассейна: <span>6x4</span></span>
-                <span class="more__desc-right">Функции бассейна: <span>противоток, подогрев, подсветка, гидромассаж,
-								фильтрация</span></span>
+                <span class="more__desc-right">Функции бассейна: <span>противоток, подогрев, подсветка, гидромассаж, фильтрация</span></span>
             </div>
         </div>
     </div>
@@ -350,16 +332,28 @@
                 <div class="swiper project-slider-swiper">
                     <div class="swiper-wrapper project-slider-wrapper">
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-1.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-1.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-1.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-1.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-2.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-2.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-2.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-3.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-3.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-3.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-3.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-4.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-4.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-4.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-4.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                     </div>
                     <div class="swiper-button-next project-slider-button-next project-slider-button">
@@ -389,35 +383,37 @@
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
-                <picture><source srcset="/uploads/assets/img/object-page/project-1.webp" type="image/webp"><img src="/uploads/assets/img/object-page/project-1.jpg" alt="фото объекта" class="project-slider__rect"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/project-1.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/project-1.jpg" alt="фото объекта" class="project-slider__rect">
+                </picture>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 d-sm-none d-xl-block d-lg-block d-md-block d-none">
                 <div
                     class="project-slider__block d-flex align-items-center justify-content-center flex-column text-center">
                     <span class="project-slider__name">Проект фундамента</span>
-                    <span class="project-slider__text grey-text">Фасад и внешняя отделка: фасад утеплен,
-								декоративная
-								штукатурка.
-							</span>
+                    <span class="project-slider__text grey-text">Фасад и внешняя отделка: фасад утеплен, декоративная штукатурка.</span>
                 </div>
             </div>
         </div>
         <div class="row g-0">
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
-                <picture><source srcset="/uploads/assets/img/object-page/project-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/project-2.jpg" alt="фото объекта" class="project-slider__rect"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/project-2.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/project-2.jpg" alt="фото объекта" class="project-slider__rect">
+                </picture>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-6">
-                <div
-                    class="project-slider__block_f d-flex align-items-center justify-content-center flex-column text-center">
+                <div class="project-slider__block_f d-flex align-items-center justify-content-center flex-column text-center">
                     <span class="project-slider__name">Проект дома</span>
-                    <span class="project-slider__text grey-text">Фасад и внешняя отделка: фасад утеплен,
-								декоративная
-								штукатурка.
-							</span>
+                    <span class="project-slider__text grey-text">Фасад и внешняя отделка: фасад утеплен, декоративная штукатурка.</span>
                 </div>
             </div>
             <div class="col-xl-4 col-lg-4 col-md-4 d-sm-none d-xl-block d-lg-block d-md-block d-none">
-                <picture><source srcset="/uploads/assets/img/object-page/project-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/project-2.jpg" alt="фото объекта" class="project-slider__rect"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/project-2.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/project-2.jpg" alt="фото объекта" class="project-slider__rect">
+                </picture>
             </div>
         </div>
         <div class="row">
@@ -439,9 +435,11 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="video__preview"
-                     onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                    <picture><source srcset="/uploads/assets/img/object-page/video-3.webp" type="image/webp"><img class="video__pr" src="/uploads/assets/img/object-page/video-3.jpg" style="cursor:pointer" /></picture>
+                <div class="video__preview" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+                    <picture>
+                        <source srcset="/uploads/assets/img/object-page/video-3.webp" type="image/webp">
+                        <img class="video__pr" src="/uploads/assets/img/object-page/video-3.jpg" style="cursor:pointer" />
+                    </picture>
                 </div>
                 <div style="display:none">
                     <iframe class="video__video video__video_pr" width="1100" height="587"
@@ -466,16 +464,28 @@
                 <div class="swiper project-slider-swiper">
                     <div class="swiper-wrapper project-slider-wrapper">
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-1.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-1.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-1.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-1.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-2.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-2.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-2.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-3.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-3.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-3.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-3.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                         <div class="swiper-slide project-slider-slide">
-                            <picture><source srcset="/uploads/assets/img/object-page/dop-slide-4.webp" type="image/webp"><img src="/uploads/assets/img/object-page/dop-slide-4.jpg" alt="фото объекта" class="project-slider__image"></picture>
+                            <picture>
+                                <source srcset="/uploads/assets/img/object-page/dop-slide-4.webp" type="image/webp">
+                                <img src="/uploads/assets/img/object-page/dop-slide-4.jpg" alt="фото объекта" class="project-slider__image">
+                            </picture>
                         </div>
                     </div>
                     <div class="swiper-button-next project-slider-button-next project-slider-button">
@@ -517,29 +527,38 @@
             <div class="parameter__col col-1 d-flex justify-content-xl-start justify-content-center">
                 <div class="territory__line"></div>
             </div>
-            <div
-                class="parameter__dop col-xl-4 col-lg-5 col-md-5 col-sm-5 col-5 d-flex flex-column align-items-end territory__col">
-						<span class="territory__desc-right">Охрана: <span>шлагбаум, видеонаблюдение, вневедомственная
-								охрана</span></span>
+            <div class="parameter__dop col-xl-4 col-lg-5 col-md-5 col-sm-5 col-5 d-flex flex-column align-items-end territory__col">
+                <span class="territory__desc-right">Охрана: <span>шлагбаум, видеонаблюдение, вневедомственная охрана</span></span>
                 <span class="territory__desc-right">Место для машины: <span>гараж, во дворе</span></span>
-                <span class="territory__desc-right grey-text">3 хурмы 8 лет <br>2 инжира 10 лет
-							<br>лавровый лист</span>
+                <span class="territory__desc-right grey-text">3 хурмы 8 лет <br>2 инжира 10 лет <br>лавровый лист</span>
             </div>
         </div>
         <div class="territory__row row g-0">
             <div class="col-6">
-                <picture><source srcset="/uploads/assets/img/object-page/territory-1.webp" type="image/webp"><img src="/uploads/assets/img/object-page/territory-1.jpg" alt="фото объекта" class="territory__image"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/territory-1.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/territory-1.jpg" alt="фото объекта" class="territory__image">
+                </picture>
             </div>
             <div class="col-6">
-                <picture><source srcset="/uploads/assets/img/object-page/territory-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/territory-2.jpg" alt="фото объекта" class="territory__image"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/territory-2.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/territory-2.jpg" alt="фото объекта" class="territory__image">
+                </picture>
             </div>
         </div>
         <div class="row g-0">
             <div class="col-6">
-                <picture><source srcset="/uploads/assets/img/object-page/territory-2.webp" type="image/webp"><img src="/uploads/assets/img/object-page/territory-2.jpg" alt="фото объекта" class="territory__image"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/territory-2.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/territory-2.jpg" alt="фото объекта" class="territory__image">
+                </picture>
             </div>
             <div class="col-6">
-                <picture><source srcset="/uploads/assets/img/object-page/territory-1.webp" type="image/webp"><img src="/uploads/assets/img/object-page/territory-1.jpg" alt="фото объекта" class="territory__image"></picture>
+                <picture>
+                    <source srcset="/uploads/assets/img/object-page/territory-1.webp" type="image/webp">
+                    <img src="/uploads/assets/img/object-page/territory-1.jpg" alt="фото объекта" class="territory__image">
+                </picture>
             </div>
         </div>
         <div class="row">
@@ -568,16 +587,16 @@
         </div>
         <div class="row">
             <div class="col-12 text-center">
-						<span class="feel__text">Самый главный мега плюс дома самый главный мега плюс дома самый
-							главный</span>
+                <span class="feel__text">Самый главный мега плюс дома самый главный мега плюс дома самый главный</span>
             </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="video__preview"
-                     onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-
-                    <picture><source srcset="/uploads/assets/img/object-page/video-2.webp" type="image/webp"><img class="video__pr" class="video__image" src="/uploads/assets/img/object-page/video-2.jpg" style="cursor:pointer" /></picture>
+                <div class="video__preview" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
+                    <picture>
+                        <source srcset="/uploads/assets/img/object-page/video-2.webp" type="image/webp">
+                        <img class="video__pr" class="video__image" src="/uploads/assets/img/object-page/video-2.jpg" style="cursor:pointer" />
+                    </picture>
                 </div>
                 <div style="display:none">
                     <iframe class="video__video video__video_pr" width="1100" height="587"
