@@ -138,26 +138,94 @@
             <div class="filter-settings-content-six" data-alias="kolichestvo_spalnyh_mest">
                 <span class="filter-settings-content-six__text">Количество спален</span>
                 <div class="filter-settings-content-six-buttons">
-                    {{ form.input('kolichestvo_spalnyh_mest', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'1': '1','2': '2','3': '3','4': '4','5': '5','6': '6+',},'hiddenField': false,'div': false,'legend': false,'label': {'class': 'filter-settings-content-six__button'},'fieldset': false,}) }}
+                    {% set kolichestvoSpalnyhMests = {
+                        '1': '1',
+                        '2': '2',
+                        '3': '3',
+                        '4': '4',
+                        '5': '5',
+                        '6': '6+',
+                    } %}
+                    {% for id,label in kolichestvoSpalnyhMests %}
+                        {{ form.checkbox('kolichestvo_spalnyh_mest', {
+                            'class': 'd-none',
+                            'hiddenField': false,
+                            'div': false,
+                            'value': id,
+                            'id': 'AdvertisementKolichestvoSpalnyhMest'~id,
+                            'checked': id in _view.request.query('kolichestvo_spalnyh_mest')
+                        }) }}
+                        {{ form.label('kolichestvo_spalnyh_mest'~id, label, {'class': 'filter-settings-content-six__button'}) }}
+                    {% endfor %}
                 </div>
             </div>
             <div class="filter-settings-content-three" data-alias="interior_decoration">
                 <span class="filter-settings-content-three__text">Ремонт</span>
                 <div class="filter-settings-content-three-buttons">
-                    {{ form.input('interior_decoration', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': interiorDecorations,'div': false,'legend': false,'hiddenField': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
+                    {% for id,label in interiorDecorations %}
+                        {{ form.checkbox('interior_decoration', {
+                            'class': 'd-none',
+                            'hiddenField': false,
+                            'div': false,
+                            'value': id,
+                            'id': 'AdvertisementInteriorDecoration'~id,
+                            'checked': id in _view.request.query('interior_decoration')
+                        }) }}
+                        {{ form.label('interior_decoration'~id, label, {'class': 'filter-settings-content-three__button'}) }}
+                    {% endfor %}
                 </div>
             </div>
             <div class="filter-settings-content-six" data-alias="number_of_floors">
                 <span class="filter-settings-content-six__text">Количество этажей</span>
                 <div class="filter-settings-content-six-buttons">
-                    {{ form.input('number_of_floors', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'1': '1','2': '2','3': '3','4': '4','5': '5','6': '6+',},'hiddenField': false,'div': false,'legend': false,'label': {'class': 'filter-settings-content-six__button'},'fieldset': false,}) }}
+                    {% set numberOfFloors = {
+                        '1': '1',
+                        '2': '2',
+                        '3': '3',
+                        '4': '4',
+                        '5': '5',
+                        '6': '6+',
+                    } %}
+                    {% for id,label in numberOfFloors %}
+                        {{ form.checkbox('number_of_floors', {
+                            'class': 'd-none',
+                            'hiddenField': false,
+                            'div': false,
+                            'value': id,
+                            'id': 'AdvertisementNumberOfFloors'~id,
+                            'checked': id in _view.request.query('number_of_floors')
+                        }) }}
+                        {{ form.label('number_of_floors'~id, label, {'class': 'filter-settings-content-six__button'}) }}
+                    {% endfor %}
                 </div>
             </div>
             <div class="filter-settings-content-three" data-alias="avtomob">
                 <span class="filter-settings-content-three__text">Расстояние до моря</span>
                 <div class="filter-settings-content-three-buttons-flex">
-                    {{ form.input('avtomob_from', {'type': 'radio', 'class': 'd-none', 'multiple': 'select','options': {'2': 'до 2 км','5': 'до 5 км',},'div': false,'hiddenField': false,'legend': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
-                    {{ form.input('avtomob_to', {'type': 'radio','class': 'd-none', 'multiple': 'select','options': {'5': '5км +',},'div': false,'hiddenField': false,'legend': false,'label': {'class': 'filter-settings-content-three__button'},'fieldset': false,}) }}
+                    {% set avtomobs = {
+                        '2': 'до 2 км',
+                        '5': 'до 5 км',
+                    } %}
+                    {% for id,label in avtomobs %}
+                        {{ form.checkbox('avtomob_from', {
+                            'class': 'd-none',
+                            'hiddenField': false,
+                            'div': false,
+                            'value': id,
+                            'id': 'AdvertisementAvtomobFrom'~id,
+                            'checked': id in _view.request.query('avtomob_from')
+                        }) }}
+                        {{ form.label('avtomob_from'~id, label, {'class': 'filter-settings-content-three__button'}) }}
+                    {% endfor %}
+                    {{ form.checkbox('avtomob_to', {
+                        'class': 'd-none',
+                        'hiddenField': false,
+                        'div': false,
+                        'value': id,
+                        'id': 'AdvertisementAvtomobTo5',
+                        'checked': '5' in _view.request.query('avtomob_to')
+                    }) }}
+                    {{ form.label('avtomob_to5', '5км +', {'class': 'filter-settings-content-three__button'}) }}
                 </div>
             </div>
             <div class="filter-settings-content-eight" data-group="checkbox-aliases">
