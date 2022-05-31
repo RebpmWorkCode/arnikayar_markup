@@ -144,8 +144,12 @@
                     </svg>
                     <h3 class="description__title">Местоположение</h3>
                 </div>
-                {% if advertisement.Advertisement.location_full %}
-                    <span class="description__desc">{{ advertisement.Advertisement.location_full }}</span>
+                {% if location.title(advertisement, 'district, locality') %}
+                    <span class="description__desc">{{ location.title(advertisement, 'district, locality') }}
+                        {% if vblizi %}
+                            <span>, вблизи улиц {{ vblizi }}</span>
+                        {% endif %}
+                    </span>
                 {% endif %}
                 {% if avtomob or aeroport or vokzal or olimpik or estosadok %}
                     <span class="description__desc">Расстояние до:</span>
