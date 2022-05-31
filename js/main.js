@@ -155,4 +155,9 @@ $(() => {
     })
     //endregion
 
+    $('.btn-link-callback').on('click', function (e) {
+        let link = '/' + e.target.getAttribute('data-url');
+        window.open(link);
+    })
+
 })

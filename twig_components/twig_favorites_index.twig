@@ -10,11 +10,11 @@
 {{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
 {{ _view.assign('title', adSeo.titleList()) }}
 {{ _view.Html.script('/uploads/assets/js/favorites.js', {'block': 'scriptCustom'}) }}
-<section class="filter">
+<section class="filter favorites">
     <div class="container">
         <div class="filter-block row">
             <div class="col-xl-9 col-lg-8 col-md-7 col-sm-6">
-                <h1 class="filter-title">Все объекты</h1>
+                <h1 class="filter-title">Избранное</h1>
             </div>
             {{ form.create('Advertisement', {
                 'url': {'plugin':'agency','controller':'realty','action':'index'},
@@ -22,22 +22,22 @@
                 'id': 'realty-sorting',
                 'type': 'get'
             }) }}
-                <span class="filter-sorting">сортировка:</span>
-                {% set sortingValue = [_view.request.query('sort'), _view.request.query('direction')]|join('_') %}
-                {% set sortingValue = sortingValue != '_' ? sortingValue|replace({'Advertisement.': ''}) : '' %}
-                {{ form.input('sorting', {
-                    'type': 'select',
-                    'options': {
-                        'price_desc': 'сначала дороже',
-                        'price_asc': 'сначала дешевле',
-                        'created_desc': 'сначала новые',
-                    },
-                    'default': 'price_desc',
-                    'class': 'select-sorting',
-                    'label': false,
-                    'div': false,
-                    'value': sortingValue,
-                }) }}
+            <span class="filter-sorting">сортировка:</span>
+            {% set sortingValue = [_view.request.query('sort'), _view.request.query('direction')]|join('_') %}
+            {% set sortingValue = sortingValue != '_' ? sortingValue|replace({'Advertisement.': ''}) : '' %}
+            {{ form.input('sorting', {
+                'type': 'select',
+                'options': {
+                    'price_desc': 'сначала дороже',
+                    'price_asc': 'сначала дешевле',
+                    'created_desc': 'сначала новые',
+                },
+                'default': 'price_desc',
+                'class': 'select-sorting',
+                'label': false,
+                'div': false,
+                'value': sortingValue,
+            }) }}
             {{ form.end() }}
         </div>
         <div class="filter-content">
@@ -184,11 +184,7 @@
                         </div>
                     </a>
                 {% endfor %}
-                <button class="filter-objects-open filter-open">фильтр</button>
             </div>
-            {% set filterUrl = {'plugin':'agency','controller':'realty','action':'index'} %}
-            {% set showMapButton = true %}
-            {{ croogo_region alias = "twig_realty_filter_block" }}
         </div>
     </div>
 </section>

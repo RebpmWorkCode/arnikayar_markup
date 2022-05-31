@@ -144,12 +144,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 video__col">
-                    <div class="video__preview" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                        <picture>
-                            <img class="video__image" src="/{{ advertisement.AdvertisementPicture.0.picture }}" alt="" style="width: 100%;height: 587px;cursor:pointer" />
-                        </picture>
-                    </div>
-                    <div style="display:none">
+                    <div>
                         <iframe class="video__video" width="1100" height="587"
                                 src="{{ advertisement.Youtube.0.url }}" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -216,12 +211,7 @@
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <div class="video__preview" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                    <picture>
-                        <img class="video__image" src="/{{ advertisement.AdvertisementPicture.1.picture }}" alt="" style="width: 100%;height: 587px;cursor:pointer" />
-                    </picture>
-                </div>
-                <div style="display:none">
+                <div>
                     <iframe class="video__video" width="1100" height="587"
                             src="{{ advertisement.Youtube.1.url }}" title="YouTube video player" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -519,12 +509,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12">
-                    <div class="video__preview" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                        <picture>
-                            <img class="video__image" src="/{{ advertisement.AdvertisementPicture.2.picture }}" alt="" style="width: 100%;height: 587px;cursor:pointer" />
-                        </picture>
-                    </div>
-                    <div style="display:none">
+                    <div>
                         <iframe class="video__video" width="1100" height="587"
                                 src="{{ advertisement.Youtube.2.url }}" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -621,28 +606,30 @@
                 {% endif %}
             </div>
         </div>
-        <div class="territory__row row g-0">
-            <div class="col-6">
-                <picture>
-                    <img src="/{{ advertisement.AdvertisementPicture.0.picture }}" alt="фото объекта" class="territory__image">
-                </picture>
+        <div class="territory__row" style="max-height: 830px; overflow: hidden">
+            <div class="row g-0">
+                <div class="col-6">
+                    <picture>
+                        <img src="/{{ advertisement.AdvertisementPicture.0.picture }}" alt="фото объекта" class="territory__image">
+                    </picture>
+                </div>
+                <div class="col-6">
+                    <picture>
+                        <img src="/{{ advertisement.AdvertisementPicture.1.picture }}" alt="фото объекта" class="territory__image">
+                    </picture>
+                </div>
             </div>
-            <div class="col-6">
-                <picture>
-                    <img src="/{{ advertisement.AdvertisementPicture.1.picture }}" alt="фото объекта" class="territory__image">
-                </picture>
-            </div>
-        </div>
-        <div class="row g-0">
-            <div class="col-6">
-                <picture>
-                    <img src="/{{ advertisement.AdvertisementPicture.2.picture }}" alt="фото объекта" class="territory__image">
-                </picture>
-            </div>
-            <div class="col-6">
-                <picture>
-                    <img src="/{{ advertisement.AdvertisementPicture.3.picture }}" alt="фото объекта" class="territory__image">
-                </picture>
+            <div class="row g-0">
+                <div class="col-6">
+                    <picture>
+                        <img src="/{{ advertisement.AdvertisementPicture.2.picture }}" alt="фото объекта" class="territory__image">
+                    </picture>
+                </div>
+                <div class="col-6">
+                    <picture>
+                        <img src="/{{ advertisement.AdvertisementPicture.3.picture }}" alt="фото объекта" class="territory__image">
+                    </picture>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -677,12 +664,7 @@
         {% if advertisement.Youtube.3.url %}
             <div class="row">
                 <div class="col-12">
-                    <div class="video__preview" onclick="this.nextElementSibling.style.display='block'; this.style.display='none'">
-                        <picture>
-                            <img class="video__image" src="/{{ advertisement.AdvertisementPicture.3.picture }}" alt="" style="width: 100%;height: 587px;cursor:pointer" />
-                        </picture>
-                    </div>
-                    <div style="display:none">
+                    <div>
                         <iframe class="video__video" width="1100" height="587"
                                 src="{{ advertisement.Youtube.3.url }}" title="YouTube video player" frameborder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -16582,12 +16582,6 @@ button {
     width: 145px;
   }
 
-  .header-object__circle {
-    position: absolute;
-    margin-left: 0;
-    bottom: 0;
-    left: 35px;
-  }
 
   .header-object__id {
     position: absolute;
@@ -17577,9 +17571,6 @@ button {
     padding: 1px 3px;
   }
 
-  .header-object__circle {
-    left: 30px;
-  }
 
   .header-object__box {
     width: 53px;
