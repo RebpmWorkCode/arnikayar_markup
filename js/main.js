@@ -99,6 +99,10 @@ $(() => {
         e.preventDefault();
         navigator.clipboard.writeText(window.location.origin + e.currentTarget.dataset.shareLink);
     })
+    $('.filter-collection-button').on('click', (e) => {
+        e.preventDefault();
+        navigator.clipboard.writeText(window.location.origin + e.currentTarget.dataset.shareLink);
+    })
 
     let createCollection = $('#create-collection');
     $('.selection').on('click', '.selection__create', (e) => {
