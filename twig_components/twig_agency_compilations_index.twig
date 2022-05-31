@@ -1,3 +1,12 @@
+<div class="modal-1 modal-general" id="create-collection" style="display: none">
+    <div class="modal-1__block d-flex flex-column">
+        <h2 class="modal-1__title title text-xl-center text-lg-center text-md-center text-sm-center text-start">Введите название подборки</h2>
+        {{ form.create(false, {'class': 'modal-1__form d-flex flex-column', 'id': 'create-collection-form', 'url': '/agency/agency_compilations/add'}) }}
+        {{ form.input('title', {'class': 'modal-1__input grey-input', 'placeholder': 'Название подборки', 'required': true, 'div': false, 'label': false}) }}
+        <button class="modal-1__btn grey-btn" type="submit">готово</button>
+        {{ form.end() }}
+    </div>
+</div>
 <div class="modal-2 modal-general" id="delete-collections">
     <div class="modal-2__block d-flex flex-column">
         <h2 class="modal-2__title title text-center">Вы действительно хотите удалить подборку?</h2>
@@ -16,19 +25,19 @@
         <div class="row selection__header">
             <div class="col-12 d-flex justify-content-xl-between justify-content-lg-between justify-content-md-between justify-content-sm-end justify-content-end align-items-end">
                 <h1 class="selection__title title">Мои подборки</h1>
-                {#<button class="selection__create d-flex align-items-center"> //TODO подборку без объекта нельзя создать, только с объектом
+                <button class="selection__create d-flex align-items-center">
                     Создать новую подборку
                     <svg class="selection__plus" width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M5.95147 14.4231H7.31787C7.43933 14.4231 7.50006 14.374 7.50006 14.2757V1.3013C7.50006 1.20301 7.43933 1.15386 7.31787 1.15386H5.95147C5.83002 1.15386 5.76929 1.20301 5.76929 1.3013V14.2757C5.76929 14.374 5.83002 14.4231 5.95147 14.4231Z" fill="#929292" />
                         <path d="M0.154293 8.65381H13.1149C13.2178 8.65381 13.2692 8.59308 13.2692 8.47162V7.10523C13.2692 6.98377 13.2178 6.92304 13.1149 6.92304H0.154293C0.0514311 6.92304 0 6.98377 0 7.10523V8.47162C0 8.59308 0.0514311 8.65381 0.154293 8.65381Z" fill="#929292" />
                     </svg>
-                </button>#}
+                </button>
             </div>
         </div>
         {% for item in list %}
             <div class="selection__stroke row align-items-center justify-content-sm-between" data-id="{{ item.AgencyCompilation.id }}">
                 <div class="col-4 d-xl-flex d-lg-flex d-md-flex d-sm-none d-none">
-                    <div class="box selection__box">
+                    {#<div class="box selection__box">
                         <picture><source srcset="../img/selections/select-1.webp" type="image/webp"><img src="../img/selections/select-1.png" alt="фото подборки" class="selection__image"></picture>
                     </div>
                     <div class="box selection__box">
@@ -36,11 +45,11 @@
                     </div>
                     <div class="box selection__box">
                         <picture><source srcset="../img/selections/select-1.webp" type="image/webp"><img src="../img/selections/select-1.png" alt="фото подборки" class="selection__image"></picture>
-                    </div>
+                    </div>#}
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-8 d-flex flex-column align-items-xl-center align-items-lg-center align-items-md-center align-items-sm-start">
                     <span class="selection__name" data-collection-name>{{ item.AgencyCompilation.title }}</span>
-                    <span class="selection__amount grey-text" data-collection-count></span>
+                    <span class="selection__amount grey-text" data-collection-count>1 ЖК</span>
                 </div>
                 <div class="col-xl-4 col-lg-4 col-md-4 col-sm-6 col-4 d-flex align-items-center justify-content-end">
                     <button class="selection__btn selection__share d-flex flex-column align-items-center justify-content-center" data-share-link="/agency/realty/index/?agency_compilation={{ item.AgencyCompilation.id }}">

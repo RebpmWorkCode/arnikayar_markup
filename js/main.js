@@ -61,6 +61,7 @@ $(() => {
         })
     })
 
+    //region Collection Code
     let collectionBlock = $('#collection-block'), collectionAddBlock = undefined, collectionCreateBlock = undefined;
     $('[data-agency-compilation-id]').on('click', (e) => {
         e.preventDefault();
@@ -93,6 +94,27 @@ $(() => {
     $('.selection').on('click', '.selection__share', (e) => {
         e.preventDefault();
         navigator.clipboard.writeText(window.location.origin + e.currentTarget.dataset.shareLink);
+    })
+
+    let createCollection = $('#create-collection');
+    $('.selection').on('click', '.selection__create', (e) => {
+        e.preventDefault();
+        createCollection.show();
+    })
+    createCollection.find('form').on('submit', (e) => {
+        e.preventDefault();
+        const data = new FormData(e.target);
+        fetch(e.target.getAttribute('action'), {
+            method: 'POST',
+            body: data,
+            headers: {'X-Requested-With': 'XMLHttpRequest'}
+        }).then((res) => {
+            if (res.status === 200) {
+                window.location.reload()
+            } else {
+                console.log(res);
+            }
+        })
     })
 
     let deleteCollections = $('#delete-collections');
@@ -131,4 +153,6 @@ $(() => {
             }
         })
     })
+    //endregion
+
 })
