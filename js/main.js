@@ -31,15 +31,19 @@ $(() => {
         }
     });
 
-    if ($('[data-alias="avtomob"]').length > 0) {
-        $('[data-alias="avtomob"]').find('[type="radio"]').on('change', (e) => {
-            if (e.target.checked) {
-                $(`[data-alias="avtomob"] [type="radio"]:not([id="${e.target.id}"]):checked`).each(function (i, el) {
+    let checkboxSingleOptionsCallback = ($wrapper) => {
+        $wrapper.find('input').on('change', (e) => {
+            $wrapper.find(`input:not([id="${e.target.id}"]):checked`).each((i, el) => {
+                if ($(el).get(0).checked) {
                     $(el).get(0).checked = false;
-                })
-            }
+                }
+            })
         })
     }
+    checkboxSingleOptionsCallback($('[data-alias="kolichestvo_spalnyh_mest"]'));
+    checkboxSingleOptionsCallback($('[data-alias="interior_decoration"]'));
+    checkboxSingleOptionsCallback($('[data-alias="number_of_floors"]'));
+    checkboxSingleOptionsCallback($('[data-alias="avtomob"]'));
 
     myLazyLoad = new LazyLoad();
 
