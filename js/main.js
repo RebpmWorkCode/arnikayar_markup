@@ -31,19 +31,19 @@ $(() => {
         }
     });
 
-    let checkboxSingleOptionsCallback = ($wrapper) => {
-        $wrapper.find('input').on('change', (e) => {
-            $wrapper.find(`input:not([id="${e.target.id}"]):checked`).each((i, el) => {
-                if ($(el).get(0).checked) {
-                    $(el).get(0).checked = false;
-                }
-            })
-        })
-    }
-    checkboxSingleOptionsCallback($('[data-alias="kolichestvo_spalnyh_mest"]'));
-    checkboxSingleOptionsCallback($('[data-alias="interior_decoration"]'));
-    checkboxSingleOptionsCallback($('[data-alias="number_of_floors"]'));
-    checkboxSingleOptionsCallback($('[data-alias="avtomob"]'));
+    // let checkboxSingleOptionsCallback = ($wrapper) => {
+    //     $wrapper.find('input').on('change', (e) => {
+    //         $wrapper.find(`input:not([id="${e.target.id}"]):checked`).each((i, el) => {
+    //             if ($(el).get(0).checked) {
+    //                 $(el).get(0).checked = false;
+    //             }
+    //         })
+    //     })
+    // }
+    // checkboxSingleOptionsCallback($('[data-alias="kolichestvo_spalnyh_mest"]'));
+    // checkboxSingleOptionsCallback($('[data-alias="interior_decoration"]'));
+    // checkboxSingleOptionsCallback($('[data-alias="number_of_floors"]'));
+    // checkboxSingleOptionsCallback($('[data-alias="avtomob"]'));
 
     myLazyLoad = new LazyLoad();
 
