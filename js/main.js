@@ -47,8 +47,27 @@ $(() => {
 
     myLazyLoad = new LazyLoad();
 
-    $('#copyLink').on('click', function (){
+    $('#copyLink').on('click', function (e){
+        e.preventDefault();
         navigator.clipboard.writeText(window.location.href);
+        $('#copyLink').css('background-color', 'green');
+        $('#copyLink > svg').css('background-color', 'green');
+        setTimeout(function () {
+            $('#copyLink').css('background-color', '#929292');
+            $('#copyLink > svg').css('background-color', '#929292');
+        }, 1000)
+    })
+    $('.copyLinkIndex').on('click', function (e){
+        e.preventDefault();
+        let target = $(e.currentTarget);
+        let url = target.attr('data-attr-url');
+        navigator.clipboard.writeText(window.location.hostname + url);
+        target.css('background-color', 'green');
+        target.children().css({'background-color': 'green', 'border-radius': '10px'});
+        setTimeout(function () {
+            target.css('background-color', '#929292');
+            target.children().css({'background-color': '#929292', 'border-radius': '10px'});
+        }, 1000)
     })
 
     $('.filter-settings-content-selection-block-district__button').on('click', (e) => {
@@ -164,8 +183,9 @@ $(() => {
     //endregion
 
     $('.btn-link-callback').on('click', function (e) {
+        e.preventDefault();
         let link = '/' + e.target.getAttribute('data-url');
-        window.open(link);
+        window.open(link, '_self');
     })
 
 })

@@ -63,6 +63,60 @@ input[type="checkbox"]:checked + .filter-settings-content-eight-block__button {
     justify-content: center;
 }
 
+.filter-objects-card-box-description {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filter-objects-card-box-description-item {
+    background: #fff;
+    text-transform: lowercase;
+    width: auto;
+}
+
+.footer-object__grid {
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+.footer-object__btn {
+    padding: 3px 10px;
+    max-width: 100%;
+    width: auto;
+}
+
+.footer-object__btn.btn-link-callback {
+    background-color: #fff;
+    max-width: 100%;
+    width: 100%;
+    font-size: 9px;
+}
+
+.description__block {
+    margin-bottom: 30px;
+}
+
+.description__line_4 {
+    position: unset;
+}
+.header-object {
+    position: fixed;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+section.layout {
+    padding: 0;
+}
+
+section.benefits {
+    padding-bottom: 0;
+}
+
+section.description {
+    padding-bottom: 30px;
+}
+
 @media (min-width: 480px) and (max-width: 1200px) {
     .realty-view .container {
         max-width: 100%;
