@@ -186,6 +186,37 @@ $(() => {
         e.preventDefault();
         let link = '/' + e.target.getAttribute('data-url');
         window.open(link, '_self');
-    })
+    });
+
+    let processHandleActiveFilters = ($wrapper) => {
+        $wrapper.find('input').on('change', (e) => {
+            let form = $(e.target.closest('form'));
+            let checkedCheckbox = form.find(`input[type="checkbox"]:checked`);
+            let textInput = form.find(`input[type="text"]`).filter(function () {
+                return this.value;
+            });
+            let isActiveFilter = false;
+            if (checkedCheckbox.length !== 0) {
+                isActiveFilter = true;
+            }
+            if (textInput.length !== 0) {
+                isActiveFilter = true;
+            }
+            if (isActiveFilter) {
+                $('.filter-settings-content-button').addClass('active');
+            } else {
+                $('.filter-settings-content-button').removeClass('active');
+            }
+        })
+    }
+    processHandleActiveFilters($('.filter-settings-content-selection-block'));
+    processHandleActiveFilters($('[data-alias="price"]'));
+    processHandleActiveFilters($('[data-alias="site_area"]'));
+    processHandleActiveFilters($('[data-alias="house_area"]'));
+    processHandleActiveFilters($('[data-alias="kolichestvo_spalnyh_mest"]'));
+    processHandleActiveFilters($('[data-alias="interior_decoration"]'));
+    processHandleActiveFilters($('[data-alias="number_of_floors"]'));
+    processHandleActiveFilters($('[data-alias="avtomob"]'));
+    processHandleActiveFilters($('[data-group="checkbox-aliases"]'))
 
 })
