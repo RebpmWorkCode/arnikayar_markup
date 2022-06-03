@@ -128,3 +128,10 @@ section.description {
         width: 267px;
     }
 }
+
+
+@media screen and (max-width: 991.98px) {
+    .filter-objects-open {
+        z-index: auto;
+    }
+}
