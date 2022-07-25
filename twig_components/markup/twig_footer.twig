@@ -6,7 +6,7 @@
                 {% set paramsValues = advertisement.CategoryParamValues ?? [] %}
                 {% set arhitectyr = complexCategory.getViewAliasesOptions('arhitectyr', paramsValues) %}
                 {% set renovation = complexCategory.getViewAliasesOptions('renovation', paramsValues) %}
-                {% set view_house = complexCategory.getViewAliasesOptions('view_house', paramsValues) %}
+                {% set view_house = complexCategory.getViewDataAliasesOptions('view_house', paramsValues) %}
                 {% set swimming_pool = complexCategory.getViewAliasesOptions('swimming_pool', paramsValues) %}
                 {% set bath_house = complexCategory.getViewAliasesOptions('bath_house', paramsValues) %}
                 {% set guest_house = complexCategory.getViewAliasesOptions('guest_house', paramsValues) %}
@@ -20,8 +20,8 @@
                     <a href="/?renovation={{ advertisement.CategoryParamValues.renovation.value }}" class="footer-object__btn text-center">с ремонтом</a>
                 {% endif %}
 
-                {% if view_house %}
-                    <a href="/?view_house={{ view_house }}" class="footer-object__btn text-center">{{ view_house }}</a>
+                {% if 'море' in view_house %}
+                    <a href="/?view_house=1" class="footer-object__btn text-center">море</a>
                 {% endif %}
 
                 {% if swimming_pool and advertisement.CategoryParamValues.swimming_pool.value == 1 %}
@@ -41,16 +41,8 @@
                 {% endif %}
             </div>
             <div class="row">
-                <div class="col-12 d-flex justify-content-end footer-object__link">
-                    <a href="/" class="project-slider__more d-flex align-items-center">
-                        <span class="project-slider__look grey-text">Перейти к каталогу</span>
-                        <svg class="project-slider__arrow-grey" width="11" height="17" viewBox="0 0 11 17" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path fill-rule="evenodd" clip-rule="evenodd"
-                                  d="M1.74512 17L11 8.5L1.74512 1.09826e-06L-5.61281e-07 1.60278L7.50977 8.5L-1.76723e-06 15.3972L1.74512 17Z"
-                                  fill="#929292"/>
-                        </svg>
-                    </a>
+                <div class="col-12 d-flex justify-content-center footer-object__link">
+                    <a href="/" class="btn btn-primary btn-back-page d-flex align-items-center">Вернуться к каталогу</a>
                 </div>
             </div>
         </div>
@@ -62,14 +54,15 @@
                 <div class="col-12 text-center d-flex flex-column align-items-center justify-content-center">
                     <div class="footer__line"></div>
                     <span class="footer__text">
-                        Ваш личный островок курорта.<br>
-                        Сочи - это 300 солнечных дней в году<br>
-                        это море и горнолыжный курорт.<br>
-                        Горный и морской воздух отсутствие заводов и вредных производств.<br>
-                        Инвестиция, которая постоянно растет в цене
+                        Сочи - уникальное сочетание моря и гор, чистого воздуха и здоровья, природного и инвестиционного климата!<br>
+                        Это 300 дней солнца в году!<br>
+                      Это чистый воздух и здоровье детей!<br>
+                         Это море и горы - всё и сразу!<br>
+                          Сочи - это вложения, которые показывают рост и солидные дивиденды в любых ситуациях!
                     </span>
                 </div>
             </div>
         </div>
     </section>
 {% endif %}
+
