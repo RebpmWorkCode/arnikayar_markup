@@ -76,7 +76,7 @@
 {% set zagolovok = complexCategory.getViewAliasesOptions('zagolovok', paramsValues) %}
 {% set vblizi = complexCategory.getViewAliasesOptions('vblizi', paramsValues) %}
 <section class="main-slider">
-    <div class="container">
+    <div class="container relative">
         <div class="swiper main-slider-swiper">
             <div class="swiper-wrapper main-slider-wrapper">
                 {% set countAll = galleryResizeList|length %}
@@ -112,6 +112,7 @@
                 </div>
             </div>
         </div>
+        <a href="/" class="btn btn-primary btn-back-page d-flex align-items-center">Вернуться к каталогу</a>
     </div>
 </section>
 {# Проверяем эксклюзивный ли объект, если да выводим эксклюзивный просмотр, иначе обычный #}
@@ -120,3 +121,12 @@
 {% else %}
     {{ croogo_region alias = "twig_realty_view_main" }}
 {% endif %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 d-flex justify-content-center">
+            <div class="d-flex align-items-center price-block">
+                СТОИМОСТЬ: {{ advertisement.Advertisement.price }}МЛН
+            </div>
+        </div>
+    </div>
+</div>
