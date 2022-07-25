@@ -1,4 +1,4 @@
-{{ html.script(['https://api-maps.yandex.ru/2.1/?lang=ru_RU', 'Agency.filter-map-site', 'YandexMaps.simplify','YandexMaps.view-map.js'], {'block': 'scriptCustom'}) }}
+{{ html.script(['https://api-maps.yandex.ru/2.1/?lang=ru_RU', 'Agency.filter-map-site', 'YandexMaps.simplify','/uploads/assets/js/map.js?v=3'], {'block': 'scriptCustom'}) }}
 {% set adView = _view.loadHelper('Agency.AdView') %}
 {% set adSeo = _view.loadHelper('Agency.AdSeo') %}
 {% set favorite = _view.loadHelper('Favorites.Favorite') %}
@@ -8,14 +8,18 @@
 {{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
 {% set title = adSeo.pattern_title(advertisement) %}
 {{ _view.assign('title', title) }}
-{{ _view.Html.script('/uploads/assets/js/favorites.js', {'block': 'scriptEndPage'}) }}
+{{ _view.Html.css('https://unpkg.com/swiper@8/swiper-bundle.min.css', {'block': 'css'}) }}
+{{ _view.Html.script('https://unpkg.com/swiper@8/swiper-bundle.min.js', {'block': 'scriptCustom'}) }}
+{{ _view.Html.script('/uploads/assets/js/fslightbox.js', {'block': 'scriptCustom'}) }}
+{{ _view.Html.script('/uploads/assets/js/gallery.js?v=8', {'block': 'scriptCustom'}) }}
+{{ _view.Html.script('/uploads/assets/js/favorites.js?v=2', {'block': 'scriptCustom'}) }}
 {% set currencyActive = currencyActive|lower %}
 {% set offerAdvertisement = adView.getInfo(advertisement) %}
 
 {# Слайдер в просмотре объекта #}
 {% set gallery = adView.getGallery(advertisement) %}
 {% set galleryList = gallery.items ?: [gallery.first] %}
-{% set galleryResizeList = imageResized.resizePicture(galleryList, {'width': '800', 'height': '610', 'mode': 'crop', 'paddings': false, 'folder': 'twig_crop_realty_view_1'}) %}
+{% set galleryResizeList = imageResized.resizePicture(galleryList, {'width': '1280', 'height': '784', 'mode': 'fit', 'paddings': false, 'folder': 'twig_fit_realty_view_1', 'cache_path_size': true}) %}
 
 {# Инициализируем переменные с параметрами категории #}
 {% set paramsValues = advertisement.CategoryParamValues ?? [] %}
@@ -25,8 +29,8 @@
 {% set area_buildings = complexCategory.getViewAliasesOptions('area_buildings', paramsValues) %}
 {% set house_area = complexCategory.getViewAliasesOptions('house_area', paramsValues) %}
 {% set area_house = complexCategory.getViewAliasesOptions('area_house', paramsValues) %}
-{% set kolichestvo_spalnyh_mest = complexCategory.getViewAliasesOptions('kolichestvo_spalnyh_mest', paramsValues) %}
-{% set number_bathrooms = complexCategory.getViewAliasesOptions('number_bathrooms', paramsValues) %}
+{% set spalen = complexCategory.getViewAliasesOptions('spalen', paramsValues) %}
+{% set tualet = complexCategory.getViewAliasesOptions('tualet', paramsValues) %}
 {% set electricity_supply = complexCategory.getViewAliasesOptions('electricity_supply', paramsValues) %}
 {% set water = complexCategory.getViewAliasesOptions('water', paramsValues) %}
 {% set sewerage_supply = complexCategory.getViewAliasesOptions('sewerage_supply', paramsValues) %}
@@ -72,7 +76,43 @@
 {% set myself_add = complexCategory.getViewAliasesOptions('myself_add', paramsValues) %}
 {% set zagolovok = complexCategory.getViewAliasesOptions('zagolovok', paramsValues) %}
 {% set vblizi = complexCategory.getViewAliasesOptions('vblizi', paramsValues) %}
-
+<section class="main-slider">
+    <div class="swiper main-slider-swiper">
+        <div class="swiper-wrapper main-slider-wrapper">
+            {% set countAll = galleryResizeList|length %}
+            {% for i, galleryItem in galleryResizeList %}
+                {% if galleryItem.description != 'Проект дома' and galleryItem.description != 'Территория/Участок' %}
+                    <div class="swiper-slide main-slider-slide" data-full="{{ galleryItem.full }}">
+                        <picture>
+                            <img data-src="{{ galleryItem.src }}" {% if i == 0 or i == 1 or i == (countAll - 1) %} src="{{ galleryItem.src }}" {% endif%} alt="{{ galleryItem.description }}" class="main-slider__image swiper-lazy">
+                        </picture>
+                        <div class="swiper-lazy-preloader"></div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+        <div class="swiper-button-next main-slider-button-next main-slider-button">
+            <div class="circle-svg">
+                <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.96618 41L25 20.5L3.96618 -6.46742e-07L3.96166e-06 3.86551L17.0676 20.5L1.05319e-06 37.1345L3.96618 41Z"
+                          fill="#040404"/>
+                </svg>
+            </div>
+        </div>
+        <div class="swiper-button-prev main-slider-button main-slider-button-prev">
+            <div class="circle-svg">
+                <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M3.96618 41L25 20.5L3.96618 -6.46742e-07L3.96166e-06 3.86551L17.0676 20.5L1.05319e-06 37.1345L3.96618 41Z"
+                          fill="#040404"/>
+                </svg>
+            </div>
+        </div>
+    </div>
+</section>
 {# Проверяем эксклюзивный ли объект, если да выводим эксклюзивный просмотр, иначе обычный #}
 {% if advertisement.Advertisement.contract_type_id == 1 %}
     {{ croogo_region alias = "twig_realty_view_exclusive" }}
