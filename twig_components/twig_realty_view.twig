@@ -73,42 +73,43 @@
 {% set security = complexCategory.getViewAliasesOptions('security', paramsValues) %}
 {% set place_car = complexCategory.getViewAliasesOptions('place_car', paramsValues) %}
 {% set names_trees = complexCategory.getViewAliasesOptions('names_trees', paramsValues) %}
-{% set myself_add = complexCategory.getViewAliasesOptions('myself_add', paramsValues) %}
 {% set zagolovok = complexCategory.getViewAliasesOptions('zagolovok', paramsValues) %}
 {% set vblizi = complexCategory.getViewAliasesOptions('vblizi', paramsValues) %}
 <section class="main-slider">
-    <div class="swiper main-slider-swiper">
-        <div class="swiper-wrapper main-slider-wrapper">
-            {% set countAll = galleryResizeList|length %}
-            {% for i, galleryItem in galleryResizeList %}
-                {% if galleryItem.description != 'Проект дома' and galleryItem.description != 'Территория/Участок' %}
-                    <div class="swiper-slide main-slider-slide" data-full="{{ galleryItem.full }}">
-                        <picture>
-                            <img data-src="{{ galleryItem.src }}" {% if i == 0 or i == 1 or i == (countAll - 1) %} src="{{ galleryItem.src }}" {% endif%} alt="{{ galleryItem.description }}" class="main-slider__image swiper-lazy">
-                        </picture>
-                        <div class="swiper-lazy-preloader"></div>
-                    </div>
-                {% endif %}
-            {% endfor %}
-        </div>
-        <div class="swiper-button-next main-slider-button-next main-slider-button">
-            <div class="circle-svg">
-                <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M3.96618 41L25 20.5L3.96618 -6.46742e-07L3.96166e-06 3.86551L17.0676 20.5L1.05319e-06 37.1345L3.96618 41Z"
-                          fill="#040404"/>
-                </svg>
+    <div class="container">
+        <div class="swiper main-slider-swiper">
+            <div class="swiper-wrapper main-slider-wrapper">
+                {% set countAll = galleryResizeList|length %}
+                {% for i, galleryItem in galleryResizeList %}
+                    {% if galleryItem.description != 'Проект дома' and galleryItem.description != 'Территория/Участок' %}
+                        <div class="swiper-slide main-slider-slide" data-full="{{ galleryItem.full }}">
+                            <picture>
+                                <img data-src="{{ galleryItem.src }}" {% if i == 0 or i == 1 or i == (countAll - 1) %} src="{{ galleryItem.src }}" {% endif%} alt="{{ galleryItem.description }}" class="main-slider__image swiper-lazy">
+                            </picture>
+                            <div class="swiper-lazy-preloader"></div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
             </div>
-        </div>
-        <div class="swiper-button-prev main-slider-button main-slider-button-prev">
-            <div class="circle-svg">
-                <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
-                     xmlns="http://www.w3.org/2000/svg">
-                    <path fill-rule="evenodd" clip-rule="evenodd"
-                          d="M3.96618 41L25 20.5L3.96618 -6.46742e-07L3.96166e-06 3.86551L17.0676 20.5L1.05319e-06 37.1345L3.96618 41Z"
-                          fill="#040404"/>
-                </svg>
+            <div class="swiper-button-next main-slider-button-next main-slider-button">
+                <div class="circle-svg">
+                    <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.96618 41L25 20.5L3.96618 -6.46742e-07L3.96166e-06 3.86551L17.0676 20.5L1.05319e-06 37.1345L3.96618 41Z"
+                              fill="#040404"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="swiper-button-prev main-slider-button main-slider-button-prev">
+                <div class="circle-svg">
+                    <svg class="main-slider-arrow" width="25" height="41" viewBox="0 0 25 41" fill="none"
+                         xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                              d="M3.96618 41L25 20.5L3.96618 -6.46742e-07L3.96166e-06 3.86551L17.0676 20.5L1.05319e-06 37.1345L3.96618 41Z"
+                              fill="#040404"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </div>
