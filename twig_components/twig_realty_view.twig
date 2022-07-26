@@ -123,7 +123,7 @@
     <div class="row">
         <div class="col-12 d-flex justify-content-center">
             <div class="d-flex align-items-center price-block">
-                СТОИМОСТЬ: {{ advertisement.Advertisement.price }}МЛН
+                СТОИМОСТЬ: {{ (advertisement.Advertisement.price / 1000000) }}МЛН
             </div>
         </div>
     </div>

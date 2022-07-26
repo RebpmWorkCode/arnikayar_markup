@@ -100,7 +100,6 @@
                                     {% for i, galleryItem in galleryResizeList %}
                                         <div class="swiper-slide">
                                             <img data-src="{{ galleryItem.src }}" {% if i == 0 %} src="{{ galleryItem.src }}" {% endif%}  alt="{{ galleryItem.description }}" class="filter-objects-card-box__img swiper-lazy">
-                                            <div class="swiper-lazy-preloader"></div>
                                         </div>
                                     {% endfor %}
                                 </div>
@@ -189,7 +188,7 @@
                             </div>
                             <div class="filter-objects-card-box-numbers">
                                 <div class="filter-objects-card-box-numbers-item">
-                                    <span class="filter-objects-card-box-numbers-item__price">{{ item.Advertisement.price }}млн</span>
+                                    <span class="filter-objects-card-box-numbers-item__price">{{ (item.Advertisement.price / 1000000)  }}млн</span>
                                 </div>
                                 <div class="filter-objects-card-box-numbers-item">
                                     {% set part = complexCategory.getViewAliasesOptions('part', paramsValues) %}
