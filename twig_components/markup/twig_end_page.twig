@@ -1,17 +1,18 @@
 <div id="collection-block"></div>
+{% set recaptcha = _view.loadHelper('Recaptcha.Recaptcha') %}
+{% set recaptchaScript = recaptcha.initScripts()|first %}
+<script src="{{ recaptchaScript }}"></script>
+{{ html.script('/uploads/assets/js/recaptcha.js') }}
 {{ html.script('/libraries/lazyload/lazyload.min.js') }}
-<script>
-    const RECAPTCHA_KEY = '{{ recaptcha.publicKey() }}';
-</script>
-<script src="https://www.google.com/recaptcha/api.js?render={{ recaptcha.publicKey() }}"></script>
-<script src="/uploads/assets/js/recaptcha.js"></script>
-<script src="/uploads/assets/js/app.min.js?_v=20220523153133"></script>
-<script src="/libraries/jquery3/jquery.min.js"></script>
-<script src="/libraries/select2/js/select2.min.js"></script>
-<script src="/libraries/select2/js/i18n/ru.js"></script>
-<script src="/agency/js/jquery.mask.min.js"></script>
-<script src="/uploads/assets/js/main.js?v=6"></script>
-<script src="https://cdn.jsdelivr.net/npm/js-cookie@2/src/js.cookie.min.js"></script>
+{{ html.script('/uploads/assets/js/app.min.js?v=20220523153133') }}
+{{ html.script('/libraries/jquery3/jquery.min.js') }}
+{{ html.script('/libraries/select2/js/select2.min.js') }}
+{{ html.script('/libraries/select2/js/i18n/ru.js') }}
+{{ html.script('https://unpkg.com/swiper@8.3.1/swiper-bundle.min.js') }}
+{{ html.script('/agency/js/jquery.mask.min.js') }}
+{{ html.script('/uploads/assets/js/main.js?v=456') }}
+{{ html.script('/uploads/assets/js/js.cookie.min.js') }}
+{{ html.script('/uploads/assets/js/sweetalert2.js') }}
 {{ _view.fetch('scriptCustom') }}
 </body>
 </html>

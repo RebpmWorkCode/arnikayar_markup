@@ -296,6 +296,27 @@ section.location .row {
     user-select: none;
 }
 
+.filter-objects-card-box-description, .filter-objects-card-box-elements, .filter-objects-card-box-numbers {
+    z-index: 1;
+}
+
+.swiper-gallery-list .circle-svg {
+    width: 25px;
+    height: 25px;
+}
+
+.swiper-gallery-list .circle-svg .main-slider-arrow  {
+    right: auto;
+}
+
+.swiper-gallery-list .swiper-button-prev {
+    left: 10px !important;
+}
+
+.swiper-gallery-list .swiper-button-next {
+    right: 10px !important;
+}
+
 @media (max-width: 575.98px){
     .description__line_3, .description__line_4 {
         width: 100%;

@@ -8,9 +8,11 @@
     {{ siteInfo.favicon() }}
     {{ meta.meta() }}
     {{ _view.fetch('meta')}}
-    <link rel="stylesheet" href="/uploads/assets/css/style.min.css?_v=20220523153133">
-    <link rel="stylesheet" href="/uploads/assets/css/style-fix.css?v=3">
-    <link rel="stylesheet" href="/libraries/select2/css/select2.min.css">
+    {{ html.css('/uploads/assets/css/style.min.css?_v=20220523153133') }}
+    {{ html.css('/uploads/assets/css/style-fix.css?v=567') }}
+    {{ html.css('/uploads/assets/css/motage.css') }}
+    {{ html.css('/libraries/select2/css/select2.min.css') }}
+    {{ html.css('https://unpkg.com/swiper@8.3.1/swiper-bundle.min.css') }}
     {{ _view.fetch('css')}}
 </head>
 <body>

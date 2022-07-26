@@ -8,8 +8,6 @@
 {{ adView.setDefaults({default_picture: config.Site.no_photo_image}) }}
 {% set title = adSeo.pattern_title(advertisement) %}
 {{ _view.assign('title', title) }}
-{{ _view.Html.css('https://unpkg.com/swiper@8/swiper-bundle.min.css', {'block': 'css'}) }}
-{{ _view.Html.script('https://unpkg.com/swiper@8/swiper-bundle.min.js', {'block': 'scriptCustom'}) }}
 {{ _view.Html.script('/uploads/assets/js/fslightbox.js', {'block': 'scriptCustom'}) }}
 {{ _view.Html.script('/uploads/assets/js/gallery.js?v=8', {'block': 'scriptCustom'}) }}
 {{ _view.Html.script('/uploads/assets/js/favorites.js?v=2', {'block': 'scriptCustom'}) }}

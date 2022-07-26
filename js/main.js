@@ -1,5 +1,30 @@
-let myLazyLoad;
+const myLazyLoad = new LazyLoad();
+
+let TwigGalleryInstances = {
+    run: () => {
+        let swiper = new Swiper('.swiper-gallery-list', {
+            // slidesPerView: 1,
+            lazy: {
+                loadPrevNext: true,
+                //loadPrevNextAmount: 2,
+            },
+            // loop: true,
+            // centeredSlides: true,
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        })
+    },
+};
+
 $(() => {
+    TwigGalleryInstances.run()
+
+    if (window.location.pathname === '/favorites') {
+        $('.favorite-btn').addClass('active');
+    }
+
     $('.select-sorting').select2({
         theme: 'realty-sorting',
         minimumResultsForSearch: Infinity,
@@ -45,30 +70,43 @@ $(() => {
     // checkboxSingleOptionsCallback($('[data-alias="number_of_floors"]'));
     // checkboxSingleOptionsCallback($('[data-alias="avtomob"]'));
 
-    myLazyLoad = new LazyLoad();
-
-    $('#copyLink').on('click', function (e){
-        e.preventDefault();
-        navigator.clipboard.writeText(window.location.href);
-        $('#copyLink').css('background-color', 'green');
-        $('#copyLink > svg').css('background-color', 'green');
-        setTimeout(function () {
-            $('#copyLink').css('background-color', '#929292');
-            $('#copyLink > svg').css('background-color', '#929292');
-        }, 1000)
-    })
-    $('.copyLinkIndex').on('click', function (e){
+    // Кнопка поделиться в списке объектов и просмотре
+    $('body').on('click', '.copyLink', function (e){
         e.preventDefault();
         let target = $(e.currentTarget);
-        let url = target.attr('data-attr-url');
-        navigator.clipboard.writeText(window.location.hostname + url);
-        target.css('background-color', 'green');
-        target.children().css({'background-color': 'green', 'border-radius': '10px'});
-        setTimeout(function () {
-            target.css('background-color', '#929292');
-            target.children().css({'background-color': '#929292', 'border-radius': '10px'});
-        }, 1000)
-    })
+        let url = window.location.href;
+        if (target.attr('data-attr-url')) {
+            url = 'https://' + window.location.hostname + target.attr('data-attr-url');
+        }
+        let title = target.attr('data-attr-title');
+
+        Swal.fire({
+            title: '<strong>Поделиться</strong>',
+            html:
+                '<div id="share-block">' +
+                '    <div class="share-link__list">' +
+                // '        <a class="share-link" target="_blank" title="Отправить в WhatsApp" href="https://api.whatsapp.com/send?text='+ title + ' ' + url + '"><img src="/uploads/whatsapp.png" alt="whatsapp"></a>' +
+                '        <a class="share-link" target="_blank" title="Отправить в WhatsApp" href="https://web.whatsapp.com"><img src="/uploads/whatsapp.png" alt="whatsapp"></a>' +
+                '        <a class="share-link" target="_blank" title="Отправить в Telegram" href="https://telegram.me/share/url?url=' + url + '"><img src="/uploads/telegram.png" alt="telegram"></a>' +
+                '        <a class="share-link" target="_blank" title="Отправить на почту" href="mailto:Введите адрес электронной почты?subject=Агентство недвижимости ПО ДОМАМ&body=' + ' ' + url + '"><img src="/uploads/mail.png" alt="mail"></a>' +
+                '        <a class="share-link" target="_blank" title="Отправить в Viber" href="viber://forward?text='+ title + ' ' + url + '"><img src="/uploads/viber.png" alt="viber"></a>' +
+                '        <a class="share-link" target="_blank" title="Отправить в VK" href="https://vk.com/share.php?url=' + url + '&title=' + title + '"><img src="/uploads/vk.png" alt="vk"></a>' +
+                '        <a class="share-link" target="_blank" title="Перейти в Instagram Direct" href="https://www.instagram.com/direct"><img src="/uploads/instagram.png" alt="instagram"></a>' +
+                '        <a class="share-link" target="_blank" title="Отправить в Facebook" href="https://www.facebook.com/sharer/sharer.php?u=' + url +'"><img src="/uploads/1facebook.png" alt="facebook"></a>' +
+                '        <a class="share-link copyLinkBtn" title="Копировать в буфер обмена" href="#"><img src="/uploads/copy.png" alt="copy"></a>' +
+                '    </div>' +
+                '</div>',
+            showCloseButton: true,
+            showCancelButton: false,
+            showConfirmButton: false,
+        });
+
+        $('body').on('click', '.copyLinkBtn', function () {
+            navigator.clipboard.writeText(url);
+        });
+    });
+
+
 
     $('.filter-settings-content-selection-block-district__button').on('click', (e) => {
         let wrapper = $(e.target).closest('.filter-settings-content-selection-block__info');
@@ -84,9 +122,16 @@ $(() => {
         })
     })
 
+    $('.filter-settings-options-disable').on('click', (e) => {
+        $('.filter-settings-content-selection-block [type="checkbox"]:checked').each((i, el) => {
+            $(el).attr('checked', false);
+            $(el).trigger('change');
+        })
+    })
+
     //region Collection Code
     let collectionBlock = $('#collection-block'), collectionAddBlock = undefined, collectionCreateBlock = undefined;
-    $('[data-agency-compilation-id]').on('click', (e) => {
+    $('body').on('click', '[data-agency-compilation-id]', (e) => {
         e.preventDefault();
         let agencyCompilationId = e.currentTarget.dataset.agencyCompilationId;
         let id = e.currentTarget.dataset.id;
@@ -217,6 +262,14 @@ $(() => {
     processHandleActiveFilters($('[data-alias="interior_decoration"]'));
     processHandleActiveFilters($('[data-alias="number_of_floors"]'));
     processHandleActiveFilters($('[data-alias="avtomob"]'));
-    processHandleActiveFilters($('[data-group="checkbox-aliases"]'))
+    processHandleActiveFilters($('[data-group="checkbox-aliases"]'));
+
+    $('.JS-filter-open').on('click', (e) => {
+        $(e.target.closest('.filter-objects')).addClass('d-none');
+    })
+    $('.filter-settings-options-button').on('click', (e) => {
+        $('.filter-objects').removeClass('d-none');
+    })
 
 })
+
