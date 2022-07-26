@@ -7,17 +7,23 @@
                 </div>
                 {% if site_area %}
                     <div class="description__item d-flex align-items-center">
-                        <svg class="description__icon" width="30" height="30" viewBox="0 0 30 30" fill="none"
-                             xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.875 1.5H25.125C26.0201 1.5 26.8785 1.85558 27.5115 2.48851C28.1444 3.12145 28.5 3.97989 28.5 4.875V25.125C28.5 26.0201 28.1444 26.8785 27.5115 27.5115C26.8785 28.1444 26.0201 28.5 25.125 28.5H4.875C3.97989 28.5 3.12145 28.1444 2.48851 27.5115C1.85558 26.8785 1.5 26.0201 1.5 25.125V4.875C1.5 3.97989 1.85558 3.12145 2.48851 2.48851C3.12145 1.85558 3.97989 1.5 4.875 1.5ZM15.8438 15.8438V25.9688H25.9688V15.8438H15.8438ZM4.03125 15.8438V25.9688H14.1562V15.8438H4.03125ZM15.8438 4.03125V14.1562H25.9688V4.03125H15.8438ZM4.03125 4.03125V14.1562H14.1562V4.03125H4.03125Z"
-                                fill="#929292"/>
+                        <svg class="description__icon" width="30" height="30" viewBox="0 0 30 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4.875 1.5H25.125C26.0201 1.5 26.8785 1.85558 27.5115 2.48851C28.1444 3.12145 28.5 3.97989 28.5 4.875V25.125C28.5 26.0201 28.1444 26.8785 27.5115 27.5115C26.8785 28.1444 26.0201 28.5 25.125 28.5H4.875C3.97989 28.5 3.12145 28.1444 2.48851 27.5115C1.85558 26.8785 1.5 26.0201 1.5 25.125V4.875C1.5 3.97989 1.85558 3.12145 2.48851 2.48851C3.12145 1.85558 3.97989 1.5 4.875 1.5ZM15.8438 15.8438V25.9688H25.9688V15.8438H15.8438ZM4.03125 15.8438V25.9688H14.1562V15.8438H4.03125ZM15.8438 4.03125V14.1562H25.9688V4.03125H15.8438ZM4.03125 4.03125V14.1562H14.1562V4.03125H4.03125Z" fill="#929292"/>
                         </svg>
                         <span class="description__desc-left">Участок по документам: <span>{{ site_area }} соток</span></span>
                     </div>
                 {% endif %}
                 {% if plot_area %}
-                    <span class="description__desc grey-text">Участок по факту: <span>{{ plot_area }} соток</span></span>
+                    {% set isShow = true %}
+                    {% if site_area %}
+                        {% if plot_area == site_area %}
+                            {% set isShow = false %}
+                        {% endif %}
+                    {% endif %}
+
+                    {% if isShow %}
+                        <span class="description__desc grey-text">Участок по факту: <span>{{ plot_area }} соток</span></span>
+                    {% endif %}
                 {% endif %}
                 {% if lot_type %}
                     <span class="description__desc">Вид разрешенного использования: <span>{{ lot_type }}</span></span>
@@ -50,7 +56,15 @@
                     </div>
                 {% endif %}
                 {% if area_house %}
-                    <span class="description__desc grey-text">Площадь дома по факту: <span>{{ area_house }} м²</span></span>
+                    {% set isShow = true %}
+                    {% if house_area %}
+                        {% if area_house == house_area %}
+                            {% set isShow = false %}
+                        {% endif %}
+                    {% endif %}
+                    {% if isShow %}
+                        <span class="description__desc grey-text">Площадь дома по факту: <span>{{ area_house }} м²</span></span>
+                    {% endif %}
                 {% endif %}
                 {% if spalen %}
                     <div class="description__item d-flex align-items-center">
@@ -285,34 +299,31 @@
                 {% if facade_decoration %}
                     <span class="description__desc">Фасад: <span>{{ facade_decoration }}</span></span>
                 {% endif %}
-                {% if facade_insulation %}
+                {% if facade_insulation and facade_insulation|lower != 'нет' %}
                     <span class="description__desc">Утепление фасада: <span>{{ facade_insulation }}</span></span>
                 {% endif %}
-                {% if house_rented %}
+                {% if house_rented and house_rented|lower != 'нет' %}
                     <span class="description__desc">Дом сдан: <span>{{ house_rented }}</span></span>
                 {% endif %}
                 {% if recreation_areas %}
                     <span class="description__desc">Зоны отдыха: <span>{{ recreation_areas }}</span></span>
                 {% endif %}
-                {% if renovation %}
-                    <span class="description__desc">Ремонт: <span>{{ renovation }}</span></span>
-                {% endif %}
                 {% if interior_decoration %}
                     <span class="description__desc">Внутренняя отделка: <span>{{ interior_decoration }}</span></span>
                 {% endif %}
-                {% if bath_house %}
+                {% if bath_house and bath_house|lower != 'нет' %}
                     <span class="description__desc">Баня\Сауна: <span>{{ bath_house }}</span></span>
                 {% endif %}
-                {% if swimming_pool %}
+                {% if swimming_pool and swimming_pool|lower != 'нет' %}
                     <span class="description__desc">Бассейн: <span>{{ swimming_pool }}</span></span>
                 {% endif %}
-                {% if guest_house %}
+                {% if guest_house and guest_house|lower != 'нет' %}
                     <span class="description__desc">Гостевой дом: <span>{{ guest_house }}</span></span>
                 {% endif %}
-                {% if pool_size %}
+                {% if pool_size and pool_size|lower != 'нет' %}
                     <span class="description__desc">Размер бассейна: <span>{{ pool_size }}</span></span>
                 {% endif %}
-                {% if pool_functions %}
+                {% if pool_functions and pool_functions|lower != 'нет' %}
                     <span class="description__desc">Функции бассейна: <span>{{ pool_functions }}</span></span>
                 {% endif %}
             </div>
