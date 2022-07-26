@@ -120,6 +120,11 @@
                                 </div>
                             </div>
                             <div class="filter-objects-card-box-description">
+                                {% if item.Advertisement.contract_type_id == 1 and item.Youtube|length > 0 %}
+                                    <div class="filter-objects-card-box-description-item">
+                                        <span class="footer-object__btn btn-link-callback text-center">видео</span>
+                                    </div>
+                                {% endif %}
                                 {% if arhitectyr and (item.CategoryParamValues.arhitectyr.value == 1 or item.CategoryParamValues.arhitectyr.value == 2) %}
                                     <div class="filter-objects-card-box-description-item">
                                         <button type="button" data-url="?arhitectyr={{ item.CategoryParamValues.arhitectyr.value }}" class="footer-object__btn btn-link-callback text-center">{{ arhitectyr }}</button>
