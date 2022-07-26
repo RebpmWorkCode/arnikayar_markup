@@ -135,27 +135,19 @@
                 {{ form.input('house_area_to', {'class': 'filter-settings-content-two-inputs-input', 'label': false, 'div': false, 'type': 'text', 'placeholder': 'Площадь до, м²'}) }}
             </div>
         </div>
-        <div class="filter-settings-content-six" data-alias="kolichestvo_spalnyh_mest">
+        <div class="filter-settings-content-six" data-alias="spalen">
             <span class="filter-settings-content-six__text">Количество спален</span>
             <div class="filter-settings-content-six-buttons">
-                {% set kolichestvoSpalnyhMests = {
-                    '1': '1',
-                    '2': '2',
-                    '3': '3',
-                    '4': '4',
-                    '5': '5',
-                    '6': '6+',
-                } %}
-                {% for id,label in kolichestvoSpalnyhMests %}
-                    {{ form.checkbox('kolichestvo_spalnyh_mest.', {
+                {% for id,label in spalens|sort((a, b) => a <=> b) %}
+                    {{ form.checkbox('spalen.', {
                         'class': 'd-none',
                         'hiddenField': false,
                         'div': false,
                         'value': id,
-                        'id': 'AdvertisementKolichestvoSpalnyhMest'~id,
-                        'checked': id in _view.request.query('kolichestvo_spalnyh_mest')
+                        'id': 'AdvertisementSpalen'~id,
+                        'checked': id in _view.request.query('spalen')
                     }) }}
-                    {{ form.label('kolichestvo_spalnyh_mest'~id, label, {'class': 'filter-settings-content-six__button'}) }}
+                    {{ form.label('spalen'~id, label, {'class': 'filter-settings-content-six__button'}) }}
                 {% endfor %}
             </div>
         </div>
@@ -178,15 +170,7 @@
         <div class="filter-settings-content-six" data-alias="number_of_floors">
             <span class="filter-settings-content-six__text">Количество этажей</span>
             <div class="filter-settings-content-six-buttons">
-                {% set numberOfFloors = {
-                    '1': '1',
-                    '2': '2',
-                    '3': '3',
-                    '4': '4',
-                    '5': '5',
-                    '6': '6+',
-                } %}
-                {% for id,label in numberOfFloors %}
+                {% for id,label in numberFloors %}
                     {{ form.checkbox('number_of_floors.', {
                         'class': 'd-none',
                         'hiddenField': false,
@@ -231,18 +215,16 @@
         <div class="filter-settings-content-eight" data-group="checkbox-aliases">
             <span class="filter-settings-content-eight__line"></span>
             <div class="filter-settings-content-eight-block">
-                {{ form.input('arhitectyr.', {'type': 'checkbox','hiddenField': false, 'value': '1', 'checked': '1' in _view.request.query('arhitectyr'), 'id': 'arhitectyr1','label': {'text': 'хай-тек', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
-                {{ form.input('remont', {'type': 'checkbox','hiddenField': false,'value': '1','label': {'text': 'с ремонтом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
-                {{ form.input('sea_view', {'type': 'checkbox','hiddenField': false,'value': '1','label': {'text': 'вид на море', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                {{ form.input('arhitectyr', {'type': 'checkbox','hiddenField': false, 'value': '1', 'checked': '1' in _view.request.query('arhitectyr'), 'id': 'arhitectyr1','label': {'text': 'хай-тек', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                {{ form.input('renovation', {'type': 'checkbox','hiddenField': false,'value': '1','label': {'text': 'с ремонтом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                {{ form.input('view_house', {'type': 'checkbox','hiddenField': false,'value': '1','label': {'text': 'вид на море', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
                 {{ form.input('swimming_pool', {'type': 'checkbox','hiddenField': false,'value': '1','label': {'text': 'с бассейном', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
                 {{ form.input('bath_house', {'type': 'checkbox','hiddenField': false,'value': '1','label': {'text': 'с баней', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
-                {{ form.input('garage_type', {'type': 'checkbox','hiddenField': false, 'value': '1', 'label': {'text': 'с гаражом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
+                {{ form.input('place_car', {'type': 'checkbox','hiddenField': false, 'value': '1', 'label': {'text': 'с гаражом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
                 {{ form.input('arhitectyr.', {'type': 'checkbox','hiddenField': false, 'value': '2', 'checked': '2' in _view.request.query('arhitectyr'), 'id': 'arhitectyr2', 'label': {'text': 'шале', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none'}) }}
                 {{ form.input('guest_house', {'type': 'checkbox', 'hiddenField': false, 'value': _view.request.query('guest_house') ?: 5, 'label': {'text': 'гостевой дом', 'class': 'filter-settings-content-eight-block__button'},'div': false, 'class': 'd-none' }) }}
             </div>
         </div>
-{#        {% set applyFilterClass = attribute(_view.request, 'query') ? 'active' : '' %}#}
-        {#{{ applyFilterClass }}#}
         <button class="filter-settings-content-button" type="submit">Показать</button>
     </div>
     {% if showMapButton %}

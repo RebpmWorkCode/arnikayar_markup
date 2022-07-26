@@ -32,8 +32,8 @@
                     <a href="/?bath_house={{ advertisement.CategoryParamValues.bath_house.value }}" class="footer-object__btn text-center">с баней</a>
                 {% endif %}
 
-                {% if place_car %}
-                    <a href="/?place_car={{ place_car }}" class="footer-object__btn text-center">с гаражом</a>
+                {% if advertisement.CategoryParamValues.place_car.value[0] == 1  %}
+                    <a href="/?place_car=1" class="footer-object__btn text-center">с гаражом</a>
                 {% endif %}
 
                 {% if guest_house and advertisement.CategoryParamValues.guest_house.value != 1 %}

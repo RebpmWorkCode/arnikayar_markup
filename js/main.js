@@ -2,19 +2,29 @@ const myLazyLoad = new LazyLoad();
 
 let TwigGalleryInstances = {
     run: () => {
-        let swiper = new Swiper('.swiper-gallery-list', {
-            // slidesPerView: 1,
-            lazy: {
-                loadPrevNext: true,
-                //loadPrevNextAmount: 2,
-            },
-            // loop: true,
-            // centeredSlides: true,
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
-            },
-        })
+        if (document.querySelector('.swiper-gallery-list')) {
+            let swiper = new Swiper('.swiper-gallery-list', {
+                // slidesPerView: 1,
+                lazy: {
+                    loadPrevNext: true,
+                    //loadPrevNextAmount: 2,
+                },
+                // loop: true,
+                // centeredSlides: true,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            })
+            $('.swiper-gallery-list').on('click', '.swiper-button-disabled', (evt) => {
+                evt.preventDefault();
+                evt.stopPropagation();
+            })
+        }
     },
 };
 

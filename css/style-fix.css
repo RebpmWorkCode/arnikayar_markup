@@ -317,6 +317,15 @@ section.location .row {
     right: 10px !important;
 }
 
+.swiper-gallery-list .swiper-button-prev.swiper-button-disabled, .swiper-gallery-list .swiper-button-next.swiper-button-disabled {
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.swiper-gallery-list.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 55px;
+}
+
 @media (max-width: 575.98px){
     .description__line_3, .description__line_4 {
         width: 100%;
